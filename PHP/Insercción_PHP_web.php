@@ -71,11 +71,24 @@
         echo "<br>";
 
     //calculo
+    echo " * Ejercicio 9:";
+    echo "<br>";
     echo sqrt(144);
+    echo "<br>";
     echo pow(2,8);
     echo "<br>";
-    echo 100/6;
-    echo "<br>";
+    echo 100%6;
+    
+    //funcion 
+echo "<br>";
+    function obtener_mcd($a, $b) {
+        if ($b ==0){
+            return $a;
+        }else{
+            return obtener_mcd($b, $a % $b);
+        }
+    }
+echo ("El mcd de 3 y 6 es: \n" . obtener_mcd(3,6))
 
 
        
