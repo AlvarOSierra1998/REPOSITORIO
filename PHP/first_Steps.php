@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+    
         //VALOR 
         $Var = 1;
         $Var2 = 2;
@@ -96,7 +97,7 @@
 
     $CadenaTotal2 = "Alvaro Olmos";
     str_replace("","", $CadenaTotal2);
-    $CadenaTotal2; //Elimina el espacio en blanco junta el nombre
+    echo $CadenaTotal2; //Elimina el espacio en blanco junta el nombre
 
     $Mayus = "alvaro";
     
@@ -104,7 +105,14 @@
        //trim elimnina los espacios 
       // concatenacion con . 
 
-    //elementos de formato   
+         //ejecicio
+        define("PI", 3,14);
+        $radio = 6;
+        $volumen = (4/3)*PI*(pow($radio,3));
+        echo "<br>";
+        echo $volumen;
+
+
     
 
 
