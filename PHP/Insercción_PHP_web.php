@@ -44,11 +44,11 @@
         echo ($VarBool);
         echo "<br>";
 
-    //REVSISAR
+         //Quita el espacio en blanco con a la concatenación
         echo str_replace(" ","", $VarConcatenacion);
         echo "<br>";
         echo "<br>";
-
+        //Para que muestre el simbolo dolar ponemos la barra \$
         echo "El operador “+” sirve para sumar el valor de variables. Con la “/”podemos
         dividir valores entre variables. El símbolo del dólar “\$” indica que estamos
         utilizando variables pero no lo usaremos en las constantes o globales.";
@@ -57,6 +57,7 @@
         dividir valores entre variables. El símbolo del dólar “\$” indica que estamos
         utilizando variables pero no lo usaremos en las constantes o globales.";
         
+        //longitud de la cadena
         echo "<br>";
         echo strlen($VarTexto);
         echo "<br>";
@@ -93,7 +94,7 @@
     echo "el resto de la división de 100 entre 6 es: ";
     echo 100%6;
     
-    //funcion 
+    //funcion  que calcula el maximo comun divisor
 echo "<br>";
 echo "<br>";
     function obtener_mcd($a, $b) {
