@@ -53,6 +53,7 @@
         dividir valores entre variables. El símbolo del dólar “\$” indica que estamos
         utilizando variables pero no lo usaremos en las constantes o globales.";
         echo "<br>";
+        
         $VarTexto = "El operador “+” sirve para sumar el valor de variables. Con la “/”podemos
         dividir valores entre variables. El símbolo del dólar “\$” indica que estamos
         utilizando variables pero no lo usaremos en las constantes o globales.";
