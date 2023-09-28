@@ -1,0 +1,72 @@
+body{
+    background-image: url(../img/FONDOsky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Header--Skyrim{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+}
+.Header--Letters{
+        width: 20%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+}
+
+button{
+    background-image: url(../img/icono.png);
+    width: 3%;
+    height: 30%;
+    padding: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 60%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
+    background-color: aliceblue;
+    transition: 0.5s;
+    border: 1px solid black;
+}
+section>input[type="button"]{
+    background-color: transparent;
+    color: aliceblue;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 7s;
+}
+
+/* This changes all the animations globally */
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}

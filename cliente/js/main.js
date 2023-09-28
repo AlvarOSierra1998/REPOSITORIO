@@ -35,3 +35,5 @@ function info() {
     alert("pa la web oficial monstro");
 
 }
+
+
