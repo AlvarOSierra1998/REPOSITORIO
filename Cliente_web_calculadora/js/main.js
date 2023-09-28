@@ -13,7 +13,7 @@ var nombre = prompt("Hola!, Introduzca su nombre, por favor ");
             var salir = true;
             while  (salir){
                 
-                var operaciones = parseInt(prompt("Introduzca una operacion"));
+                var operaciones = parseInt(prompt("Introduzca una operacion, si por el contrario desea cerrar esta ventana pulse el numero 6."));
                 switch(operaciones){
                     case 1:
                         if(operaciones == 1){

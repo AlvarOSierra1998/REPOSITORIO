@@ -41,7 +41,7 @@ button{
 
 button:hover{
     background-color: aliceblue;
-    transition: 0.5s;
+    transition: .5s;
     border: 1px solid black;
 }
 section>input[type="button"]{
@@ -49,6 +49,13 @@ section>input[type="button"]{
     color: aliceblue;
     border-radius: 7px;
     cursor: pointer;
+    border: none;
+    font-size: 1em;
+}
+section>input[type="button"]:hover{
+    background-color: grey;
+    transition: .5s;
+    color: black;
 }
 .my-element {
     display: inline-block;
