@@ -1,0 +1,118 @@
+body{
+    background-image: url(../img/chivalry-2-knight-sword-uhdpaper.com-4K-5.2175.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+header>img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9%;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(192, 192, 192);
+    font-weight: bolder;
+}
+li{
+    width: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4%;
+    padding: 4px;
+}
+li:hover{
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+    transition: .3s;
+    
+}
+nav>ul{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(22, 22, 24, 0.13);
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+form>input{
+    display: block;
+    margin: 10px;
+    background: transparent;
+    border: none;
+    color: black;
+}
+
+
+.borderInput:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.452);
+    color: rgb(252, 172, 0);
+    transition: .5s;
+}
+
+.borderInput::after {
+    content: "";
+    display: flex;
+    height: 4px;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+.func:hover{
+    background-color: rgb(53, 53, 53);
+    color: rgb(252, 172, 0);
+    transition: .5s;
+    cursor: pointer;
+    color: aliceblue;
+    border-radius: 50%;
+    width: 10%;
+    padding: 10px;
+    border: 1px solid white;
+    font-weight: bold;
+}
+.func::after{
+    content: "";
+    display: flex;
+    height: 4px;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+.func:hover::after{
+    transform: scaleX(1);
+}
+
+/*esto la muestra al pasar el raton*/
+.borderInput:hover::after {
+    /*se pone: "para hacer que salga de la izquierda"*/
+    transform: scaleX(1);
+}
+
+
+#resetButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+

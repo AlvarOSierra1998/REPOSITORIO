@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Chivalry</title>
 </head>
+
 <body>
-    
+    <header>
+        <img src="img/Daco_6106572.png" alt="logo" />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Web Oficial</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <section>
+            <h3>Sign In</h3>
+            <form  action="" method="post">
+                <input class="borderInput" type="text" name="User" id="users" placeholder="introduzca su usuario">
+                <input class="borderInput" type="password" name="pass" id="password" placeholder="introduzca su contraseña">
+                <input class="borderInput" type="email" name="mail" id="email" placeholder="introduzca su email">
+                <input onclick="enviar()" class="func" type="submit" value="Enviar">
+                <input class="func"  type="reset" value="Restablecer datos">
+            </form>
+        </section>
+    </nav>
+    <main>
+        <section>
+            
+        </section>
+    </main>
+    <script>
+        function enviar(){
+            alert("Tus datos se han registrado");
+        }
+    </script>
 </body>
+
 </html>
