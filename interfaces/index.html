@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Chivalry</title>
+    <link rel="shortcut icon"
+        href="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png">
+    <title> Chivalry II</title>
 </head>
 
 <body>
@@ -14,28 +16,43 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Web Oficial</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="https://chivalry2.com/" target="_blank">Web</a></li>
+            <li><a href="https://github.com/AlvarOSierra1998?tab=repositories" target="_blank">Contacto</a></li>
         </ul>
         <section>
-            <h3>Sign In</h3>
-            <form  action="" method="post">
-                <input class="borderInput" type="text" name="User" id="users" placeholder="introduzca su usuario">
-                <input class="borderInput" type="password" name="pass" id="password" placeholder="introduzca su contraseña">
-                <input class="borderInput" type="email" name="mail" id="email" placeholder="introduzca su email">
-                <input onclick="enviar()" class="func" type="submit" value="Enviar">
-                <input class="func"  type="reset" value="Restablecer datos">
-            </form>
+            <details>
+                <summary>
+                    Formualario de Registro
+                </summary>
+                <form action="/action_page.php" method="post">
+                    <input class="borderInput" type="text" name="User" id="users" placeholder="introduzca su usuario">
+                    <input class="borderInput" type="password" name="pass" id="password"
+                        placeholder="introduzca su contraseña">
+                    <input class="borderInput" type="email" name="mail" id="email" placeholder="introduzca su email">
+                    <input onclick="enviar()" class="func" type="submit" value="Enviar">
+                    <input class="func" type="reset" value="Restablecer datos">
+                </form>
+            </details>
         </section>
     </nav>
     <main>
-        <section>
-            
+        <section class="contenedor-chiv">
+            <div class="info-chiv-container">
+                <blockquote class="info-chiv-text">
+                    <a href="https://www.youtube.com/watch?v=ppuIsrn-fZ8&t=24s" target="_blank">
+                        <img id="chiv-lore" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
+                    </a>
+                    <p class="inner-info-chiv-text">En Chivalry hay muchas armas: armas de asta, de perforación, de golpe contundente.
+                        todas son mortiferas y letales, pero sin duda el unico arma de la cual el jugador debe de tener miedo es de la ira de un jugador al que le acaban de arrancar los brazos
+                        esto se debe a que sin poder usar armas por carencia de manos, usara su propia cabeza persiguiendo a su adversario hasta darle muerte
+                    </p>
+                </blockquote>
+            </div>
         </section>
     </main>
     <script>
-        function enviar(){
+        function enviar() {
             alert("Tus datos se han registrado");
         }
     </script>
