@@ -16,6 +16,7 @@ function mostrar() {
      for (var i = 0; i < mostrar.length; i++) {
         mostrar[i].style.display = "flex";
     }
+    ocultar2();
 }
 
 function ocultar() {
@@ -30,6 +31,7 @@ function mostrar2() {
      for (var i = 0; i < mostrar.length; i++) {
         mostrar[i].style.display = "flex";
     }
+    ocultar();
 }
 
 function ocultar2() {
@@ -38,3 +40,4 @@ function ocultar2() {
         oculto[i].style.display = "none";
     }
 }
+
