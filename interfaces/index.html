@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon"
-        href="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png">
+    <link rel="shortcut icon" href="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png">
     <title> Chivalry II</title>
 </head>
 
@@ -14,7 +13,11 @@
     <header>
         <img src="img/Daco_6106572.png" alt="logo" />
     </header>
-    <nav>
+    <!--ANTES
+
+
+
+<nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="https://chivalry2.com/" target="_blank">Web</a></li>
@@ -51,11 +54,97 @@
             </div>
         </section>
     </main>
+
+
+
+
+
+    -->
+
+    <!--DEPUES-->
+    <nav>
+            <button class="lista" onclick="mostrar()" ondblclick="ocultar()">Sign In</button>
+            <button class="lista" onclick="mostrar2()" ondblclick="ocultar2()">Log In</button>
+    </nav>
+    <main>
+       
+            <section class="contenedor">
+                <form action="/action_page.php" method="post">
+                    <div>
+                        <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
+                        <h2 class="tituloForm">Sign Up</h2>
+                    </div>
+                    <div class="user">
+                        <span class="icono">
+
+                            <ion-icon name="person-circle-outline"></ion-icon></span>
+                        </span>
+                        <input class="borderInput" type="text" name="User" id="users" required
+                            placeholder="introduzca su usuario">
+                    </div>
+                    <div>
+                        <span class="icono">
+                            <ion-icon name="lock-closed-outline"></ion-icon></span>
+                        </span>
+                        <input class="borderInput" type="password" name="pass" id="password" required
+                            placeholder="introduzca su contraseña">
+                    </div>
+                    <div>
+                        <span class="icono">
+                            <ion-icon name="mail-outline"></ion-icon></span>
+                        </span>
+                        <input class="borderInput" type="email" name="mail" id="email"
+                            placeholder="introduzca su email">
+                    </div>
+                    <input onclick="enviar()" class="func" type="submit" value="Enviar">
+                    <input class="func" type="reset" value="Restablecer datos">
+                </form>
+        </section>
+
+
+
+
+        <section class="contenedor-login">
+            <form class="form-Log" action="/action_page.php" method="post">
+                <div>
+                    <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
+                    <h2 class="tituloForm">Log In</h2>
+                </div>
+                <div class="user">
+                    <span class="icono">
+
+                        <ion-icon name="person-circle-outline"></ion-icon></span>
+                    </span>
+                    <input class="borderInput" type="text" name="User" id="users" required
+                        placeholder="introduzca su usuario">
+                </div>
+                <div>
+                    <span class="icono">
+                        <ion-icon name="lock-closed-outline"></ion-icon></span>
+                    </span>
+                    <input class="borderInput" type="password" name="pass" id="password" required
+                        placeholder="introduzca su contraseña">
+                </div>
+                <input onclick="enviar()" class="func" type="submit" value="Entrar">
+            <a href="">
+                <span class="noRegister">No estas registrado?</span> 
+            </a> 
+            
+                
+            </form>
+    </section>
+     
+       
+    </main>
+
     <script>
         function enviar() {
             alert("Tus datos se han registrado");
         }
     </script>
+    <script src="js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
