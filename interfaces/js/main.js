@@ -10,12 +10,14 @@
     }
 }*/
 
-
+//registro
 function mostrar() {
     var mostrar = document.getElementsByClassName("contenedor");
+    /*var blur = document.getElementById("blur");*/
      for (var i = 0; i < mostrar.length; i++) {
         mostrar[i].style.display = "flex";
     }
+
     ocultar2();
 }
 
@@ -25,7 +27,7 @@ function ocultar() {
         oculto[i].style.display = "none";
     }
 }
-
+//login
 function mostrar2() {
     var mostrar = document.getElementsByClassName("contenedor-login");
      for (var i = 0; i < mostrar.length; i++) {

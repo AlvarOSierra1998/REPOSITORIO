@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <img src="img/Daco_6106572.png" alt="logo" />
+        <img id="blur" src="img/Daco_6106572.png" alt="logo" />
     </header>
     <!--ANTES
 
@@ -62,43 +62,42 @@
     -->
 
     <!--DEPUES-->
-    <nav>
-            <button class="lista" onclick="mostrar()" ondblclick="ocultar()">Sign In</button>
-            <button class="lista" onclick="mostrar2()" ondblclick="ocultar2()">Log In</button>
+    <nav id="blur">
+        <button class="lista" onclick="mostrar()" ondblclick="ocultar()">Sign In</button>
+        <button class="lista" onclick="mostrar2()" ondblclick="ocultar2()">Log In</button>
     </nav>
     <main>
-       
-            <section class="contenedor">
-                <form action="/action_page.php" method="post">
-                    <div>
-                        <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
-                        <h2 class="tituloForm">Sign Up</h2>
-                    </div>
-                    <div class="user">
-                        <span class="icono">
 
-                            <ion-icon name="person-circle-outline"></ion-icon></span>
-                        </span>
-                        <input class="borderInput" type="text" name="User" id="users" required
-                            placeholder="introduzca su usuario">
-                    </div>
-                    <div>
-                        <span class="icono">
-                            <ion-icon name="lock-closed-outline"></ion-icon></span>
-                        </span>
-                        <input class="borderInput" type="password" name="pass" id="password" required
-                            placeholder="introduzca su contraseña">
-                    </div>
-                    <div>
-                        <span class="icono">
-                            <ion-icon name="mail-outline"></ion-icon></span>
-                        </span>
-                        <input class="borderInput" type="email" name="mail" id="email"
-                            placeholder="introduzca su email">
-                    </div>
-                    <input onclick="enviar()" class="func" type="submit" value="Enviar">
-                    <input class="func" type="reset" value="Restablecer datos">
-                </form>
+        <section class="contenedor">
+            <form class="Form-Regis" action="/action_page.php" method="post">
+                <div>
+                    <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
+                    <h2 class="tituloForm">Sign Up</h2>
+                </div>
+                <div class="user">
+                    <span class="icono">
+
+                        <ion-icon name="person-circle-outline"></ion-icon></span>
+                    </span>
+                    <input class="borderInput" type="text" name="User" id="users" required
+                        placeholder="introduzca su usuario">
+                </div>
+                <div>
+                    <span class="icono">
+                        <ion-icon name="lock-closed-outline"></ion-icon></span>
+                    </span>
+                    <input class="borderInput" type="password" name="pass" id="password" required
+                        placeholder="introduzca su contraseña">
+                </div>
+                <div>
+                    <span class="icono">
+                        <ion-icon name="mail-outline"></ion-icon></span>
+                    </span>
+                    <input class="borderInput" type="email" name="mail" id="email" placeholder="introduzca su email">
+                </div>
+                <input onclick="enviar()" class="func" type="submit" value="Enviar">
+                <input class="func" type="reset" value="Restablecer datos">
+            </form>
         </section>
 
 
@@ -125,22 +124,40 @@
                     <input class="borderInput" type="password" name="pass" id="password" required
                         placeholder="introduzca su contraseña">
                 </div>
-                <input onclick="enviar()" class="func" type="submit" value="Entrar">
-            <a href="">
-                <span class="noRegister">No estas registrado?</span> 
-            </a> 
-            
-                
+                <input onclick="enviar()" class="InnerLog" type="submit" value="Entrar">
+
+                <a href="">
+                    <span id="vacio" onclick="registar()" class="noRegister">No estas registrado?</span>
+                </a>
+                <h6 class="seccionesTitulo">Secciones</h6>
+                <div class="contenedorSeccionInfo">
+                    <a href="pags/info.html" target="_blank">
+
+                        <span class="seccionInfo">Información</span>
+                    </a>
+                    <a href="#">
+
+                        <span class="seccionInfo">Imagenes</span>
+                    </a>
+                    <a href="#">
+
+                        <span class="seccionInfo">Clases</span>
+                    </a>
+
+                </div>
             </form>
-    </section>
-     
-       
+        </section>
+        
+
+
     </main>
 
     <script>
         function enviar() {
             alert("Tus datos se han registrado");
+
         }
+
     </script>
     <script src="js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

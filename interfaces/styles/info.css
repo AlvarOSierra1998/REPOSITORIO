@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'chiv';
+    src: url(../fonts/OldeEnglish.ttf);
+}
+
+body {
+    background-image: url(../img/fondoinfo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header>h1 {
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'chiv';
+    font-size: 3rem;
+}
+
+button {
+    padding: 10px;
+    width: 5%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: wheat;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: wheat;
+    color: black;
+    transition: .5s;
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
+.seccionInfor{
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 12px;
+    font-size: 3rem;
+    width: 90%;
+}
+.iconos{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    border-radius: 20%;
+    
+}
+.iconos:hover{
+}

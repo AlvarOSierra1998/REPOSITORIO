@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     z-index: 1;
     background-color: gray;
+
 }
 
 header>img {
@@ -14,13 +15,38 @@ header>img {
     margin: auto;
 
 }
-.form-Log{
-   background-image: url(../img/fondo\ login.jpeg);
+
+.form-Log {
+    background-image: url(../img/fondo\ login.jpeg);
     width: 70rem;
     height: 40rem;
     background-repeat: no-repeat;
     font-size: 40px;
-    color: black ;
+    color: rgb(253, 251, 251);
+}
+
+.InnerLog {
+    background: transparent;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+
+    width: 20%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid yellow;
+}
+
+.InnerLog:hover {
+    background-color: yellow;
+    color: #000000;
+    transition: .5s;
+    border-radius: 10PX;
+
 }
 
 a {
@@ -28,7 +54,7 @@ a {
     display: flex;
     justify-content: flex-start;
     color: wheat;
-    
+
 
 }
 
@@ -72,9 +98,10 @@ li:hover {
     margin: auto;
 
 }
-.contenedor-login{
+
+.contenedor-login {
     display: none;
-} 
+}
 
 .lista {
     position: relative;
@@ -86,13 +113,15 @@ li:hover {
     transition: .5s;
     cursor: pointer;
 }
-.lista:hover{
+
+.lista:hover {
     color: orange;
     background-color: #000000;
     padding: 10px;
     border-radius: 10%;
 }
-button{
+
+button {
     background: transparent;
     border: none;
 }
@@ -193,12 +222,65 @@ main {
     align-items: center;
     justify-content: center;
 }
-.noRegister{
+
+.noRegister {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: -19px;
+    top: -52px;
+    width: 20%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.noRegister:hover {
+    background-color: #000000;
+    color: yellow;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.contenedorSeccionInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     margin: auto;
 }
+
+.seccionesTitulo {
+    background: transparent;
+    border-bottom: 1px solid yellow;
+    padding: 10px;
+    width: 10%;
+
+}
+
+.seccionInfo {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -25px 10px 300px -300px;
+    background-color: #0000009c;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+.seccionInfo:hover{
+    background-color: yellow;
+    transition: .5s;
+    color: #000000;
+
+}
+
+
+/*scrolling*/
+
+
+
 
 nav>ul {
     text-align: center;
@@ -218,6 +300,10 @@ nav>ul {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/*btotones*/
+
+
+
 form {
     background-color: #000000cc;
     padding: 50px;
@@ -225,6 +311,16 @@ form {
     border: 2px solid black;
     box-shadow: 10px 10px 100px black;
     color: orange;
+}
+
+.Form-Regis {
+    background-color: #000000cc;
+    padding: 100px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 100px black;
+    color: orange;
+
 }
 
 form>input {
@@ -319,7 +415,7 @@ input {
     justify-content: center;
 }*/
 
-.contenedor{
+.contenedor {
     display: none;
 }
 
@@ -360,8 +456,3 @@ input {
     align-items: center;
     margin: auto;
 }
-
-
-
-
-
