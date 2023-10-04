@@ -6,14 +6,73 @@
 body {
     background-image: url(../img/fondoinfo.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+html {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
 }
 
 header>h1 {
     color: antiquewhite;
     text-align: center;
     font-family: 'chiv';
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.section--dos {
+    color: beige;
+    position: relative;
+    top: 820px;
+
+
+}
+
+.contenido--dos {
+    width: 25%;
+    padding: 10px;
+
+}
+
+.section--dos {
+    color: beige;
+    position: relative;
+    top: 820px;
+
+
+}
+
+.contenido--tres {
+    width: auto;
+    padding: 10px;
+    font-size: 3rem ;
+}
+
+
+.imagenes{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.imagenes:hover{
+    transition: .5s;
+    transform: scale(1.07);
+
 }
 
 button {
@@ -25,6 +84,7 @@ button {
     color: wheat;
     cursor: pointer;
     font-size: 1em;
+    margin-left: 110px;
 }
 
 button:hover {
@@ -33,25 +93,45 @@ button:hover {
     transition: .5s;
     border: 1px solid black;
     border-radius: 10px;
-    transform: scale(1.2);
 }
-.seccionInfor{
+
+.seccionInfor {
     color: wheat;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto 12px;
     font-size: 3rem;
-    width: 90%;
+    width: 95%;
 }
-.iconos{
-    width: 20%;
+
+.iconos {
+    width: 6%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-left: 30px;
+    margin-left: 70px;
     border-radius: 20%;
-    
+    cursor: pointer;
+    position: absolute;
+    top: 24%;
 }
 
+.titulo {
+    font-family: 'chiv';
+    letter-spacing: 7px;
+    font-size: 4rem;
+}
 
+.iconos:hover {
+    transform: translate(0px, 70%);
+    transition: .5s;
+}
+
+.iconosDetras {
+    position: relative;
+    left:50px;
+    top: -72px;
+    z-index: -1;
+    margin: 20px;
+}
