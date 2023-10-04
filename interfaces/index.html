@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
     <title> Chivalry II</title>
 </head>
 
@@ -68,8 +71,9 @@
     </nav>
     <main>
 
-        <section class="contenedor">
+        <section id="cerrarRegistro" class="contenedor">
             <form class="Form-Regis" action="/action_page.php" method="post">
+                <span class="close" onclick="cerrarRegistro()">x</span>
                 <div>
                     <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
                     <h2 class="tituloForm">Sign Up</h2>
@@ -101,10 +105,10 @@
         </section>
 
 
-
-
-        <section class="contenedor-login">
+        <section id="cerrar" class="contenedor-login">
             <form class="form-Log" action="/action_page.php" method="post">
+                <span class="close" onclick="cerraranuncio()">x</span>
+                
                 <div>
                     <img class="foto_form" src="img/dembw48-ff5fc7ce-2f18-4c0f-a76a-17bafd721aee.png" alt="">
                     <h2 class="tituloForm">Log In</h2>
