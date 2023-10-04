@@ -54,11 +54,11 @@ header>h1 {
 .contenido--tres {
     width: auto;
     padding: 10px;
-    font-size: 3rem ;
+    font-size: 3rem;
 }
 
 
-.imagenes{
+.imagenes {
     width: 25%;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ header>h1 {
     cursor: pointer;
 }
 
-.imagenes:hover{
+.imagenes:hover {
     transition: .5s;
     transform: scale(1.07);
 
@@ -130,8 +130,29 @@ button:hover {
 
 .iconosDetras {
     position: relative;
-    left:50px;
+    left: 50px;
     top: -72px;
     z-index: -1;
     margin: 20px;
+}
+
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: FadeIn;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+    /* don't forget to set a duration! */
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
