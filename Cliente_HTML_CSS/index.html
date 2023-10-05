@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicios</h1>
+    </header>
+    <main>
+        <!--EJERCICIO1-->
+        <section>
+            <button id="boton1" onclick="mostrarUlr()">url</button>
+            <span id="texto"></span>
+            <button id="pasar" onclick="mostrarUlrI()">urlI</button>
+            <span id="diferente"></span>
+        </section>
+        <!-------------------->
+        <!--EJERCICIO2-->
+        <section>
+            <table id="tabla" id="alienacion"
+                style=" border: 1px solid black;  width: 300px; height: 300px; text-align: center; margin: auto;">
+                <tr style=" border: 1px solid black;">
+                    <td style=" border: 1px solid black;">Ariel</td>
+                    <td style=" border: 1px solid black;">Takeli</td>
+                    <td style=" border: 1px solid black;">David</td>
+                    <td style=" border: 1px solid black;">Jorge</td>
+                </tr>
+                <tr style=" border: 1px solid black;">
+                    <td style=" border: 1px solid black;">Miguel</td>
+                    <td style=" border: 1px solid black;">Pablo</td>
+                    <td style=" border: 1px solid black;">Fernado</td>
+                    <td style=" border: 1px solid black;">Bea</td>
+                </tr>
+                <tr style=" border: 1px solid black;">
+                    <td style=" border: 1px solid black;">Cifuentes</td>
+                    <td style=" border: 1px solid black;">Alvaro</td>
+                    <td style=" border: 1px solid black;">Manu</td>
+                    <td style=" border: 1px solid black;">Jorge</td>
+                </tr>
+                <trstyle=" border: 1px solid black;">
+                    <td style=" border: 1px solid black;">Ivan</td>
+                    <td style=" border: 1px solid black;">Arostegui</td>
+                    <td style=" border: 1px solid black;">Yusef</td>
+                    <td style=" border: 1px solid black;">Caba</td>
+                    </tr>
+                    
+            </table>
+            <button id="boton" onclick="valores()">Cambio Ancho y alto</button>
+                        <p>Este seria el valor actual del borde de la tabla:
+                            <span id="borderWidth">1px</span>
+                        </p>
+
+                        <button onclick="cambiarBorde()">Cambiar Borde</button>
+                    
+                    <input type="text" id="nuevoBorde" placeholder="Nuevo borde (px)">
+                    <button onclick="alineacion()">Alineacion</button>
+        </section>
+        <!--EJERCICIO3-->
+        <div>
+            <p><span id="nuevoNumero">0</span></p>
+        </div>
+        <button onclick="sumar1">Sumar</button>
+        <button onclick="restar1">Restar</button>
+    </main>
+    <script src="js/ejercicio1.js"></script>
+    <script src="js/ejercicio2.js"></script>
+    <script src="js/ejercicio3.js"></script>
+
+</body>
+
+</html>
