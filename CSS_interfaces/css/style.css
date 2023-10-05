@@ -27,12 +27,39 @@ span {
     padding: 20px;
 }
 
-.fotos{
+.fotos {
     width: 15%;
-    height: 10%;
-
 
 }
+
+.fondoHeader {
+    display: block;
+    position: absolute;
+    width: 38.7%;
+    z-index: -1;
+    left: 0%;
+    border-radius: 1%;
+    filter: opacity(0.3);
+    -webkit-box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+    -moz-box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+    box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+
+}
+
+.grif {
+    display: none;
+    position: absolute;
+    width: 28.9%;
+    left: 70%;
+    z-index: -1;
+    border-radius: 1%;
+    filter: opacity(0.3);
+    -webkit-box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+    -moz-box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+    box-shadow: inset -1px -25px 90px 100px rgba(0, 0, 0, 0.94);
+}
+
+
 
 .titulo {
     width: 50%;
@@ -93,14 +120,16 @@ footer {
     cursor: pointer;
     transition: .5s;
 }
-blockquote{
+
+blockquote {
     color: wheat;
     width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 /*BOTON*/
 
 .btn41-43 {

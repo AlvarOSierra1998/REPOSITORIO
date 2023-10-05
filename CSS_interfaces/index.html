@@ -10,7 +10,9 @@
 
 <body>
     <header>
-        <img class="titulo" src="img/pngegg(3).png" alt="">
+        <img id="fadeIn" onmouseover="fadeIn()" class="fondoHeader" src="img/berserk-guts.gif" alt="gif">
+        <img class="grif" src="img/grif.gif" alt="gif">
+        <img class="titulo" src="img/pngegg(3).png" alt="titulo">
     </header>
     <nav>
 
@@ -30,10 +32,10 @@
                 </section>
             </div>
 
-            <div class="seccionFondo  fotos">
+            <div class="seccionFondo fotos">
                 <section class="seccion2">
                     <span>Griffith</span>
-                    <img class="bordes" src="img/Griffith_sin_sentimientos.webp" alt="">
+                    <img class="bordes " src="img/Griffith_sin_sentimientos.webp" alt="">
                     <a href="" class="btn41-43 btn-41" onclick="precio2()">
                         Precio
                     </a>
@@ -43,7 +45,7 @@
             <div class="seccionFondo fotos">
                 <section class="seccion3">
                     <span>Kaska</span>
-                    <img class="bordes" src="img/Casca_en_la_hoguera.webp" alt="">
+                    <img class="bordes" src="img/kaska.jpg" alt="">
                     <a href="" class="btn41-43 btn-41" onclick="precio3()">
                         Precio
                     </a>
@@ -102,6 +104,12 @@
         }
         function precio4() {
             alert("15 $")
+        }
+        function fadeIn(){
+            var fadIn = document.getElementById("fadeIn");
+            fadIn.style.display = "block";
+            
+            
         }
 
     </script>
