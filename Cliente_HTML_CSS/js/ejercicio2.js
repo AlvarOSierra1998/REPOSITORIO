@@ -22,8 +22,14 @@ function cambiarBorde() {
     document.getElementById("borderWidth").textContent = nuevoBorde + "px";
 }
 
-function alineacion(){
-    var alineacion = document.getElementById("alineacion");
-    alineacion.style.position=  "float: left";
-
+function alinear(){
+    var tabla = document.getElementById("tabla");
+    var posicionTabla = window.getComputedStyle(tabla).getPropertyValue("float");
+    if(posicionTabla ==="none"){
+            tabla.style.float = "right";
+}else if(posicionTabla ==="right"){
+    tabla.style.float = "left";
+}else{
+    tabla.style.float = "none";
+}
 }

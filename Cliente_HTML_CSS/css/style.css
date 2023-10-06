@@ -1,2 +1,10 @@
+.galeria{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 10%;
+    margin: 0 auto;
 
+}
 

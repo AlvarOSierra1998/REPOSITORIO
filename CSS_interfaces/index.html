@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>BERSERK</title>
 </head>
 
 <body>
     <header>
-        <img id="fadeIn" onmouseover="fadeIn()" class="fondoHeader" src="img/berserk-guts.gif" alt="gif">
-        <img class="grif" src="img/grif.gif" alt="gif">
+        <!--FONDOGIF-->
+        <img class="fondoHeader" src="img/steamuserimages-a.akamaihd.gif" alt="gif">
+
         <img class="titulo" src="img/pngegg(3).png" alt="titulo">
     </header>
     <nav>
@@ -20,49 +21,97 @@
     <main>
 
         <div class="container">
-            <div class="seccionFondo fotos">
-                <section class="seccion1">
+            <div class="seccionFondo">
+                <section class="seccion1" onclick="fotos()">
                     <span>Gattsu Dark</span>
-                    <img class="bordes" src="img/Guts_halc n.webp" alt="1">
+                    <img onclick="info()" class="bordes" src="img/Guts_halc n.webp" alt="1">
                     <a href="" class="btn41-43 btn-41" onclick="precio1()">
                         Precio
                     </a>
-                    
-                    
+
+
                 </section>
             </div>
 
-            <div class="seccionFondo fotos">
-                <section class="seccion2">
+            <!--INFO-->
+            <div class="info">
+                <blockquote class="info--inner">
+                    <p>
+                        Guts (ガッツ Gattsu?), conocido por su epíteto del "espadachín negro" ("kuroi kenshi", "guerrero
+                        negro" en traducciones en español), es el protagonista del manga y anime Berserk. Es un antiguo
+                        mercenario marcado que viaja por el mundo en una lucha interna constante entre perseguir su
+                        venganza y proteger a sus seres queridos.
+                    </p>
+                </blockquote>
+            </div>
+
+            <div class="seccionFondo">
+                <section class="seccion2" onclick="fotos()">
+
                     <span>Griffith</span>
-                    <img class="bordes " src="img/Griffith_sin_sentimientos.webp" alt="">
+                    <img class="bordes " onclick="info()" src="img/Griffith_sin_sentimientos.webp" alt="">
                     <a href="" class="btn41-43 btn-41" onclick="precio2()">
                         Precio
                     </a>
                 </section>
             </div>
 
-            <div class="seccionFondo fotos">
-                <section class="seccion3">
+            <div class="info">
+                <blockquote class="info--inner">
+                    <p>
+                        Griffith (グリフィス Gurifisu?) es uno de los personajes principales y el principal antagonista del
+                        manga Berserk. Es un personaje de apariencia pulcra y andrógina que antiguamente era el líder de
+                        la Banda del Halcón, la banda de mercenarios a la que pertenecía Guts.
+                    </p>
+                </blockquote>
+            </div>
+
+
+            <div class="seccionFondo">
+                <section class="seccion3" onclick="fotos()">
+
                     <span>Kaska</span>
-                    <img class="bordes" src="img/kaska.jpg" alt="">
+                    <img class="bordes" onclick="info()" src="img/kaska.jpg" alt="">
                     <a href="" class="btn41-43 btn-41" onclick="precio3()">
                         Precio
                     </a>
                 </section>
             </div>
 
-            <div class="seccionFondo fotos">
-                <section class="seccion4">
+            <div class="info">
+                <blockquote class="info--inner">
+                    <p>
+                        Casca (キャスカ Kyasuka?) es un personaje principal de Berserk. Fue el único miembro femenino en la
+                        Banda del Halcón. Juega un papel primordial en la búsqueda de Guts por matar a todos los
+                        apóstoles y los Mano de Dios.
+                    </p>
+                </blockquote>
+            </div>
+
+            <div class="seccionFondo">
+                <section class="seccion4" onclick="fotos()">
+
                     <span>Zodd</span>
-                    <img class="bordes" src="img/Zodd_.webp" alt="">
+                    <img class="bordes" onclick="info()" src="img/Zodd_.webp" alt="">
                     <a href="" class="btn41-43 btn-41" onclick="precio4()">
                         Precio
                     </a>
                 </section>
             </div>
+            <div class="info">
+                <blockquote class="info--inner">
+                    <p>
+                        Nosferatu Zodd (不死のゾッド Nosuferatu Zoddo?) es un apóstol que, según se ha contado durante
+                        décadas, reaparece una vez más tras cada batalla en la que ha muerto. Esto le hizo ganar el
+                        epíteto de "Nosferatu". No lo hace por sadismo, sino por la satisfacción de encontrar un
+                        desafío, lo que le lleva a respetar profundamente a quienes logran sobrevivir a un
+                        enfrentamiento contra él.
+                    </p>
+                </blockquote>
+            </div>
 
         </div>
+
     </main>
     <hr>
 
@@ -70,21 +119,21 @@
         <div>
             <H5>
                 <b>
-                    Alvaro Olmos Sierra
+                    Álvaro Olmos Sierra
+                </b>
             </H5>
-            </b>
             <a href="">
-                <button>
+                <button class="btn41-43 btn-41" >
                     Informacion
                 </button>
             </a>
             <a href="">
-                <button>
+                <button class="btn41-43 btn-41"  >
                     Contacto
                 </button>
             </a>
             <a href="">
-                <button>
+                <button class="btn41-43 btn-41"  >
                     Manga
                 </button>
             </a>
@@ -105,12 +154,23 @@
         function precio4() {
             alert("15 $")
         }
-        function fadeIn(){
-            var fadIn = document.getElementById("fadeIn");
-            fadIn.style.display = "block";
-            
-            
+
+        function fotos() {
+            var fotos = document.querySelectorAll(".container");
+            for (var i = 0; i < fotos.length; i++) {
+                fotos[i].style.display = "block"
+                fotos[i].style.width = "30%";
+                fotos[i].style.marginLeft = "37%";
+            }
+
         }
+        function info() {
+            let info = document.querySelectorAll(".info");
+            for (var i = 0; i < info.length; i++) {
+                info[i].style.display = "block";
+            }
+        }
+        
 
     </script>
 

@@ -1,12 +1,13 @@
-/*function sumar(){
-    var nuevoNumero=0
-    var sumar1
-var sumar1 = nuevoNumero + 1;
+function sumar(){
+    let suma = document.getElementById("nuevoNumero");
+    let cogerSuma = parseInt(suma.textContent);
+    cogerSuma++;
+    suma.textContent = cogerSuma;
 
 }
-
 function restar(){
-var  = nuevoNumero - 1;
-
-
-}*/
+    let restar = document.getElementById("nuevoNumero");
+    let cogerResta = parseInt(restar.textContent);
+    cogerResta--;
+    restar.textContent = cogerResta;
+}
