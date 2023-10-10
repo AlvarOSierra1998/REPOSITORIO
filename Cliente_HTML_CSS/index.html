@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
-<body>
+<body id="Cambiar">
     <header>
         <h1>Ejercicios</h1>
     </header>
@@ -69,30 +70,157 @@
         <button onclick="restar()">Restar</button>
 
         <!--EJERCICIO4-->
-        <!------- 
-            Crea una galería de fotos (al menos 5 fotos) que posea un botón para avanzar y otro para
-            retroceder.
-             El botón para avanzar hará que se muestre la siguiente foto cada vez que se pulse. Si se
-            llega al final de la lista de imágenes, el botón deja de funcionar.
-             El botón para retroceder hará que se muestre la foto anterior cada vez que se pulse. Si
-            se llega al principio de la lista de imágenes, el botón deja de funcionar.
-            b) Mejorar el ejercicio haciendo que el botón correspondiente se deshabilite cuando se
-            alcanza el final/principio de la lista de fotos
-            
-            
-            -------->
         <section>
             <div class="galeria">
                 <button id="atras" onclick="atras()"> <- </button>
-                <img class="galeria" id="imagen" src="./img/corpetit.jpg">
-                <button id="delante" onclick="delante()"> -> </button>
+                        <img class="galeria" id="imagen" src="./img/corpetit.jpg">
+                        <button id="delante" onclick="delante()"> -> </button>
             </div>
+        </section>
+
+        <!--ejercicio5-->
+        <section>
+            <p class="uno" id="color" onclick="cambiarColor()">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Et fugit, quod dolorem impedit sit quidem
+                atque, eaque fugiat numquam quo voluptatum libero doloribus error repudiandae at aperiam! Veniam, sed
+                repellat.</p>
+        </section>
+
+        <!--EJERCICIO6-->
+        <section class="seccionCambia">
+            <button value="rojo" onclick="CambiarColor()" style="background-color: red; color: white;">Cambiar
+                Rojo</button>
+            <button value="Azul" onclick="CambiarColor2()" style="background-color: blue; color: white;">Cambiar
+                Azul</button>
+            <button value="Verde" onclick="CambiarColor3()" style="background-color: green; color: white;">Cambiar
+                Verde</button>
+            <button value="Amarillo" onclick="CambiarColor4()" style="background-color: yellow; color: black;">Cambiar
+                Amarillo</button>
+            <button value="Blanco" onclick="CambiarColor5()" style="background-color: lightgrey; color: black;">Cambiar
+                Preterminado</button>
+        </section>
+        <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!--CSS-->
+        <!--EJERCICIO9 REVISAR-->
+        <section>
+            <p  id="color2" onclick="cambiarColor2()">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Et fugit, quod dolorem impedit sit quidem
+                atque, eaque fugiat numquam quo voluptatum libero doloribus error repudiandae at aperiam! Veniam, sed
+                repellat.</p>
+        </section>
+
+        <!--EJERCICIO 10-->
+        <section>
+            <div class="unoD">div1</div>
+            <div class="dosD">div2</div>
+            <div class="tresD">div3</div>
+        </section>
+
+        <!--EJERCICIO 11-->
+        <section>
+            <div class="div1">Soy el div 1</div>
+            <div class="div2 div2-disp">Soy el div 2</div>
+            <div class="div3">Soy el div 3</div>
+        </section>
+
+        <!--EJERCICIO12-->
+        
+        <section>
+            <div class="absolute">
+                <img id="foto" src="https://w0.peakpx.com/wallpaper/221/949/HD-wallpaper-bob-esponja-mafioso-bob-esponja-gangster-mafioso-meme-thumbnail.jpg" alt="">
+                <button class="buttons" onclick="derecha()">Derecha</button>
+                <button class="buttons" onclick="izquierda()">Izquierda</button>
+                <button class="buttons" onclick="resetear()">Resetear</button>
+            </div>
+        </section>
+        
+        <!--EJERCICIO 13-->
+        <section>
+            <span class="spoilerBoton" onclick="toggleSpoiler(this)">Pincha aqui</span>
+            <span class="spoiler">Sorpresa</span>
+        </section>
+        <!--EJERCICIO 14-->
+        <section>
+
+            <details class="bloque1" >
+                <summary onclick="cambiar()">Inicio</summary>
+                <ul>
+                    <ul>
+                        <li>Portada</li>
+                        <li>Acerca de mi</li>
+                        <li>Mis Fotos</li>
+                    </ul>
+                </ul>
+            </details>
+
+            <details class="bloque2">
+                <summary>Proyectos</summary>
+                <ul>
+                    <ul>
+                        <li>Web Apps</li>
+                        <li>Mobile Apps</li>
+                        <li>Juegos</li>
+                    </ul>
+                </ul>
+            </details>
+
+            <details class="bloque3">
+                <summary>Portafolio</summary>
+                <ul>
+                    <ul>
+                        <li>Páginas Web</li>
+                        <li>Software</li>
+                    </ul>
+                </ul>
+            </details>
+
+
+            <details class="bloque4">
+                <summary>Contacto</summary>
+            </details>
+
+
+        </section>
+
+        <hr>
+        <!--EJERCICIO 15-->
+        <section>
+            <ul class="menu">
+                <li class="componentes">Indice
+                    <ul class="submenu">
+                        <li>Portada</li>
+                        <li>Acerca de mi</li>
+                        <li>Mis fotos</li>
+                    </ul>
+                </li>
+                <li class="componentes">Proyectos
+                    <ul class="submenu">
+                        <li>Webs Apps</li>
+                        <li>Mobile Apps</li>
+                        <li>Juegos</li>
+                    </ul>
+                </li>
+                <li class="componentes">Portafolio
+                    <ul class="submenu">
+                        <li>Paginas Webs</li>
+                        <li>Software</li>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </main>
     <script src="js/ejercicio1.js"></script>
     <script src="js/ejercicio2.js"></script>
     <script src="js/ejercicio3.js"></script>
     <script src="js/ejercicio4.js"></script>
+    <script src="js/ejercicio5.js"></script>
+    <script src="js/ejercicio6.js"></script>
+    <!--CSS-->
+    <script src="js/ejercicio9.js"></script>
+    <script src="js/ejercicio10.js"></script>
+    <script src="js/ejercicio11.js"></script>
+    <script src="js/ejercicio13.js"></script>
+    <script src="js/ejercicio14.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-.galeria{
+.galeria {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,3 +8,140 @@
 
 }
 
+
+.uno {
+    background-color: aqua;
+    border: 1px solid black;
+    width: 15%;
+    color: black;
+    font-size: 2em;
+}
+
+.dos {
+    background-color: rgb(255, 115, 0);
+    border: 3px solid rgb(255, 0, 0);
+    width: 15%;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+}
+
+.seccionCambia {
+    background-color: rgb(241, 241, 241);
+    width: 50%;
+    padding: 3rem;
+}
+
+/*EJERCICIO10*/
+.unoD {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 76);
+}
+
+.dosD {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+.tresD {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+
+/*EJERCICIO11*/
+
+.div1 {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 153, 0);
+}
+
+.div1:hover+.div2 {
+    visibility: visible;
+    background-color: aqua;
+}
+
+.div2-disp {
+    display: none;
+}
+
+.div1:hover+.div2-disp {
+    display: block;
+}
+
+.div2 {
+    width: 300px;
+    height: 100px;
+    visibility: hidden;
+
+}
+
+.div3 {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(221, 98, 115);
+}
+/*EJERCICIO12*/
+
+.absolute{
+    position: absolute;
+    margin: 18% 39%;
+}
+.buttons{
+display: block;
+}
+
+/*EJERCICIO13*/
+.spoiler {
+    display: none;
+}
+
+.spoilerBoton {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+/*EJERCICIO 14*/
+.bloque1{
+    display: block;
+}
+.bloque2{
+    display: block;
+}
+.bloque3{
+    display: block;
+}
+.bloque4{
+    display: block;
+}
+
+
+
+/*EJERCIO15*/
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.componentes {
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8eaa78;
+  padding: 10px;
+  border: 1px solid #0000007e;
+}
+
+.componentes:hover .submenu {
+  display: block;
+}
