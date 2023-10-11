@@ -88,6 +88,7 @@
 .absolute{
     position: absolute;
     margin: 18% 39%;
+    
 }
 .buttons{
 display: block;
@@ -105,13 +106,13 @@ display: block;
 }
 /*EJERCICIO 14*/
 .bloque1{
-    display: block;
+    display: none;
 }
 .bloque2{
-    display: block;
+    display: none;
 }
 .bloque3{
-    display: block;
+    display: none;
 }
 .bloque4{
     display: block;

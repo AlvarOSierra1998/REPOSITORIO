@@ -127,7 +127,7 @@
         
         <section>
             <div class="absolute">
-                <img id="foto" src="https://w0.peakpx.com/wallpaper/221/949/HD-wallpaper-bob-esponja-mafioso-bob-esponja-gangster-mafioso-meme-thumbnail.jpg" alt="">
+                <img  src="https://w0.peakpx.com/wallpaper/221/949/HD-wallpaper-bob-esponja-mafioso-bob-esponja-gangster-mafioso-meme-thumbnail.jpg" alt="">
                 <button class="buttons" onclick="derecha()">Derecha</button>
                 <button class="buttons" onclick="izquierda()">Izquierda</button>
                 <button class="buttons" onclick="resetear()">Resetear</button>
@@ -142,10 +142,10 @@
         <!--EJERCICIO 14-->
         <section>
 
-            <details class="bloque1" >
-                <summary onclick="cambiar()">Inicio</summary>
+            <details onclick="cerrarAbrir1()" >
+                <summary >Inicio</summary>
                 <ul>
-                    <ul>
+                    <ul class="bloque1">
                         <li>Portada</li>
                         <li>Acerca de mi</li>
                         <li>Mis Fotos</li>
@@ -153,10 +153,10 @@
                 </ul>
             </details>
 
-            <details class="bloque2">
+            <details onclick="cerrarAbrir2()">
                 <summary>Proyectos</summary>
                 <ul>
-                    <ul>
+                    <ul class="bloque2">
                         <li>Web Apps</li>
                         <li>Mobile Apps</li>
                         <li>Juegos</li>
@@ -164,10 +164,10 @@
                 </ul>
             </details>
 
-            <details class="bloque3">
+            <details onclick="cerrarAbrir3()" >
                 <summary>Portafolio</summary>
                 <ul>
-                    <ul>
+                    <ul class="bloque3">
                         <li>Páginas Web</li>
                         <li>Software</li>
                     </ul>
@@ -175,8 +175,8 @@
             </details>
 
 
-            <details class="bloque4">
-                <summary>Contacto</summary>
+            <details onclick="cerrarAbrir3()" >
+                <summary class="bloque4">Contacto</summary>
             </details>
 
 
@@ -219,6 +219,7 @@
     <script src="js/ejercicio9.js"></script>
     <script src="js/ejercicio10.js"></script>
     <script src="js/ejercicio11.js"></script>
+    <script src="js/ejercicio12.js"></script>
     <script src="js/ejercicio13.js"></script>
     <script src="js/ejercicio14.js"></script>
 

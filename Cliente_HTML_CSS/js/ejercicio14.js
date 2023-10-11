@@ -46,6 +46,75 @@
     }
 }*/
 
+/*
+function abrirCerrar1() {
+    let bloque1 = document.querySelectorAll(".bloque1");
+    let bloque2 = document.querySelectorAll(".bloque2");
+    let bloque3 = document.querySelectorAll(".bloque3");
+    let bloque4 = document.querySelectorAll(".bloque4");
+
+    // Itera a través de la colección y oculta los elementos
+    for (let i = 0; i < bloque1.length; i++) {
+        bloque1[i].style.display = 'block';
+        bloque2.style.display = 'none';
+        bloque3.stye.display = 'none';
+        bloque4.stye.display = 'none';
+    }
+
+}*/
+
+
+function cerrarAbrir1() {
+    let bloque2 = document.querySelectorAll(".bloque2")[0];
+
+    if (window.getComputedStyle(bloque2).display === 'none') {
+        let bloque1 = document.querySelectorAll(".bloque1")[0];
+        let bloque2 = document.querySelectorAll(".bloque2")[0];
+        let bloque3 = document.querySelectorAll(".bloque3")[0];
+        let bloque4 = document.querySelectorAll(".bloque4")[0];
+        bloque1.style.display = 'block';
+        bloque2.style.display = 'none';
+        bloque3.style.display = 'none';
+        bloque4.style.display = 'none';
+    }
+}
+
+function cerrarAbrir2() {
+    let bloque1 = document.querySelectorAll(".bloque1")[0];
+
+    if (window.getComputedStyle(bloque1).display === 'none') {
+        let bloque1 = document.querySelectorAll(".bloque1")[0];
+        let bloque2 = document.querySelectorAll(".bloque2")[0];
+        let bloque3 = document.querySelectorAll(".bloque3")[0];
+        let bloque4 = document.querySelectorAll(".bloque4")[0];
+        bloque2.style.display = 'block';
+        bloque1.style.display = 'none';
+        bloque3.style.display = 'none';
+        bloque4.style.display = 'none';
+    }
+}
+
+function cerrarAbrir3() {
+    let bloque3 = document.querySelectorAll(".bloque3")[0];
+
+    if (window.getComputedStyle(bloque3).display === 'none') {
+        let bloque1 = document.querySelectorAll(".bloque1")[0];
+        let bloque2 = document.querySelectorAll(".bloque2")[0];
+        let bloque3 = document.querySelectorAll(".bloque3")[0];
+        let bloque4 = document.querySelectorAll(".bloque4")[0];
+        bloque3.style.display = 'block';
+        bloque2.style.display = 'none';
+        bloque1.style.display = 'none';
+        bloque4.style.display = 'none';
+    }
+}
+
+
+
+
+
+
+
 
 
 
