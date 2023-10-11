@@ -64,6 +64,11 @@ function abrirCerrar1() {
 }*/
 
 
+
+/***
+ * 
+ * En este código, window.getComputedStyle(bloque2).display se utiliza para obtener el valor computado del estilo display del elemento "bloque2", lo que te permitirá verificar si está oculto correctamente, independientemente de cómo se haya definido el estilo.
+ */
 function cerrarAbrir1() {
     let bloque2 = document.querySelectorAll(".bloque2")[0];
 
