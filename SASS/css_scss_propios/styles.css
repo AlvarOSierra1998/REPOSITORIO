@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "soul";
+  src: url(../font/OptimusPrinceps.ttf);
+}
+body {
+  background-color: rgb(26, 25, 25);
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #c42828;
+  font-size: 10em;
+  font-family: "soul";
+}
+
+ul li:hover {
+  color: #c42828;
+  background-color: rgb(71, 71, 71);
+  border-radius: 10%;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,44 @@
+
+
+@font-face {
+    font-family: 'soul';
+    src: url(../font/OptimusPrinceps.ttf);
+}
+$colorLetra: #c42828;
+$colorBody: rgb(26, 25, 25);
+$sizesLetra: 10em;
+$familia: "Helvetica Neue", "Helvetica";
+$thTablas: white;
+$borderRadius: 20%;
+$letra: 'soul';
+$LinkHover-bg: rgb(71, 71, 71);
+$link-letra: rgb(255, 255, 255);
+$btn-color: rgb(66, 66, 66);
+$border-radius: 10%;
+
+
+
+
+body{
+    background-color: $colorBody;
+    overflow-x: hidden ;
+}
+
+h1{
+    color: $colorLetra;
+    font-size: $sizesLetra;
+    font-family: $letra;
+}
+
+ul{
+    li{
+        &:hover{
+            color: $colorLetra;
+            background-color: $LinkHover-bg;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+
+
