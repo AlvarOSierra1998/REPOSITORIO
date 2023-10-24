@@ -131,7 +131,9 @@ Ejemplos:
 [1, 2, 3, 3] y [3, 2, 1, 4, 5, 4]) ==> [4,5]
 
 
-*/
+
+
+
 
 /****
  * 
@@ -193,6 +195,24 @@ casa blue green orden brown bombilla bici pink
 Array resultante:
 blue green brown pink casa orden bombilla bici
  */
+
+function arr6(){
+    const colores = ["red", "yellow", "green", "white", "blue", "brown", "pink", "black"];
+    const arrayWord = [];
+    do {
+        word =(prompt("introduce las 8 palabras"));
+        
+    } while (word < 1 || word > 8);
+    word.push(arrayWord);
+    
+    if(arrayWord.includes(colores)){
+        colores.sort((colores, arrayWord) => colores - arrayWord);
+    }
+    console.log(arrayWord);
+
+
+}
+
 
 /***
  * 
