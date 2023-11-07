@@ -1,0 +1,85 @@
+
+body{
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/61/185/250/dark-souls-iii-the-ringed-city-dlc-5k-wallpaper-fc3aa8ab7f14b3924f519303fa16e9f4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+h1{
+    font-size: 4em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    width: 100% ;
+}
+form{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+fieldset{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15%;
+    height: 600px;
+    border-radius: 2%;
+    transition:  .5s;
+    
+    
+}
+legend{
+    font-size: 2em;
+}
+fieldset:hover{
+    backdrop-filter: blur(5px) !important;
+    transition: all .5s;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.507);
+    
+
+}
+input[type = "text"], input[type = "password"]{
+    width: 80%;
+    height: 40px;
+    margin: 2%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    transition: .3s;
+}
+input[type = "text"]:focus, input[type = "password"]:focus{
+    border-bottom: 1px solid #000000;
+    transform: scaleY(1.2);
+    
+    
+}
+input[type = "submit"]{
+    width: 20%;
+    height: 40px;
+    margin: 10%;
+    font-size: 1.1em;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+    transition: all .5s;
+}
+
+input[type = "submit"]:hover{
+    background-color: rgb(100, 81, 48);
+    border-radius: 50%;
+    color: aliceblue;
+}
+
+label{
+    font-size: 1em;
+}
