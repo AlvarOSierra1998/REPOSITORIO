@@ -19,3 +19,15 @@ if (!isset($_GET["login_ok"])) {
 
 ?>
 
+<!------DIFERENCIA ENTRE COOKIE Y SESION
+
+
+La principal diferencia entre cookie y sesion es que una cookie al ser creada se alamacena en nuestro equipo locla como un fichero de texto
+que permanece oculto y al cual el navegador accede cuando entramos en las webs en los que se han creado dichas cookies.
+Y una sesion almacena los datos en un servidor.
+
+
+
+
+----->
+
