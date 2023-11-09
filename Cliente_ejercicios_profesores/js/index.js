@@ -106,7 +106,8 @@ function mostrar() {
             <td class="text-center">${Alumno.Tutor}</td>
         </tr>
         <tr>
-            <th class="text-center">Asignaturas</th><th>Nota Media</th>
+            <th class="text-center">Asignaturas</th>
+            <th class="text-center">Nota Media</th>
         </tr>
     `;
 

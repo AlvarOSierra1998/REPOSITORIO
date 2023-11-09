@@ -1,8 +1,14 @@
 table,tr,td,th{
-    border: 1px solid black;
-    margin: 25%;
+    margin: 10%;
+    width: 30%;
+    font-size: 1.3em;
+    background: #e0e0e0;
+    box-shadow:  42px 42px 84px #bebebe,
+             -42px -42px 84px #ffffff;
+    
 }
 body{
+    overflow: hidden;
     background-size: cover;
     background-image:  url(../img/marco-suministros-escolares-o-oficina-mesa-madera-rustica.jpg) ;
 }
