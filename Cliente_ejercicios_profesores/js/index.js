@@ -50,8 +50,8 @@ var Tutor = {
     },
 }
 
-let nota = {
-    Despliegue_servidor: 8,
+let nota_m = {
+    Despliegue_servidor: 2,
     Interfaces: 6,
     Cliente: 7,
     Despliegue_web: 9,
@@ -64,7 +64,7 @@ let Alumno = {
     Curso: 2,
     Tutor: "Evelyn",
     Asignaturas: asignatura,
-    nota_media: nota,
+    nota_media: nota_m,
     calcularMedia: function () {
         let notas = Object.values(this.nota_media); +
             console.log(notas);
