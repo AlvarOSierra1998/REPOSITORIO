@@ -104,7 +104,10 @@ li:hover {
 .contenedor-login {
     display: none;
 }
-
+button {
+    background: transparent;
+    border: none;
+}
 .lista {
     position: relative;
     font-size: 2rem;
@@ -123,10 +126,7 @@ li:hover {
     border-radius: 10%;
 }
 
-button {
-    background: transparent;
-    border: none;
-}
+
 
 .lista::after {
     content: '';

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "soul";
   src: url(../font/OptimusPrinceps.ttf);
@@ -17,4 +18,12 @@ ul li:hover {
   color: #c42828;
   background-color: rgb(71, 71, 71);
   border-radius: 10%;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+div {
+  width: col-qty(12) 6;
+}
+
+/*col-qty especificar columnas*/
+/* gutters tamaño margen lateral */
+/*width*//*# sourceMappingURL=styles.css.map */

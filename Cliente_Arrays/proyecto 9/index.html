@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+      // te crea las mesas y te las rellena de manera aleatoria
+function generarEstadoInicial(numMesas) {
+  const estadoInicial = [];
+  for (let i = 0; i < numMesas; i++) {
+    estadoInicial.push(Math.floor(Math.random() * 5)); // te los rellena la mesa de manera aleatoria aleatorios entre 0 y 4
+  }
+  return estadoInicial;
+}
+
+// te enseña el estado de las mesas
+function mostrarMesas(mesas) {
+  console.log("Estado de las mesas:");
+  mesas.forEach((comensales, i) => {
+    console.log(`Mesa ${i + 1}: ${comensales} comensales`);
+  });
+}
+
+// para pedrirte los que sois en la mesa
+const numMesas = parseInt(prompt("Ingrese el número de mesas en el restaurante:"));
+
+// estado inicial de las mesas
+const mesas = generarEstadoInicial(numMesas);
+mostrarMesas(mesas);
+
+// coloca a la gente en las mesas
+while (true) {
+  const numComensales = parseInt(prompt("¿Cuántos son? (Ingrese un valor negativo para salir):"));
+
+  if (numComensales < 0) {
+    break;
+  }
+
+  if (numComensales > 4) {
+    console.log("Lo siento, no admitimos grupos de más de 4 personas. Haga grupos de 4 personas como máximo e intente de nuevo.");
+  } else {
+    let mesaEncontrada = false;
+    for (let i = 0; i < mesas.length; i++) {
+      if (mesas[i] + numComensales <= 4) {
+        mesas[i] += numComensales;
+        mesaEncontrada = true;
+        break;
+      }
+    }
+
+    if (!mesaEncontrada) {
+      console.log("No hay mesas disponibles para ese grupo. Espere o divida su grupo.");
+    }
+  }
+
+  mostrarMesas(mesas);
+}
+
+console.log("Gracias por utilizar nuestro servicio. Hasta la próxima.");
+
+      </script>
+</body>
+
+</html>

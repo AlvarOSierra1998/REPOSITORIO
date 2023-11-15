@@ -1,9 +1,3 @@
-
-
-@font-face {
-    font-family: 'soul';
-    src: url(../font/OptimusPrinceps.ttf);
-}
 $colorLetra: #c42828;
 $colorBody: rgb(26, 25, 25);
 $sizesLetra: 10em;
@@ -15,21 +9,19 @@ $LinkHover-bg: rgb(71, 71, 71);
 $link-letra: rgb(255, 255, 255);
 $btn-color: rgb(66, 66, 66);
 $border-radius: 10%;
-
-
-
-
+@font-face {
+    font-family: 'soul';
+    src: url(../font/OptimusPrinceps.ttf);
+}
 body{
     background-color: $colorBody;
     overflow-x: hidden ;
 }
-
 h1{
     color: $colorLetra;
     font-size: $sizesLetra;
     font-family: $letra;
 }
-
 ul{
     li{
         &:hover{
@@ -39,6 +31,18 @@ ul{
         }
     }
 }
+$columns: col-qty(12);
+div{
+    width: $columns(6);
+}
+
+/*col-qty especificar columnas*/
+/* gutters tamaño margen lateral */
+/*width*/
+
+
+
+
 
 
 

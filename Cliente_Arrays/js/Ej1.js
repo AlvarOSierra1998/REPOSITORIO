@@ -195,7 +195,7 @@ casa blue green orden brown bombilla bici pink
 Array resultante:
 blue green brown pink casa orden bombilla bici
  */
-
+/*
 function arr6(){
     const colores = ["red", "yellow", "green", "white", "blue", "brown", "pink", "black"];
     const arrayWord = [];
@@ -211,7 +211,32 @@ function arr6(){
     console.log(arrayWord);
 
 
+}*/
+/*
+function ordenarPalabras() {
+    const colores = ["rojo", "verde", "azul", "amarillo", "rosa", "naranja", "violeta", "negro"];
+    const palabrasUsuario = [];
+
+    // Solicitar 8 palabras al usuario
+    for (let i = 0; i < 8; i++) {
+        const palabra = prompt(`Introduce una palabra (${i + 1}/8):`);
+        palabrasUsuario.push(palabra);
+    }
+
+    // Separar palabras que son colores del array de colores
+    const palabrasColores = palabrasUsuario.filter(palabra => colores.includes(palabra));
+    const palabrasRestantes = palabrasUsuario.filter(palabra => !colores.includes(palabra));
+
+    // Combinar las dos listas de palabras
+    const palabrasOrdenadas = palabrasColores.concat(palabrasRestantes);
+
+    console.log("Array de palabras ordenado:");
+    console.log(palabrasOrdenadas);
 }
+
+// Llama a la función para ejecutar el código
+ordenarPalabras();
+*/
 
 
 /***

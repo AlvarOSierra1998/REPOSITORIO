@@ -1,0 +1,19 @@
+$ColorHeader: blue;
+$ColorHeader2: green;
+$Color_black_tablas: black;
+$ColorLetrasHeader: white;
+$PaddingHeader: 4%;
+$fuenteLetra: 1em;
+$margenes: 1rem ;
+
+header{
+    background-color: $ColorHeader;
+    color: $ColorLetrasHeader;
+    text-align: center;
+    padding: $PaddingHeader ;
+    font-size: $fuenteLetra ;
+}
+.secction_nave{
+    background-color: $ColorHeader2;
+    margin-top: $margenes;
+}

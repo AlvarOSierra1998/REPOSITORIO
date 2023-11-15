@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Formu</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg colorNav">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="IMG/BG3-logo_2.png" alt="logo" href="#" />
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse contenedorNav" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-warning navItems" aria-current="page"
+                                href="#">Formulario1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning navItems" href="#">Formulario2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning navItems" href="#">Formulario3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!--formulario1-->
+            <fieldset>
+                <legend class="titulos">Datos del usuario</legend>
+                <form method="post" onsubmit="validarFormulario(event)">
+                    <label class="Operaciones" for="nombre">Nombre: </label>
+                    <input class="Operaciones" type="text" name="nombre" id="name" placeholder="introduce tu nombre" />
+                    <label class="Operaciones" for="edad">Edad: </label>
+                    <input class="Operaciones" type="number" name="edad" min="18" max="100" id="numero_edad"
+                        placeholder="la edad es mayor a 18" />
+                    <input class="Operaciones" type="submit" value="enviar"/>
+                </form>
+            </fieldset>
+            <fieldset>
+                <legend class="titulos">Lista de Tareas</legend>
+                <!--<details class="Operaciones">
+                    <summary>Lista</summary>   
+                </details>-->
+                <label class="Operaciones" for="tareas">Tareas</label>
+                <input class="Operaciones" type="text" name="tareas" id="tareaUsuario" placeholder="añade una tarea" />
+                <input class="Operaciones" type="submit" value="Añadir tarea" onclick="agregarTarea()" />
+                <span id="tareasUsuario"></span>
+            </fieldset>
+            <!--formulario3-->
+            <fieldset>
+                <legend  class="titulos">Operaciones</legend>
+                <form  method="post">
+                    <label  class="Operaciones" for="numero">Numero 1</label>
+                    <input  class="Operaciones" type="number" name="numero" id="valor1">
+                    <label  class="Operaciones" for="numero2">Numero 2</label>
+                    <input  class="Operaciones" type="number" name="numero2" id="valor2">
+                    <div  class="container">
+                        <button class="button" id="suma" id="resultado" onclick="suma(event)" style="--color:#ff711e;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Sumar
+                        </button>
+                        <a class="button" id="restar"  style="--color:#baae0d;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Restar
+                        </a>
+                        <a class="button" id="multiplicar"  style="--color:#ff1e1e;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Multiplicar
+                        </a>
+                        <a class="button" id="dividir"  style="--color:#ff5e1e;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Dividir
+                        </a>
+                    </div>
+                        
+                </form>
+
+            </fieldset>
+
+        </section>
+
+    </main>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
