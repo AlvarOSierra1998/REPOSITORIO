@@ -1,0 +1,31 @@
+.imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 35% ;
+    width: 30%;
+    transition: rotate,filter 7s;
+ 
+    
+}
+.imagenes:hover{
+    transition: rotate,filter .5s;
+    animation: rotate 5s ease-in-out infinite;
+    filter: drop-shadow(0 0 3.75rem rgb(68, 245, 254));
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    from{
+        
+        transform: rotate(0deg);
+    }
+
+    to{
+       transform: rotate(359deg);
+    }
+}
+
+body{
+    background-color: black;
+}

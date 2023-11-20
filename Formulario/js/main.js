@@ -35,6 +35,7 @@ function agregarTarea() {
         var lista = document.getElementById('tareasUsuario');
         var nuevoElemento = document.createElement('li');
         nuevoElemento.innerHTML = " Se ha añadido: " + tarea + " a la lista de tareas ";
+
         nuevoElemento.style.color = "orange";
         nuevoElemento.style.margin="auto";
         nuevoElemento.style.display = "flex";
@@ -62,6 +63,7 @@ function agregarTarea() {
         botonEliminar.style.outline = "none";
         botonEliminar.style.backgroundColor = "orange";
         botonEliminar.style.marginTop = "2%";
+
         botonEliminar.className = 'delete-button';
         botonEliminar.onclick = function () {
             lista.removeChild(nuevoElemento);
