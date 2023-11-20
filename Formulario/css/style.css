@@ -67,8 +67,8 @@ main{
 }
 fieldset {
     background-color: rgba(0, 0, 0, 0.381);
-    padding: 1rem 4rem 4rem 4rem;
-    width: auto;
+    padding: 1rem 40rem 4rem 4rem;
+    width: 200%;
 }
 .Operaciones{
     width:20% ;

@@ -66,47 +66,69 @@
                 <span id="tareasUsuario"></span>
             </fieldset>
             <!--formulario3-->
-            <fieldset>
-                <legend  class="titulos">Operaciones</legend>
-                <form  method="post">
-                    <label  class="Operaciones" for="numero">Numero 1</label>
-                    <input  class="Operaciones" type="number" name="numero" id="valor1">
-                    <label  class="Operaciones" for="numero2">Numero 2</label>
-                    <input  class="Operaciones" type="number" name="numero2" id="valor2">
-                    <div  class="container">
-                        <button class="button" id="suma" id="resultado" onclick="suma(event)" style="--color:#ff711e;">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Sumar
-                        </button>
-                        <a class="button" id="restar"  style="--color:#baae0d;">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Restar
-                        </a>
-                        <a class="button" id="multiplicar"  style="--color:#ff1e1e;">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Multiplicar
-                        </a>
-                        <a class="button" id="dividir"  style="--color:#ff5e1e;">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Dividir
-                        </a>
-                    </div>
-                        
-                </form>
 
-            </fieldset>
+            <legend  class="titulos">Operaciones</legend>
+            <div class="ejercicio3 mb-3 pt-5">
+                <form method="post" id="formEjercicio3" onsubmit="procesarEjercicio3(event)">
+    
+                    <div class="form-outline mb-4 w-25 m-auto text-center">
+                        <label class="form-label" for="num1">Numero 1</label>
+                        <input type="number" type="number" name="num1" id="num1" class="form-control" />
+    
+                    </div>
+                    <div class="form-outline  mb-4 w-25 m-auto text-center">
+                        <label class="form-label" for="num2">Numero 2</label>
+                        <input type="number" type="number" name="num2" id="num2" class="form-control" />
+    
+                    </div>
+                    <div class="row row-cols-4 text-center">
+                        
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary " value="sumar">Sumar</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" value="restar">Restar</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" value="multiplicar">Multiplicar</button>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" value="dividir">Dividir</button>
+                        </div>
+                </form>
+            </div>
+            <div id="resultadoEj3" class="text-center" style="color: aquamarine;">
+        </div>
+
+
+        <div class="ejercicio4 mb-3 p-5">
+            <form method="post" id="formEjercicio4" onsubmit="procesarEjercicio4(event)">
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="name">User</label>
+                    <input type="text" name="user" id="user" class="form-control" />
+        
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="name">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" />
+        
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="name">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" />
+        
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="name">Repite Password</label>
+                    <input type="password" name="repitePassword" id="repitePassword" class="form-control" />
+        
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        
+        </div>
 
         </section>
 
