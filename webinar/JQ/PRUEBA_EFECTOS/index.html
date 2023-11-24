@@ -14,13 +14,12 @@
     <nav>
         <div>
             <span id="menu">Menu</span>
-            <ul class="lista" id="lista">
+            <ul class="lista" id="listaAcordeon">
                 <li>Home</li>
                 <li>Blog</li>
                 <li>Products</li>
                 <li>Contact</li>
             </ul>
-            <!--<button id="ocultar">Ocultar</button>-->
         </div>
 
     </nav>
@@ -29,13 +28,25 @@
     </div>
     <script>
     $(function(){
+        /*
+        FORMA 1
         $("nav span:contains('Menu')").mouseover(function(e){
             $("#lista").slideDown(400);
             $("#lista").css("display","block");
             $("#lista").mouseleave(function(e){
             $("#lista").slideUp(400);
             })
-        });
+        });*/
+
+        //FORMA 2 ABREVIADA
+        $("#menu").mouseover(function(e){
+            $("#listaAcordeon").slideDown(400);
+            $("#listaAcordeon").css("display","block");
+            //sacar el raron de los elementos
+            $("#listaAcordeon").mouseleave(function(e){
+            $("#listaAcordeon").slideUp(400);
+            })
+        })
     })
     //ANIMACION
     $(function(){
