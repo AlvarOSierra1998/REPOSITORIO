@@ -1,0 +1,9 @@
+.lista{
+    display: none;
+}
+.lista li:hover{
+    transition: text-indent .3s ease-out;
+    text-indent: 1.5em;
+    color: red;
+    font-size: 2em;
+}

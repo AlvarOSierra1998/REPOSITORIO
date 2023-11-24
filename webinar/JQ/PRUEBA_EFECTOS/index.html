@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/css.css">
+    <title>Efectos y animaciones</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <span id="menu">Menu</span>
+            <ul class="lista" id="lista">
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Products</li>
+                <li>Contact</li>
+            </ul>
+            <!--<button id="ocultar">Ocultar</button>-->
+        </div>
+
+    </nav>
+</body>
+<script>
+    $(function(){
+        $("nav span:contains('Menu')").mouseover(function(e){
+            $("#lista").slideDown(400);
+            $("#lista").css("display","block");
+            $("#lista").mouseleave(function(e){
+            $("#lista").slideUp(400);
+            })
+        });
+
+        /*
+        $("nav button:contains('Ocultar')").click('click',function(e){
+            $("#lista").slideUp(400); 
+        });*/
+        
+    })
+</script>
+
+</html>
