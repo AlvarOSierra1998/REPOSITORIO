@@ -9,3 +9,6 @@
     cursor: pointer;
 
 }
+span{
+    cursor:default;
+}
