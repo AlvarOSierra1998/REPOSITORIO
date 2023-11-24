@@ -4,6 +4,8 @@
 .lista li:hover{
     transition: text-indent .3s ease-out;
     text-indent: 1.5em;
-    color: red;
+    color: rgb(252, 0, 0);
     font-size: 2em;
+    cursor: pointer;
+
 }
