@@ -24,6 +24,9 @@
         </div>
 
     </nav>
+    <div>
+
+    </div>
     <script>
     $(function(){
         $("nav span:contains('Menu')").mouseover(function(e){
@@ -34,6 +37,12 @@
             })
         });
     })
+    //ANIMACION
+    $(function(){
+        $("span").animate({
+            fontSize : "3rem"
+        });
+    });
 </script>
 <!--
     El nombre de la función es un claro de indicativo de lo que hacen (si sabemos un poquito de inglés).

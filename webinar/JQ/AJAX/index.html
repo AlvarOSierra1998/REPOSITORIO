@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Css/cssAjax.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        <button id="users">Obtener usuario</button>
+        <button id="fotos">Obtener Fotos</button>
+    </p>
+    <div class="ouput">
+        <ul class="lista_usuarios">
+        </ul>
+        <ul class="lista_fotos">
+        </ul>
+    </div>
+    <div class="profile">
+        <h3>DATOS DE LA PERSONA SELECCIONADA</h3>
+        <div id="personal_file">
+
+        </div>
+    </div>
+    <script>
+        $(function () {
+            //Asocia un evento click al boton q tiene el id users
+            $("#users").on("click", function (event) {
+                //vacía(prepara) la lista de usuario para rellenar con AJAX
+                $("ul.lista_usuarios").empty();
+                //indicamos la url a la que vamos a solicitar los datos
+                $.ajax("https://jsonplaceholder.typicode.com/users", {
+                    //especificamos el tipo  de respuesta en este caso json
+                    dataType: 'json',
+                    //almacenamos los datos de esa respuesta en la variable data
+                    success: function (data) {
+                        //recorremos cada uno de los datos de variable que tiene a los usuarios 
+                        //y le asignamos un valor por parametro para mostrar resultado posteriormente
+                        data.forEach(function (valor) {
+                            //añadimos con .append() los elementos lista que va a tener ese ul padre
+                            //con la variabel por parametro sacamos los valores que queremos como el id y el name
+                            $("ul.lista_usuarios").append("<li><span class='oculto'>" + valor.id + "</span>" + valor.name + "</li>");
+                        });
+                    },
+                    //lanzamos un error en caso de que los datos o la url no sea correcta
+                    error: function (jqXHR, textStatus, error) {
+                        alert("error" + textStatus + " " + error);
+                    }
+                });
+            });
+            //mismo procedimiento con las fotos
+            $("#fotos").on('click', function (event) {
+                $("ul.lista_fotos").empty();
+                $.ajax("https://jsonplaceholder.typicode.com/photos", {
+                    dataType: 'json',
+                    success: function (data) {
+                        for (i = 0; i < 3; i++) {
+                            $("ul.lista_fotos").append("<li class='elemento'><img src='" + data[i].thumbnailUrl + "' /></li>");
+                        }
+                    }
+                });
+            });
+            //le asociamos otro evento delegado a los usuarios con mouseenter a los elemntos hijos
+            //de la lista de usuarios
+            $("ul.lista_usuarios").on("mouseenter", "li", function (event) {
+                //creamos variables y le especificamos con this la posicion en la que estoy
+                //seleccionamos los hijos span y el primero a 0 que  y el texto que tienen
+                let id = $(this).children("span").eq(0).text();
+                // aqui guardamos el url y la concatenamos con la id anterior
+                let url = "https://jsonplaceholder.typicode.com/users?id=" + id;
+                //le añadimos la clase selected de css a este elemento para q se pinte en rojo
+                $(this).addClass("selected");
+                //cogemos la url le decimos el tipo de respuesta (json)
+                //y ahora almacenamos todos los datos
+                $.ajax(url, {
+                    dataType: 'json',
+                    success: function (data) {
+                        //se pone 0 porque al seleccionar un unico usuario se le asocia
+                        //el indice 0
+                        let name = data[0].name;
+                        let username = data[0].username;
+                        let email = data[0].email;
+                        let phone = data[0].phone;
+                        let company = data[0].company.name;
+                        let web = data[0].website;
+                        let city = data[0].address.city;
+                        //mostarmos los resultados
+                        $("#personal_file").html(
+                            "<p>" + name + "</p>" +
+                            "<p>" + username + "</p>" +
+                            "<p>" + email + "</p>" +
+                            "<p>" + phone + "</p>" +
+                            "<p>" + company + "</p>" +
+                            "<p>" + web + "</p>" +
+                            "<p>" + city + "</p>"
+                        );
+                    },
+                    error: function (jqXHR, texStatus, error) {
+                        alert("Error:" + texStatus + " " + error);
+                    }
+                });
+            });
+
+            $("ul.lista_usuarios").on("mouseleave", "li", function (event) {
+                $(this).removeClass("selected");
+            });
+        });
+    </script>
+</body>
+
+</html>
