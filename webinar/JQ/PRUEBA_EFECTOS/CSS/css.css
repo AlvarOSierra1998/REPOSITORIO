@@ -7,7 +7,7 @@
     color: rgb(252, 0, 0);
     font-size: 2em;
     cursor: pointer;
-    animation: shine 5s ease-in-out ;
+    animation: shine 2s ease-in-out ;
     
 }
 @keyframes shine {
