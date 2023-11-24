@@ -7,7 +7,16 @@
     color: rgb(252, 0, 0);
     font-size: 2em;
     cursor: pointer;
-
+    animation: shine 5s ease-in-out ;
+    
+}
+@keyframes shine {
+    from{
+        text-shadow: 0 0 30px #110303;
+    }
+    to{
+        text-shadow: 0 0 810px #000000;
+    }
 }
 span{
     cursor:default;
