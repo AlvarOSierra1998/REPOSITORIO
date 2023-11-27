@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/jqui.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="rojo">
+            <h1>HOLA</h1>
+        </div>
+        <div class="azul">
+            <h1>HOLA</h1>
+        </div>
+        <div class="verde">
+            <h1>HOLA</h1>
+        </div>
+        <div class="amarillo">
+            <h1>HOLA</h1>
+        </div>
+        <div class="rosa">
+            <h1>HOLA</h1>
+        </div>
+    </div>
+    <div class="container">
+        <p class="colores">
+            <input type="color">
+            <button>Seleccionar color</button>
+        </p>
+        <p class="efectos">
+            <select>
+                <option value="blind">Blind</option>
+                <option value="bounce">Bounce</option>
+                <option value="clip">Clip</option>
+                <option value="drop">Drop</option>
+                <option value="explode">Explode</option>
+                <option value="fade">Fade</option>
+                <option value="fold">Fold</option>
+                <option value="highlight">Highlight</option>
+                <option value="puff">Puff</option>
+                <option value="pulsate">Pulsate</option>
+                <option value="scale">Scale</option>
+                <option value="shake">Shake</option>
+                <option value="size">Size</option>
+                <option value="slide">Slide</option>
+            </select>
+        </p>
+    </div>
+
+    <script>
+
+        $(function () {
+
+            let caja1 = $(".container div").eq(0);
+            let caja2 = $(".container div").eq(1);
+            let caja3 = $(".container div").eq(2);
+            let caja4 = $(".container div").eq(3);
+            let caja5 = $(".container div").eq(4);
+
+            $(".container div").click(function(e){
+                $(this).toggleClass("small_font",400);
+            });
+
+            $(".colores button").click(function(e){
+                let color = $("input[type='color']").val();
+                alert("Has elegido el color " + color + " los contenedores colorearan en funcion a este valor elegido ");
+                $(".container:first div").animate({
+                    "background-color": color
+                }, 700);
+            });
+            $(".efectos select").change(function(e){
+                $(".container:first div").toggle($(this).val(),400);
+
+                });
+            });
+        
+
+
+    </script>
+
+</body>
+
+</html>
