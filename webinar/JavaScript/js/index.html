@@ -8,15 +8,29 @@
 
 </head>
 
-<body style="background-color: gray;">
-    <center>
-
+<body>
+    <button id="cambiarFondo">cambiar fondo</button>
+    <!-- <center>
         <input type="text" class="saluda" name="texto" />
         <button type="button" class="boton">saluda</button>
+    </center>--->
 
-    </center>
+    <script type="text/javascript">
+        var boton = document.getElementById('cambiarFondo');
+        function random(nummax2) {
+            return Math.round(Math.random() * nummax2);
+        }
+        boton.addEventListener("click", function (event) {
+            var colores = [
+                random(255),
+                random(255),
+                random(255),
+            ];
+            document.body.style.backgroundColor = "rgb(" + colores[0] + "," + colores[1] + "," + colores[2] + ")";
+        });
 
-    <script src="main.js"></script>
+    </script>
+    <!--<script src="main.js"></script>-->
 </body>
 
 </html>

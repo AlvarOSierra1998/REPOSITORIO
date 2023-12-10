@@ -91,7 +91,7 @@ window.addEventListener("click", function (event) {
 });
 */
 
-
+/*
 let texto = document.querySelector(".saluda");
 let button = document.querySelector(".boton");
 
@@ -103,7 +103,50 @@ button.addEventListener("click", function (event) {
     }
     
     
-});
+});*/
+
+var jugador = {
+    fuerza: 1,
+    incrementar_fuerza: function(){
+        this.fuerza += 1;
+    },
+    consultar_fuerza: function(){
+        console.log("la fuerza es " + this.fuerza);
+    }
+};
+jugador.consultar_fuerza();
+jugador.incrementar_fuerza();
+jugador.consultar_fuerza();
+jugador.incrementar_fuerza();
+jugador.consultar_fuerza();
+
+
+function random(nummax){
+    return Math.round(Math.random() * nummax);
+}
+console.log(random(100));
+
+
+var numeros = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+
+for (let i = 0; i < numeros.length; i++) {
+    if(numeros[i] % 2 === 0 ){
+        console.log(numeros[i]);
+    }
+    
+    
+}
+var numerosSuma = [0,1,2,3,4,5,6,7,8,9,10,11,12];
+var total = 0;
+
+for (let i = 0; i < numeros.length; i++) {
+    total += numerosSuma[i];
+    
+    
+}
+console.log("el total es " + total);
+
+
 
 
 

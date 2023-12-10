@@ -5,7 +5,7 @@
 
     <button @click="saludar(nombre)" >Aceptar</button>
     <button @click="count()">contador</button>
-    <span> {{ numero}}</span>
+    <span> {{ numero }}</span>
 
     
   </div>
