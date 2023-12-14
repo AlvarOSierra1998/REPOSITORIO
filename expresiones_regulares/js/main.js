@@ -89,7 +89,7 @@ function handleKeyPress(e) {
     let top = parseInt(style.top);
     let left = parseInt(style.left);
     var key = e.key;
-//asociamos el rango de movimiento
+    //asociamos el rango de movimiento
     switch (key) {
         case 'ArrowUp':
             top = Math.max(0, top - 20);
@@ -109,5 +109,42 @@ function handleKeyPress(e) {
     cuadro.style.top = top + 'px';
     cuadro.style.left = left + 'px';
 }
+
+/***
+ * 
+ * 5.
+ * Crea un script que valide un DNI español usando expresiones regulares. El DNI está
+    compuesto de 8 dígitos entre el cero y el nueve y una letra mayúscula
+ */
+
+function validarDNI(dni) {
+    // Definir la expresión regular para un DNI español
+    const patronDNI = /^\d{8}[A-Za-z]$/;
+
+    // Verificar si el DNI coincide con el patrón
+    if (patronDNI.test(dni)) {
+        const numeros = dni.slice(0, -1);  // Obtener los primeros 8 dígitos
+        const letra = dni.slice(-1).toUpperCase();  // Obtener la letra y convertirla a mayúscula
+
+        // Calcular la letra esperada a partir de los números
+        const letrasPosibles = 'TRWAGMYFPDXBNJZSQVHLCKE';
+        const indice = parseInt(numeros, 10) % 23;
+        const letraEsperada = letrasPosibles.charAt(indice);
+
+        // Comparar la letra calculada con la letra del DNI
+        return letra === letraEsperada;
+    } else {
+        return false;
+    }
+}
+
+// Ejemplo de uso
+const dni = prompt("Introduce un DNI español: ");
+if (validarDNI(dni)) {
+    alert("El DNI es válido.");
+} else {
+    alert("El DNI no es válido.");
+}
+
 
 
