@@ -59,7 +59,7 @@
                 $("ul.lista_fotos").empty();
                 $.ajax("https://jsonplaceholder.typicode.com/photos", {
                     dataType: 'json',
-                    success: function (data) {
+                    success: function (data) { 
                         for (i = 0; i < 3; i++) {
                             $("ul.lista_fotos").append("<li class='elemento'><img src='" + data[i].thumbnailUrl + "' /></li>");
                         }
