@@ -14,21 +14,38 @@
     <div id="app">
         <!-- Favorites -->
         <div class="favorites">
+            <div v-for = "favorite in allFavorites" class="favorite">
+                <a :href="favorite.blog" target="_blank">
+                    <img :src="favorite.avatar_url" :alt="favorite.name" class="favorite__avatar">
+                </a>
+                </div>
         </div>
 
         <!-- Content -->
         <article class="content">
-            <h1 class="content__title">{{ mensaje }}</h1>
+            <h1 class="content__title">Search </h1>
 
             <!-- Search -->
-            <form class="search">
-                <input type="text" class="search__input" required placeholder="Search GitHub users">
+            <form class="search" v-on:submit.prevent="doSearch">
+                <input type="text" v-model ="search" class="search__input" required placeholder="Search GitHub users">
                 <input type="submit" class="search__submit" value="Search">
             </form>
 
             <!-- Result -->
+            <div class="result" v-if="result">
+                <a v-if="isFavorite" href="#" class="result__toggle-favorite" @click="removeFavorite"> Remove Favorite</a>
+                <a v-else href="#" class="result__toggle-favorite" @click="addFavorite">Add Favorite ⭐️</a>
+                <h2 class="result__name">{{result.name}}</h2>
+                <!--v-bind: es igual q poner  : -->
+                <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar">
+                <p class="result__bio">{{result.bio}}
+                    <br>
+                    <a :href="result.blog" class="result__blog">{{result.blog}}</a>
+                </p>
+            </div>
+            <p v-else > waiting ofr search</p>
             <!-- Error -->
-            <div class="result__error"></div>
+            <div class="result__error" v-if ="error">{{error}}</div>
         </article>
     </div>
     <script src="js/main.js"></script>
