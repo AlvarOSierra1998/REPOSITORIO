@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+/*
+body{
+    background-image: url("https://images.alphacoders.com/132/1324334.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+form,
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form{
+    background-image: url("https://gamelust.com/wp-content/uploads/2019/05/Baldurs-Gate-III-Wallpaper-01-1920x1080.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 600px;
+    margin: auto;
+    border-radius: 4%;
+}
+.input-separacion{
+    margin: 1%;
+}
+input[type="text"],input[type="password"]{
+    width: 50%;
+    height: 30px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    
+}
+input[type="text"]:hover,input[type="password"]:hover{
+
+    border-bottom: 1px solid wheat;
+    transition: border   10s ;
+}
+
+.seccion-log{
+    margin: 5%;
+}
+.enviar{
+    width: 30%;
+    height: 50px;
+}*/
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: #000;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-animation-name: left;
+    animation-name: left;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.right {
+    flex: 1;
+    background-color: black;
+    transition: 1s;
+    background-image: url(https://images6.alphacoders.com/133/1331323.jpeg);
+    border-image: fill 0 linear-gradient(#0003, #000);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header>h2 {
+    margin: 0;
+    color: #a56446;
+}
+
+.header>h4 {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 15px;
+    color: wheat;
+}
+
+.form {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form>p {
+    text-align: right;
+}
+
+.form>p>a {
+    color: wheat;
+    font-size: 14px;
+}
+
+.form-field {
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: "Rubik", sans-serif;
+    outline: 0;
+    transition: 0.2s;
+    margin-top: 20px;
+}
+
+.form-field:focus {
+    border-color: #f1a20f;
+}
+
+.form>button {
+    padding: 12px 10px;
+    border: 0;
+    background: linear-gradient(to right, #dea248 0%, #000000 100%);
+    border-radius: 3px;
+    margin-top: 10px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+}
+
+.animation {
+    -webkit-animation-name: move;
+    animation-name: move;
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+
+}
+
+.a1 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.a2 {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+
+.color-a2 {
+    color: wheat;
+}
+
+.a3 {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+.a4 {
+    -webkit-animation-delay: 2.3s;
+    animation-delay: 2.3s;
+}
+
+.a5 {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.a6 {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes move {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes left {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        padding: 20px 40px;
+        width: 440px;
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+        padding: 20px 40px;
+        width: 440px;
+    }
+}
+
+/*tabla uwu*/
+
+

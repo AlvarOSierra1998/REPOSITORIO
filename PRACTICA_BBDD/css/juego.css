@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&family=Noto+Serif+JP:wght@200&display=swap');
+
+body {
+    color: wheat;
+    font-family: "lato", sans-serif;
+    background-image: url("https://preview.redd.it/pl7841h8ntr51.png?width=1920&format=png&auto=webp&s=a160ceab52c498897cfd7fac11f0efa3060b93b5");
+    background-repeat: repeat;
+
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    color: orange;
+
+}
+
+
+form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+  
+
+}
+
+table,
+thead,
+tbody,
+td {
+    width: 100%;
+    border: 1px solid white;
+
+}
+
+.asociado-container {
+    font-size: 1.10rem;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 30%;
+  
+    
+}
+
+.asociado-container2 {
+    font-size: 1.10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 30%;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+}
+
+
+
+
+.tag-asociado {
+    color: orange;
+    font-family: 'Kalnia', serif;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.20em;
+    display: flex;
+}
+
+.titulo-total{
+    font-family: 'Kalnia', serif;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.60rem;
+    color: red;
+    text-align: center;
+    font-weight: bolder;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+}
+.titulo-asociado {
+    font-family: 'Kalnia', serif;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.60rem;
+    color: red;
+    text-align: center;
+    font-weight: bolder;
+    width: 30%;
+    margin: auto 1%;
+    border-radius: 20px 20px 20px 20px;
+    text-shadow: 0 0 30px #fff;
+    
+    
+
+}
+
+.boton1,
+.boton2 {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dice1 {
+    width: 50%;
+    margin: auto 100%;
+    height: auto;
+    
+}
+
+.dice2 {
+    width: 100%;
+    margin: auto 100%;
+    height: auto;
+}
+
+.fadebalck {
+    border-image: fill 0 linear-gradient(#0003, #000);
+    height: 500px;
+}
