@@ -2,22 +2,25 @@
 
 model = { items: [] }
 
+//creamos la vista
 view = {
 
+    //funcion que limpia la lista
     clearList: function () {
         var range = document.createRange();
         range.selectNodeContents(document.getElementById("list"));
         range.deleteContents();
     },
 
+
     render: function () {
 
         this.clearList();
-
+        //rellenamos la lista
         if (model.items.length != 0) {
-
+            //accede al DOM 
             list = document.getElementById("list")
-
+            //recorre los items que estan en la lista y se muestra x consola
             for (var i = model.items.length - 1; i >= 0; i--) {
                 console.log(model.items[i])
 
@@ -35,23 +38,23 @@ view = {
 
                 span.textContent = model.items[i].text
 
-                // Put a line through any items we've 'ticked' off
+                // tacha co una linea las que ya etsan realizadas
                 if (model.items[i].completed) {
                     span.setAttribute("style", "text-decoration: line-through; color: #bbb")
                 }
 
 
-                // Add our icons
+                // iconos
                 iconCheck.setAttribute("class", "icon ion-md-checkmark")
                 iconCheck.setAttribute("data-id", i)
                 iconCross.setAttribute("class", "icon ion-md-trash")
                 iconCross.setAttribute("data-id", i)
 
-                // Add our onclick functions for complete/delete actions
+                // iconos para decir cual esta completo y cual no
                 check.setAttribute("onclick", "controller.completeItem('" + i + "')")
                 cross.setAttribute("onclick", "controller.deleteItem('" + i + "')")
 
-                // Append all our elements and add to DOM
+                // añadimos todo al nodo del DOM
                 check.appendChild(iconCheck)
                 cross.appendChild(iconCross)
                 item.appendChild(span)
@@ -61,7 +64,7 @@ view = {
             }
         }
     },
-
+    //especificamos que se añadiran los elementos con la tecla enter y el enter de numPad
     addItem: function (e) {
         if ((e.code == "Enter") || (e.code == "NumpadEnter")) {
             if (((document.getElementById("add-item").value != "") && (document.getElementById("add-item").value != " "))) {
@@ -72,12 +75,13 @@ view = {
         }
     },
 }
-
+//controlador de la API
 controller = {
     init: function () {
         view.render()
     },
 
+    //funcion para añadir elementos
     addItem: function (item) {
         list_item = { text: item, completed: false }
         model.items.push(list_item)
@@ -85,19 +89,22 @@ controller = {
         document.getElementById("add-item").value = ""
         view.render()
     },
-
+    //funcion que especifica cual esta completada
     completeItem: function (item_index) {
         model.items[item_index].completed = !model.items[item_index].completed
         console.log(model.items[item_index].completed)
         view.render()
     },
-
+    //funcion q borra los elementos medinate indice
     deleteItem: function (item_index) {
         model.items.splice(item_index, 1)
         view.render()
     }
 }
 
-
-
+//exportacion del controlador.
 controller.init()
+
+
+
+
