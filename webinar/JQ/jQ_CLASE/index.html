@@ -18,52 +18,57 @@
 </style>
 
 <body>
-    <h1>JQUERY</h1>
+    <header>
+        <h1 class="titulo">JQUERY</h1>
+    </header>
     <div id="container">
-        <div id="contenido" class="contendido-style"></div>
+        <div id="contenido" class="contenido-style"></div>
         <textarea id="texto" type="text" placeholder="introuce una cadena de texto"></textarea>
 
-        <button id="añadir-titulo" class="boton">
-            Añadir Titulo H1
-        </button>
-        <button id="cambiar" class="boton">
-            Cambiar Titulo H1
-        </button>
-        <button id="añadir-h2" class="boton">
-            Añadir Titulo H2
-        </button>
-
-        <button id="añadir-h3" class="boton">
-            Añadir Titulo H3
-        </button>
-        <button id="añadir-P" class="boton">
-            Añadir parrafo
-        </button>
-        <button id="añadir-img" class="boton">
-            Añadir Imagen
-        </button>
-        <button id="cambiar-fuente" class="boton">
-            cambiar fuente
-        </button>
-        <button id="cambiar-fondo" class="boton">
-            cambiar-fondo
-        </button>
-        <button id="cambiar-color-fuente">
-            cambiar color de texto
-        </button>
-        <button id="borrar-ultimo">
-            Eliminar Ultimo elemento
-        </button>
-        <button id="vaciar-articulo">
-            Vaciar articulo
-        </button>
-        <button id="dark-mode">
-            Modo oscuro
-        </button>
-
-        <button id="toggle_img">
-            Mostrar/Ocultar imagen
-        </button>
+        <div class="container-boton">
+            <button id="añadir-titulo" class="boton">
+                Añadir Titulo H1
+            </button>
+            <button id="cambiar" class="boton">
+                Cambiar Titulo H1
+            </button>
+            <button id="añadir-h2" class="boton">
+                Añadir Titulo H2
+            </button>
+    
+            <button id="añadir-h3" class="boton">
+                Añadir Titulo H3
+            </button>
+            <button id="añadir-P" class="boton">
+                Añadir parrafo
+            </button>
+            <button id="añadir-img" class="boton">
+                Añadir Imagen
+            </button>
+            <button id="cambiar-fuente" class="boton">
+                cambiar fuente
+            </button>
+            <button id="cambiar-fondo" class="boton">
+                cambiar-fondo
+            </button>
+            <button id="cambiar-color-fuente" class="boton">
+                cambiar color de texto
+            </button>
+            <button id="borrar-ultimo" class="boton">
+                Eliminar Ultimo elemento
+            </button>
+            <button id="vaciar-articulo" class="boton">
+                Vaciar articulo
+            </button>
+            <button id="dark-mode" class="boton">
+                Modo oscuro
+            </button>
+    
+            <button id="toggle_img" class="boton">
+                Mostrar/Ocultar imagen
+            </button>
+        </div>
+        
     </div>
     <script>
         //Botón de añadir título H1 (Esta opción debe desaparecer al añadir el título, es decir, solo puede haber un H1).
@@ -142,7 +147,7 @@
                 $("#contenido img").fadeToggle(400);
                 $("#toggle_img").show();
             });
-            
+
 
         });
 
