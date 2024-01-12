@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/css.css">
+    <title>Document</title>
+</head>
+
+<style>
+    .dark-mode {
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+    }
+</style>
+
+<body>
+    <h1>JQUERY</h1>
+    <div id="container">
+        <div id="contenido" class="contendido-style"></div>
+        <textarea id="texto" type="text" placeholder="introuce una cadena de texto"></textarea>
+
+        <button id="añadir-titulo" class="boton">
+            Añadir Titulo H1
+        </button>
+        <button id="cambiar" class="boton">
+            Cambiar Titulo H1
+        </button>
+        <button id="añadir-h2" class="boton">
+            Añadir Titulo H2
+        </button>
+
+        <button id="añadir-h3" class="boton">
+            Añadir Titulo H3
+        </button>
+        <button id="añadir-P" class="boton">
+            Añadir parrafo
+        </button>
+        <button id="añadir-img" class="boton">
+            Añadir Imagen
+        </button>
+        <button id="cambiar-fuente" class="boton">
+            cambiar fuente
+        </button>
+        <button id="cambiar-fondo" class="boton">
+            cambiar-fondo
+        </button>
+        <button id="cambiar-color-fuente">
+            cambiar color de texto
+        </button>
+        <button id="borrar-ultimo">
+            Eliminar Ultimo elemento
+        </button>
+        <button id="vaciar-articulo">
+            Vaciar articulo
+        </button>
+        <button id="dark-mode">
+            Modo oscuro
+        </button>
+
+        <button id="toggle_img">
+            Mostrar/Ocultar imagen
+        </button>
+    </div>
+    <script>
+        //Botón de añadir título H1 (Esta opción debe desaparecer al añadir el título, es decir, solo puede haber un H1).
+        $(function () {
+
+            $("button").css("display", "block");
+            $("#container #cambiar").hide()
+            $("#toggle_img-mostrar").hide();
+
+            $("#container #añadir-titulo").click(function () {
+                $("#contenido").append("<h1>" + $("#texto").val() + "</h1>");
+                $("#container #añadir-titulo").hide();
+                $("#container #cambiar").show()
+            });
+            //Botón cambiar H1 (Este botón solo debe aparecer si se ha introducido un H1)
+            $("#container #cambiar").click(function () {
+                $("#contenido").append("<h1>" + $("#texto").val() + "</h1>");
+                $("#container #cambiar").show()
+            });
+            //    Botón de añadir título H2.
+            $("#container #añadir-h2").click(function () {
+                $("#contenido").append("<h2>" + $("#texto").val() + "</h2>");
+                $("#container #añadir-titulo").hide();
+            });
+            //    Botón de añadir título H3.
+            $("#container #añadir-h3").click(function () {
+                $("#contenido").append("<h3>" + $("#texto").val() + "</h3>");
+                $("#container #añadir-titulo").hide();
+            });
+
+            //    Botón de añadir título Parrafo.
+            $("#container #añadir-P").click(function () {
+                $("#contenido").append("<p>" + $("#texto").val() + "</p>");
+                $("#container #añadir-titulo").hide();
+            });
+
+            //    Botón de añadir  img.
+            $("#añadir-img").click(function () {
+                var foto = $("#texto").val();
+                $("#contenido").append("<img src='" + foto + "' alt='Imagen'>");
+            });
+
+            //Botón para cambiar la fuente de texto de todo el artículo.
+            $("#cambiar-fuente").click(function () {
+                $("#contenido").css("font-family", $("#texto").val());
+
+            });
+            ///Botón para cambiar el color de fondo del artículo.
+            $("#cambiar-fondo").click(function () {
+                $("#contenido").css("background-color", $("#texto").val());
+            });
+
+            //Botón para cambiar el color de todo el texto del artículo.
+            $("#cambiar-color-fuente").click(function () {
+                $("#contenido").css("color", $("#texto").val());
+            });
+
+            //Botón "deshacer" que elimina el último elemento introducido en el artículo.
+            $("#borrar-ultimo").click(function () {
+                $("#contenido").children().last().remove();
+            });
+
+            //Botón para eliminar el artículo y empezar de 0.
+            $("#vaciar-articulo").click(function () {
+                $("#contenido").empty();
+            });
+
+            //Botón para alternar "modo oscuro" (fondo negro y texto blanco).
+            $("#dark-mode").click(function () {
+                $("body").toggleClass("dark-mode");
+
+            });
+
+            //   Botón para alternar entre mostrar imágenes o no [ Las imágenes deben desvanecerse ("fade") ].
+            $("#toggle_img").click(function () {
+                $("#contenido img").fadeToggle(400);
+                $("#toggle_img").show();
+            });
+            
+
+        });
+
+    </script>
+</body>
+
+</html>
