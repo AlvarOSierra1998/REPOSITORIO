@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-   <!--- <link rel="stylesheet" href="CSS/css.css">-->
-    <title>Document</title>
+    <!--- <link rel="stylesheet" href="CSS/css.css">-->
+    <title>JQUERY</title>
 </head>
 
 <style>
@@ -15,153 +15,235 @@
         background-color: rgb(0, 0, 0);
         color: aliceblue;
     }
-    h1,h2,h3,p{
-    text-align: center;
-}
-.titulo{
-    font-size: 10rem;
-    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
-	background-size: contain;
-	color: transparent;
-	-moz-background-clip: text;
-	-webkit-background-clip: text;
-	text-transform: uppercase;
-	font-size: 120px;
-	margin: 10px 0;
-    
-}
 
-header{
-    padding: 3rem;
-}
-textarea{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 20%;
-}
-.contenido-style{
-    margin: auto;
-    width: 100%;
-    border-radius: 5px;
-  
-    
-    
-}
-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
+    h1,
+    h2,
+    h3,
+    p {
+        text-align: center;
+    }
 
-/*ANIMACIONES*/
+    .titulo {
+        font-size: 10rem;
+        background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: contain;
+        color: transparent;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        font-size: 120px;
+        margin: 10px 0;
 
-.title {
-	font-family: "Cairo";
-	text-align: center;
-	color: #FFF;
+    }
+
+
+    header {
+        padding: 3rem;
+    }
+
+    textarea {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 20%;
+    }
+
+    .contenido-style {
+        margin: auto;
+        width: 100%;
+        
+        
+        
+
+
+
+    }
+
+    img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 50%;
+        
+    }
+
+    /*ANIMACIONES*/
+
+    .title {
+        font-family: "Cairo";
+        text-align: center;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        letter-spacing: 1px;
+        line-height: 2
+    }
+
+    /* styling my button */
+
+    .white-mode {
+        text-decoration: none;
+        padding: 7px 10px;
+        background-color: #122;
+        border-radius: 3px;
+        color: #FFF;
+        transition: .35s ease-in-out;
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        font-family: "Montserrat";
+    }
+
+    .white-mode:hover {
+        background-color: #FFF;
+        color: #122;
+    }
+
+    .container-boton { 
+        
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	flex-wrap: wrap;
 	justify-content: center;
-	height: 100vh;
-	letter-spacing: 1px;
-	line-height:2
-}
+	align-items: center;
+	align-content: center;
+    width: 60%;
+    float: left;
 
-/* styling my button */
+    }
 
-.white-mode {
-	text-decoration: none;
-	padding: 7px 10px;
-	background-color: #122;
-	border-radius: 3px;
-	color: #FFF;
-	transition: .35s ease-in-out;
-	position: absolute;
-	left: 15px;
-	bottom: 15px;
-	font-family: "Montserrat";
-}
+    .container-boton2 {  
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 20%;
+        float: left;
+    
+        }
+   
 
-.white-mode:hover {
-	background-color: #FFF;
-	color: #122;
-}
-.container-boton{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: auto;
-    flex-wrap: wrap;
+    /*meter estilos al boton*/
+    body {
+        box-sizing: border-box;
+    }
 
+    /*BOTON*/
 
-}
-/*meter estilos al boton*/
-.boton{
-   margin: 20px;
-   padding: 1rem;
-}
-body{
-    background-color: #4d7e97;
-}
+    .btn {
+        width: 7.5em;
+        height: 4.3em;
+        margin: 0.5em;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 0.625em;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border: 1px solid white;
+    }
 
+    button:hover {
+        color: black;
+    }
+
+    button:after {
+        content: "";
+        background: white;
+        position: absolute;
+        z-index: -1;
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.5s;
+    }
+
+    button:hover:after {
+        transform: skewX(-45deg) scale(1, 1);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
 </style>
 
 <body>
     <header>
         <h1 class="titulo">JQUERY</h1>
     </header>
-    <div id="container">
-        <div id="contenido" class="contenido-style"></div>
+    <div id="container" class="contendor-general">
         <textarea id="texto" type="text" placeholder="introuce una cadena de texto"></textarea>
-
+        <span id="contenido" class="contenido-style"></span>
         <div class="container-boton">
-            <button id="añadir-titulo" class="boton">
+            <button id="añadir-titulo" class="btn">
                 Añadir Titulo H1
             </button>
-            <button id="cambiar" class="boton">
+
+            <button id="cambiar" class="btn">
                 Cambiar Titulo H1
             </button>
-            <button id="añadir-h2" class="boton">
+
+            <button id="añadir-h2" class="btn">
                 Añadir Titulo H2
             </button>
-    
-            <button id="añadir-h3" class="boton">
+
+            <button id="añadir-h3" class="btn">
                 Añadir Titulo H3
             </button>
-            <button id="añadir-P" class="boton">
+
+            <button id="añadir-P" class="btn">
                 Añadir parrafo
             </button>
-            <button id="añadir-img" class="boton">
+
+            <button id="añadir-img" class="btn">
                 Añadir Imagen
             </button>
-            <button id="cambiar-fuente" class="boton">
-                cambiar fuente
-            </button>
-            <button id="cambiar-fondo" class="boton">
-                cambiar-fondo
-            </button>
-            <button id="cambiar-color-fuente" class="boton">
-                cambiar color de texto
-            </button>
-            <button id="borrar-ultimo" class="boton">
-                Eliminar Ultimo elemento
-            </button>
-            <button id="vaciar-articulo" class="boton">
-                Vaciar articulo
-            </button>
-            <button id="dark-mode" class="boton">
-                Modo oscuro
-            </button>
-    
-            <button id="toggle_img" class="boton">
+            <button id="toggle_img" class="btn">
                 Mostrar/Ocultar imagen
+
             </button>
         </div>
-        
+
+        <div class="container-boton2">
+            <button id="cambiar-fuente" class="btn">
+                cambiar fuente
+            </button>
+            <button id="cambiar-fondo" class="btn">
+                cambiar-fondo
+
+            </button>
+            <button id="cambiar-color-fuente" class="btn">
+                cambiar color de texto
+
+            </button>
+            <button id="borrar-ultimo" class="btn">
+                Eliminar Ultimo elemento
+
+            </button>
+            <button id="vaciar-articulo" class="btn">
+                Vaciar articulo
+
+            </button>
+            <button id="dark-mode" class="btn">
+                Modo oscuro
+
+            </button>
+
+            
+        </div>
+
     </div>
     <script>
         //Botón de añadir título H1 (Esta opción debe desaparecer al añadir el título, es decir, solo puede haber un H1).
