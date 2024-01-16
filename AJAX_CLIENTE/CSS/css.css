@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    font-size: 4rem;
+    color: #FF4500;
+}
+
+body {
+    background-image: url(https://w.wallhaven.cc/full/l3/wallhaven-l3zey2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: #FF4500;
+}
+
+.container-contenido{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    font-size: 100%;
+    justify-content: center;
+    flex-direction: column;
+    color: #FF4500;
+    margin: auto;
+    background-color:#404040;
+    border-radius: 10px;
+    padding: 2em;
+    background: linear-gradient(145deg, #000000cc, #000000b7);
+    box-shadow:  20px 20px 60px #000000,
+                 -20px -20px 60px #000000;
+}
+.container-contenido:hover{
+    border: 1px solid #FF4500;
+}
+
+
+
+a {
+    margin-top: 6%;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+
+a:hover{
+    background-color: #FFD700;
+    color: black;
+    padding: 1em;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+
