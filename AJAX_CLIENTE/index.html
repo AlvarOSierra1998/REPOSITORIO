@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>AJAX</title>
 </head>
 
@@ -14,17 +15,81 @@
     </header>
     <main>
         <section id="menu" class="container">
-            <a href="../AJAX_CLIENTE/php_datos/datos.php?dato1" target="_self">Siegmeyer de catarina</a>
-            <div class="container-contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate culpa
-                ullam veniam enim assumenda, dolores atque doloremque vitae animi saepe id iusto maiores repellat ipsum,
-                aperiam itaque. Sint, vero facere.</div>
-                
-            <a href="../AJAX_CLIENTE/php_datos/datos.php?dato2" target="_self">Solarie</a>
-            <a href="../AJAX_CLIENTE/php_datos/datos.php?dato3" target="_self">Yhorm</a>
-            <a href="../AJAX_CLIENTE/php_datos/datos.php?dato4" target="_self">Gwynn</a>
-            <a href="../AJAX_CLIENTE/php_datos/datos.php?dato5" target="_self">Lautrec</a>
+            <a href="datos.php?dato1" target="_self">Siegmeyer de catarina</a>
+            <div class="container-contenido"></div>
+
+            <a href="datos.php?dato2" target="_self">Solarie</a>
+            <a href="datos.php?dato3" target="_self">Yhorm</a>
+            <a href="datos.php?dato4" target="_self">Gwynn</a>
+            <a href="datos.php?dato5" target="_self">Lautrec</a>
         </section>
     </main>
+    <script>
+        /*$(function () {
+            $('a').click(function (event) {
+                event.preventDefault();
+            });
+        });*/
+    </script>
+</body>
+
+
+
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/css.css">
+    <title>AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- Incluye jQuery -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        DARK SOULS
+    </header>
+    <main>
+        <section id="menu" class="container">
+            <!-- Cambia los enlaces para pasar el valor deseado a través del atributo href -->
+            <a id="foto" onclick="cargarContenido('dato1'); return false;">Siegmeyer de catarina</a>
+            <a onclick="cargarContenido('dato2'); return false;">Solarie</a>
+            <a onclick="cargarContenido('dato3'); return false;">Yhorm</a>
+            <a onclick="cargarContenido('dato4'); return false;">Gwyn</a>
+            <a onclick="cargarContenido('dato5'); return false;">Lautrec</a>
+        </section>
+        <div class="container-contenido-dinamico container" id="contenido"></div>
+        
+    </main>
+
+    <!--JQuery-->
+
+    <!--<script>
+        $(document).ready(function () {
+            // Captura el evento de clic en los enlaces
+            $('a').click(function (event) {
+                event.preventDefault(); // Evita que el enlace realice la acción por defecto (navegar a otra página)
+                // Realiza la solicitud AJAX
+                $.ajax({
+                    url: 'datos.php',
+                    type: 'GET',
+                    data: { dato: dato },
+                    success: function (response) {
+                        // Muestra la respuesta en la sección correspondiente
+                        $('.container-contenido-dinamico').html(response);
+                    },
+                    error: function () {
+                        alert('Error al cargar los datos.');
+                    }
+                });
+            });
+        });
+    </script>-->
+   
 </body>
 
 </html>

@@ -16,30 +16,44 @@ body {
 
 .container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
-    flex-direction: column;
+    flex-direction: row;
     color: #FF4500;
+
+}
+.fotos{
+    width: 30%;
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    background-color:#404040;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #000000cc, #000000b7);
+    box-shadow:  20px 20px 60px #000000,-20px -20px 60px #000000;
+    
+
+}
+
+.titulos{
+    font-size: 2.50em;
+    color: #FFD700;
 }
 
 .container-contenido{
     display: flex;
     align-items: center;
-    width: 20%;
-    font-size: 100%;
+    width: 50%;
+    font-size: 1.50em;
     justify-content: center;
     flex-direction: column;
     color: #FF4500;
+    padding: 2em;
     margin: auto;
     background-color:#404040;
     border-radius: 10px;
-    padding: 2em;
     background: linear-gradient(145deg, #000000cc, #000000b7);
-    box-shadow:  20px 20px 60px #000000,
-                 -20px -20px 60px #000000;
-}
-.container-contenido:hover{
-    border: 1px solid #FF4500;
+    box-shadow:  20px 20px 60px #000000,-20px -20px 60px #000000;
 }
 
 
@@ -50,14 +64,16 @@ a {
     text-decoration: none;
     font-size: 2rem;
     transition: all .3s ease;
+    cursor: pointer;
 }
 
 a:hover{
     background-color: #FFD700;
     color: black;
-    padding: 1em;
     border-radius: 10px;
     transition: all .3s ease;
+    padding: 1em;
+    cursor: pointer;
 }
 
 
