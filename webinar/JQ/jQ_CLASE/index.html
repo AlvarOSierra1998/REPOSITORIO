@@ -176,6 +176,9 @@
         -webkit-transition: all 0.5s;
         transition: all 0.5s;
     }
+    .dark-mode_article{
+        background-color: black;
+    }
     
 </style>
 
@@ -266,7 +269,7 @@
             //    Botón de añadir título H2.
             $("#container #añadir-h2").click(function () {
                 $("#contenido").append("<h2>" + $("#texto").val() + "</h2>");
-                $("#container #añadir-titulo").hide();
+                $("#container #añadir-titulo").toggle();
             });
             //    Botón de añadir título H3.
             $("#container #añadir-h3").click(function () {
