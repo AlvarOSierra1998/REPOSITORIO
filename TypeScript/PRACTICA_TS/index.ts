@@ -126,6 +126,7 @@ function Main(): void {
         let posicion:number = Math.random() * 3;
         return enemigos[posicion];
     }
+    jugador.setAtaque(jugador.calcularFuerzaInicial(1,10));
     
 }
 
