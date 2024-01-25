@@ -142,11 +142,11 @@ function Main(): void {
     
 
     //OBJETOS ENEMIGOS
-    const Alvaro = new Enemigo("Alvaro Olmos Sierra");
-    const Cifuentes = new Enemigo("Cifuentes");
+    const Gyobu_Oniwa = new Enemigo("Gyobu Oniwa");
+    const Lautrec = new Enemigo("Lautrec");
     const Pablo = new Enemigo("Pablo Motril");
-    const Ramirez = new Enemigo("Ramirez");
-    const enemigos: Enemigo[] = [Alvaro, Cifuentes, Pablo, Ramirez];
+    const Vicaria_Amelia = new Enemigo("Vicaria Amelia");
+    const enemigos: Enemigo[] = [Gyobu_Oniwa, Lautrec, Pablo, Vicaria_Amelia];
 
     let nombreUsuario: string = readlineSync.question("Introduce tu nombre ");
     console.log("Bienvenido:  " + nombreUsuario + "!");
@@ -154,9 +154,8 @@ function Main(): void {
     //OBJETO JUGADOR;
     const jugador = new Jugador(nombreUsuario);
 
-    const lore: string = "Este juego consiste en una comparación entre los diferentes ataques que tengan los jugadores y los enemigos, el que tenga mayor resultado tendra la ventaja ";
+    const lore: string = " Bienvenido a este mundo viajero, este videojuego es una simulacion de combate RPGs en el te enfrentaras a enemigos conocidos de la franquicia de juegos de FromSoftware, además, podras comprar objetos con los tesoros que obtenga de derrotar a tus enemigos. tus estadisticas son tu piedra angular, consigue dinero para poder comprar items y poder volverte mas fuerte en tu viaje.";
     console.log(lore);
-
     jugador.setAtaque(jugador.calcularFuerzaInicial());
 
 

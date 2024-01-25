@@ -104,16 +104,16 @@ function Main() {
     /*OBJETOS TIENDA
     const ArmaduraPlacas = new Tienda("Armadura de placas", 0, 50, 100);*/
     //OBJETOS ENEMIGOS
-    var Alvaro = new Enemigo("Alvaro Olmos Sierra");
+    var Gyobu_Oniwa = new Enemigo("Gyobu Oniwa");
     var Cifuentes = new Enemigo("Cifuentes");
     var Pablo = new Enemigo("Pablo Motril");
     var Ramirez = new Enemigo("Ramirez");
-    var enemigos = [Alvaro, Cifuentes, Pablo, Ramirez];
+    var enemigos = [Gyobu_Oniwa, Cifuentes, Pablo, Ramirez];
     var nombreUsuario = readlineSync.question("Introduce tu nombre ");
     console.log("Bienvenido:  " + nombreUsuario + "!");
     //OBJETO JUGADOR;
     var jugador = new Jugador(nombreUsuario);
-    var lore = "Este juego consiste en una comparación entre los diferentes ataques que tengan los jugadores y los enemigos, el que tenga mayor resultado tendra la ventaja ";
+    var lore = " Bienvenido a este mundo viajero, este videojuego es una simulacion de combate RPGs en el te enfrentaras a enemigos conocidos de la franquicia de juegos de FromSoftware, además, podras comprar objetos con los tesoros que obtenga de derrotar a tus enemigos. tus estadisticas son tu piedra angular, consigue dinero para poder comprar items y poder volverte mas fuerte en tu viaje.";
     console.log(lore);
     jugador.setAtaque(jugador.calcularFuerzaInicial());
     //CAMBIAR LA FUERZA POR dinero
@@ -182,7 +182,7 @@ function Main() {
             comparacion_valores = enemigo_actual.getPuntos_ataque() - jugador.getAtaque();
             //CAMBIA LA SALUD
             jugador.setSalud(jugador.getSalud() - comparacion_valores);
-            console.log(" Has perdido " + enemigo_actual.getNombre() + " te ha golpeado" + " tu vida ha bajado " + comparacion_valores + " puntos de vida ");
+            console.log(" Has perdido, " + enemigo_actual.getNombre() + " te ha golpeado" + " tu vida ha bajado " + comparacion_valores + " puntos de vida ");
         }
         //variables que saca un enemigo aleatorio
         var enemigo_actual = EnemigoRandom();
