@@ -1,6 +1,5 @@
 import * as readlineSync from 'readline-sync';
 
-
 class Jugador {
     nombre: string
     puntos_salud: number = 20;
