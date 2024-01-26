@@ -10,7 +10,6 @@ class Jugador {
         this.nombre = nombre;
     }
 
-
     //GETTERS & SETTERS
     public getNombre() {
         return this.nombre;
