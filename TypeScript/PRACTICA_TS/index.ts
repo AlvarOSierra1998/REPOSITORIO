@@ -138,7 +138,7 @@ function Main(): void {
 
     /*OBJETOS TIENDA
     const ArmaduraPlacas = new Tienda("Armadura de placas", 0, 50, 100);*/
-    
+
 
     //OBJETOS ENEMIGOS
     const Gyobu_Oniwa = new Enemigo("Gyobu Oniwa");
@@ -146,6 +146,33 @@ function Main(): void {
     const Pablo = new Enemigo("Pablo Motril");
     const Vicaria_Amelia = new Enemigo("Vicaria Amelia");
     const enemigos: Enemigo[] = [Gyobu_Oniwa, Lautrec, Pablo, Vicaria_Amelia];
+
+    //PRUEBAS
+
+    // Obtén referencias a los elementos del DOM y especifica sus tipos
+    const inputElement: HTMLInputElement | null = document.getElementById("miInput") as HTMLInputElement;
+    const boton: HTMLButtonElement | null = document.getElementById("miBoton") as HTMLButtonElement;
+
+    // Verifica si los elementos se encontraron antes de continuar
+    if (inputElement && boton) {
+        // Agrega un event listener al botón
+        boton.addEventListener("click", () => {
+            // Accede al valor del input
+            const valorInput: string = inputElement.value;
+
+            // Muestra una alerta con el valor del input
+            alert("Valor del input: " + valorInput);
+        });
+    } else {
+        console.error("No se encontraron los elementos necesarios en el DOM");
+    }
+
+
+
+
+    /////////////////////
+
+
 
     let nombreUsuario: string = readlineSync.question("Introduce tu nombre ");
     console.log("Bienvenido:  " + nombreUsuario + "!");
@@ -231,13 +258,13 @@ function Main(): void {
             return enemigos[posicion];
         }
 
-        function Perder(){
-            comparacion_valores = enemigo_actual.getPuntos_ataque()-jugador.getAtaque();
+        function Perder() {
+            comparacion_valores = enemigo_actual.getPuntos_ataque() - jugador.getAtaque();
             //CAMBIA LA SALUD
-            jugador.setSalud(jugador.getSalud()-comparacion_valores);
+            jugador.setSalud(jugador.getSalud() - comparacion_valores);
             console.log(" Has perdido, " + enemigo_actual.getNombre() + " te ha golpeado" + " tu vida ha bajado " + comparacion_valores + " puntos de vida ");
         }
-        
+
         //variables que saca un enemigo aleatorio
         let enemigo_actual = EnemigoRandom();
         //variable que almacena la comparcion de valores
@@ -245,66 +272,65 @@ function Main(): void {
         //muestra el nombre del enemigo
         console.log(enemigo_actual.getNombre());
         //CASO VICTORIA
-        if(jugador.getAtaque() >= enemigo_actual.getPuntos_ataque()){
+        if (jugador.getAtaque() >= enemigo_actual.getPuntos_ataque()) {
             //variable que almacena el dinero que el enemigo dropea
             let dineroAlmacenao = enemigo_actual.soltarDinero();
             //mensaje de victoria
-            console.log("Has ganado!" + enemigo_actual.getNombre() + "Ha soltado " + dineroAlmacenao+ "De dinero");
+            console.log("Has ganado!" + enemigo_actual.getNombre() + "Ha soltado " + dineroAlmacenao + "De dinero");
             //establecemos el din
-            
-            jugador.setDinero(jugador.getDinero() + dineroAlmacenao );
-            
-        }else{
+
+            jugador.setDinero(jugador.getDinero() + dineroAlmacenao);
+
+        } else {
             //CASO ERROR
-        console.log(Perder());
+            console.log(Perder());
 
             //RESTA DE VIDA
-           
         }
     }
-    
+
 
     Luchar();
 
-   /* function tienda(){
-    console.log("****TIENDA*****")
-    console.log("1. Armadura de placas");
-    console.log("2. Espada bastarda");
-    console.log("3. grajeas");
-    console.log("4. Escudo redondo");
-    console.log("*********************");
-    let continuar = true;
+    /* function tienda(){
+     console.log("****TIENDA*****")
+     console.log("1. Armadura de placas");
+     console.log("2. Espada bastarda");
+     console.log("3. grajeas");
+     console.log("4. Escudo redondo");
+     console.log("*********************");
+     let continuar = true;
+ 
+     while (continuar) {
+ 
+         //comprobar 
+         const opcion = readlineSync.question("¿Que quieres comprar?:");
+ 
+         switch (opcion) {
+             case '1':
+             console.log("Has obtenido Armadura de placas");
+                 
+                 break;
+             case '2':
+                 console.log("Has obtenido la espada bastarda");
+                 // Agrega lógica de compra de ítems aquí
+                 break;
+             case '3':
+                 console.log("Has obtenido grajeas");
+                 
+                 break;
+             case '4':
+                 console.log("Has obtenido el escudo redondo");
+                 continuar = false;
+                 break;
+             default:
+                 console.log("Opción no válida. Por favor, selecciona una opción válida.");
+                 break;
+         }
+     }
+     }
+     tienda();*/
 
-    while (continuar) {
-
-        //comprobar 
-        const opcion = readlineSync.question("¿Que quieres comprar?:");
-
-        switch (opcion) {
-            case '1':
-            console.log("Has obtenido Armadura de placas");
-                
-                break;
-            case '2':
-                console.log("Has obtenido la espada bastarda");
-                // Agrega lógica de compra de ítems aquí
-                break;
-            case '3':
-                console.log("Has obtenido grajeas");
-                
-                break;
-            case '4':
-                console.log("Has obtenido el escudo redondo");
-                continuar = false;
-                break;
-            default:
-                console.log("Opción no válida. Por favor, selecciona una opción válida.");
-                break;
-        }
-    }
-    }
-    tienda();*/
-    
     ////////////////////////////////////////////////////////////////////////
 
     function mostrarPanelItems() {
@@ -316,45 +342,45 @@ function Main(): void {
     }
     function comprarItems() {
         mostrarPanelItems();
-        
+
         const opcion = readlineSync.question("¿Que quieres comprar?:");
-            switch (opcion) {
-                case '1':
-                    if (jugador.dinero >= 50) {
-                        jugador.dinero -= 50;
-                        jugador.puntos_ataque += 10;
-                        console.log("Has comprado una Espada. ¡Tu ataque ha aumentado!");
-                    } else {
-                        console.log("No tienes suficiente dinero para comprar este objeto.");
-                    }
-                    break;
-                case '2':
-                    if (jugador.dinero >= 30) {
-                        jugador.dinero -= 30;
-                        jugador.puntos_salud += 20;
-                        console.log("Has comprado una Poción de curación. ¡Tu salud ha aumentado!");
-                    } else {
-                        console.log("No tienes suficiente dinero para comprar la Poción de curación.");
-                    }
-                    break;
-                case '3':
-                    if (jugador.dinero >= 100) {
-                        jugador.dinero -= 100;
-                        jugador.puntos_ataque += 20;
-                        console.log("Has comprado una espada bastarda. ¡Tu ataque ha aumentado!");
-                    } else {
-                        console.log("No tienes suficiente dinero para comprar la espada bastarda.");
-                    }
-                    break;
-                default:
-                    console.log("Opción no válida.");
-                    break;
-            }
-        };
-        mostrarPanelItems();
-        comprarItems();
-    }
-    
+        switch (opcion) {
+            case '1':
+                if (jugador.dinero >= 50) {
+                    jugador.dinero -= 50;
+                    jugador.puntos_ataque += 10;
+                    console.log("Has comprado una Espada. ¡Tu ataque ha aumentado!");
+                } else {
+                    console.log("No tienes suficiente dinero para comprar este objeto.");
+                }
+                break;
+            case '2':
+                if (jugador.dinero >= 30) {
+                    jugador.dinero -= 30;
+                    jugador.puntos_salud += 20;
+                    console.log("Has comprado una Poción de curación. ¡Tu salud ha aumentado!");
+                } else {
+                    console.log("No tienes suficiente dinero para comprar la Poción de curación.");
+                }
+                break;
+            case '3':
+                if (jugador.dinero >= 100) {
+                    jugador.dinero -= 100;
+                    jugador.puntos_ataque += 20;
+                    console.log("Has comprado una espada bastarda. ¡Tu ataque ha aumentado!");
+                } else {
+                    console.log("No tienes suficiente dinero para comprar la espada bastarda.");
+                }
+                break;
+            default:
+                console.log("Opción no válida.");
+                break;
+        }
+    };
+    mostrarPanelItems();
+    comprarItems();
+}
+
 Main();
 
 
