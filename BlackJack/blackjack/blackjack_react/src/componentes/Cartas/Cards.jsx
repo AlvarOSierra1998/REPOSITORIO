@@ -83,7 +83,7 @@ const GameBoard = () => {
             )}
             
             <div>
-                <p className='total'>Puntuación Ttal: {totalScore}</p>
+                <p className='total'>Puntuación Total: {totalScore}</p>
                 <button className='boton-random' onClick={handleGetRandomCard}>Pedir</button>
             </div>
             
