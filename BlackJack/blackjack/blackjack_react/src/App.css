@@ -1,0 +1,11 @@
+.board{
+  height: 1500px;
+  width: 50%;
+  margin: auto;
+  position: relative;
+  margin-top: 8%;
+  border-radius: 75px;
+  background: linear-gradient(145deg, #022508, #000000);
+  box-shadow:  22px 22px 58px #000000,-22px -22px 58px #000000;
+  
+}
