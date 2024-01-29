@@ -10,10 +10,7 @@
     padding: 1rem;
     width: 15%;
     margin: auto;
-    position: relative;
-    left: -60%;
     display: inline-flex;
-
 
     display: flex;
     align-items: center;
@@ -42,13 +39,14 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin: auto;
-    margin-top: 50%;
+    margin-top: 20%;
+    position: relative;
+    left: 20%;
+    
 }
 
 .carta {
     margin: auto;
-    position: relative;
-    left: 500px;
     overflow: hidden;
     display: inline-flex;
 }
@@ -60,8 +58,9 @@
     text-align: center;
     width: 100%;
     
+    
 }
-.descripcion {
+/*.descripcion {
     position: relative;
     top: -300px;
     display: flex;
@@ -71,7 +70,7 @@
     margin: auto;
     color: #4CAF50;
     font-size: 3.5em;
-}
+}*/
 .total{
     color: #4CAF50;
     text-align: center;
