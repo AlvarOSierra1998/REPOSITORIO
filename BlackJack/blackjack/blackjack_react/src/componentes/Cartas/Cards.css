@@ -25,7 +25,10 @@
 
     /* Transición de color de fondo al hacer hover */
 }
-
+h2{
+    color: aliceblue;
+    font-size: 3rem;
+}
 .boton-random:hover {
     color: #000000;
     background-color: #4CAF50;
@@ -49,6 +52,33 @@
     margin: auto;
     overflow: hidden;
     display: inline-flex;
+}
+.carta-img {
+    position: relative;
+    top: -149%;
+}
+.boton-plantarse{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    /* Color de fondo inicial */
+    color: #4CAF50;
+    /* Color del texto */
+    padding: 1rem;
+    width: 15%;
+    margin: auto;
+    display: inline-flex;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #4CAF50;
+    font-size: 1.5em;
 }
 
 .container-description {
