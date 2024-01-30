@@ -262,6 +262,7 @@ function Main(): void {
             comparacion_valores = enemigo_actual.getPuntos_ataque() - jugador.getAtaque();
             //CAMBIA LA SALUD
             jugador.setSalud(jugador.getSalud() - comparacion_valores);
+
             console.log(" Has perdido, " + enemigo_actual.getNombre() + " te ha golpeado" + " tu vida ha bajado " + comparacion_valores + " puntos de vida ");
         }
 

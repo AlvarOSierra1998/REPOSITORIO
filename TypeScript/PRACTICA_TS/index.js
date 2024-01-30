@@ -104,12 +104,30 @@ function Main() {
     /*OBJETOS TIENDA
     const ArmaduraPlacas = new Tienda("Armadura de placas", 0, 50, 100);*/
     //OBJETOS ENEMIGOS
-    var Gyobu_Oniwa = new Enemigo("Gyobu Oniwa");
-    var Cifuentes = new Enemigo("Cifuentes");
+    var Gyobu_Oniwa = new Enemigo(" Gyobu Oniwa ");
+    var Lautrec = new Enemigo("Lautrec");
     var Pablo = new Enemigo("Pablo Motril");
-    var Ramirez = new Enemigo("Ramirez");
-    var enemigos = [Gyobu_Oniwa, Cifuentes, Pablo, Ramirez];
-    var nombreUsuario = readlineSync.question("Introduce tu nombre ");
+    var Vicaria_Amelia = new Enemigo("Vicaria Amelia");
+    var enemigos = [Gyobu_Oniwa, Lautrec, Pablo, Vicaria_Amelia];
+    //PRUEBAS
+    // Obtén referencias a los elementos del DOM y especifica sus tipos
+    var inputElement = document.getElementById("miInput");
+    var boton = document.getElementById("miBoton");
+    // Verifica si los elementos se encontraron antes de continuar
+    if (inputElement && boton) {
+        // Agrega un event listener al botón
+        boton.addEventListener("click", function () {
+            // Accede al valor del input
+            var valorInput = inputElement.value;
+            // Muestra una alerta con el valor del input
+            alert("Valor del input: " + valorInput);
+        });
+    }
+    else {
+        console.error("No se encontraron los elementos necesarios en el DOM");
+    }
+    /////////////////////
+    var nombreUsuario = readlineSync.question(" Introduce tu nombre ");
     console.log("Bienvenido:  " + nombreUsuario + "!");
     //OBJETO JUGADOR;
     var jugador = new Jugador(nombreUsuario);
@@ -119,8 +137,8 @@ function Main() {
     //CAMBIAR LA FUERZA POR dinero
     var decision;
     do {
-        console.log('Tu fuerza inicial es ' + jugador.getAtaque());
-        decision = readlineSync.keyInYNStrict('Quieres cambiar tu fuerza por 1 dinero?');
+        console.log(' Tu fuerza inicial es ' + jugador.getAtaque());
+        decision = readlineSync.keyInYNStrict(' Quieres cambiar tu fuerza por 1 dinero? ');
         if (decision) {
             if (jugador.getDinero() >= 1) {
                 jugador.setAtaque(jugador.calcularFuerzaInicial());
@@ -129,7 +147,7 @@ function Main() {
                 console.log(" ");
             }
             else {
-                console.log('No tienes suficiente dinero para cambiar la fuerza.');
+                console.log(' No tienes suficiente dinero para cambiar la fuerza.');
                 console.log(" ");
             }
         }
@@ -146,27 +164,27 @@ function Main() {
         var continuar = true;
         while (continuar) {
             //comprobar 
-            var opcion = readlineSync.question("Selecciona una opcion:");
+            var opcion = readlineSync.question(" Selecciona una opcion: ");
             switch (opcion) {
                 case '1':
-                    console.log("Luchando contra el enemigo...");
+                    console.log(" Luchando contra el enemigo... ");
                     Luchar();
                     break;
                 case '2':
-                    console.log("Comprando ítems...");
+                    console.log(" Comprando ítems... ");
                     mostrarPanelItems();
                     comprarItems();
                     break;
                 case '3':
-                    console.log("Consultando estadísticas...");
+                    console.log(" Consultando estadísticas... ");
                     jugador.mostrarEstadisticas();
                     break;
                 case '4':
-                    console.log("Saliendo del juego. ¡Hasta luego!");
+                    console.log(" Saliendo del juego. ¡Hasta luego! ");
                     continuar = false;
                     break;
                 default:
-                    console.log("Opción no válida. Por favor, selecciona una opción válida.");
+                    console.log(" Opción no válida. Por favor, selecciona una opción válida. ");
                     break;
             }
         }

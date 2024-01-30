@@ -3,26 +3,27 @@ import './Cards.css';
 
 const API = "https://deckofcardsapi.com/api/deck/new/draw/?count=49";
 
-
-
 const GameBoard = () => {
+    // ESTADOS:
     const [totalScore, setTotalScore] = useState(0);
     const [totalScoreDealer, setTotalScoreDealer] = useState(0);
     const [selectedCards, setSelectedCards] = useState([]);
     const [dealerHand, setdealerHand] = useState([]);
     const [oneCards, setoneCards] = useState(false);
-    //const [link, setLink] = useState(false);
-   
+    const [playerPlanted, setPlayerPlanted] = useState(false);
+    const [hiddenCardUrl, setHiddenCardUrl] = useState('https://www.deckofcardsapi.com/static/img/back.png');
 
-
+    // RESET DEL GAME
     const resetGame = () => {
         setSelectedCards([]);
         setdealerHand([]);
-        setTotalScoreDealer(0)
+        setTotalScoreDealer(0);
         setTotalScore(0);
-        
+        setPlayerPlanted(false);
+        setHiddenCardUrl('https://www.deckofcardsapi.com/static/img/back.png');
     };
 
+    // OBTENER CARTA RANDOM
     const getRandomCard = async () => {
         try {
             const response = await fetch(API);
@@ -38,10 +39,9 @@ const GameBoard = () => {
 
                 const randomIndex = Math.floor(Math.random() * availableCards.length);
                 const randomCard = availableCards[randomIndex];
-
                 // Agregar la carta seleccionada a la lista
                 setSelectedCards([...selectedCards, randomCard]);
-
+                // ARRAY TODAS CARTAS console.log(availableCards)
                 return randomCard;
             } else {
                 throw new Error("Error en la respuesta de la API");
@@ -52,13 +52,11 @@ const GameBoard = () => {
         }
     };
 
-    //DEALER
-
+    // GENERA UNA CARTA ALEATORIA PARA EL DEALER
     const getRandomCarDealer = async () => {
         try {
             const response = await fetch(API);
             const data = await response.json();
-
 
             if (data.success) {
                 const availableCards = data.cards.filter(card => !selectedCards.some(selectedCard => selectedCard.code === card.code));
@@ -74,18 +72,17 @@ const GameBoard = () => {
                 //DEALER
                 const randomIndexD = Math.floor(Math.random() * availableCards.length);
                 const randomCardDEA = availableCards[randomIndexD];
-                //               const imgHide =randomCardDEA.images.png.value;
-                //              alert(imgHide);
+
+                // Actualizar la URL de la carta oculta del crupier
+                setHiddenCardUrl(randomCardDEA.image);
+
                 if (oneCards) {
-                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0])
-
-
+                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0]);
+                    console.log(dealerHand);
                 } else {
                     setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0]);
-
-
+                    console.log(dealerHand);
                 }
-
 
                 console.log(oneCards);
 
@@ -100,12 +97,15 @@ const GameBoard = () => {
             console.error("Error al obtener carta aleatoria:", error);
             return null;
         }
-
-
     };
 
-    //PLANTARSE
+    // PUNTUACION DEALER
     const puntuacionDealer = async () => {
+        if (!playerPlanted) {
+            alert("¡El jugador debe plantarse antes de que el crupier revele cartas!");
+            return;
+        }
+
         let randomCardDEA = await getRandomCarDealer();
 
         if (randomCardDEA) {
@@ -113,12 +113,10 @@ const GameBoard = () => {
             let cardValueD = parseInt(randomCardDEA.value);
             if (["QUEEN", "KING", "JACK"].includes(randomCardDEA.value)) {
                 cardValueD = 10;
-
-
             } else if (["ACE"].includes(randomCardDEA.value)) {
                 cardValueD = 11;
-
             }
+            // OPERACION QUE SUMA LOS VALORES
             setTotalScoreDealer(totalScoreDealer + (isNaN(cardValueD) ? 0 : cardValueD));
 
             if (totalScoreDealer > 21) {
@@ -127,16 +125,22 @@ const GameBoard = () => {
             } else if (totalScoreDealer === 21) {
                 alert("Ganaste");
                 resetGame(true);
-    
-
             }
-
-
         }
     };
 
+    // PLANTARSE
+    const plantarse = async () => {
+        setPlayerPlanted(true);
+    };
 
+    // SACA LAS CARTAS ALEATORIAS PARA EL PLAYER
     const handleGetRandomCard = async () => {
+        if (playerPlanted) {
+            alert("¡El jugador ya se ha plantado!");
+            return;
+        }
+
         const randomCard = await getRandomCard();
 
         if (randomCard) {
@@ -147,9 +151,10 @@ const GameBoard = () => {
             } else if (["ACE"].includes(randomCard.value)) {
                 cardValue = 11;
             }
+
             setTotalScore(totalScore + (isNaN(cardValue) ? 0 : cardValue));
 
-            if (totalScore  > 21) {
+            if (totalScore > 21) {
                 alert("Perdiste");
                 resetGame(true);
             } else if (totalScore === 21) {
@@ -159,23 +164,22 @@ const GameBoard = () => {
         }
     };
 
-
-
     return (
         <div>
             <div>
                 <div>
                     <p className='total'>Puntuación Dealer: {totalScoreDealer}</p>
                     <button className='boton-random' onClick={puntuacionDealer}>Pedir Dealer</button>
-                    <button className='boton-plantarse'>Plantarse</button>
+                    <button className='boton-plantarse' onClick={plantarse}>Plantarse</button>
                 </div>
                 {dealerHand.map((card, index) => (
                     <div className='container-cards' key={index}>
                         <div>
                             <img
                                 className='carta'
-                                src={index === 1 ? 'https://www.deckofcardsapi.com/static/img/back.png' : card.image}
-                                alt="Carta" />
+                                src={index === 1 ? hiddenCardUrl : card.image}
+                                alt="Carta"
+                            />
                         </div>
                     </div>
                 ))}
@@ -194,13 +198,8 @@ const GameBoard = () => {
                 <p className='total'>Puntuación jugador: {totalScore}</p>
                 <button className='boton-random' onClick={handleGetRandomCard}>Pedir</button>
             </div>
-
-
-
-
         </div>
     );
 };
-
 
 export default GameBoard;
