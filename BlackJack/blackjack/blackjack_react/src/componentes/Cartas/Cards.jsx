@@ -12,12 +12,15 @@ const GameBoard = () => {
     const [dealerHand, setdealerHand] = useState([]);
     const [oneCards, setoneCards] = useState(false);
     //const [link, setLink] = useState(false);
-
+   
 
 
     const resetGame = () => {
         setSelectedCards([]);
+        setdealerHand([]);
+        setTotalScoreDealer(0)
         setTotalScore(0);
+        
     };
 
     const getRandomCard = async () => {
@@ -74,7 +77,7 @@ const GameBoard = () => {
                 //               const imgHide =randomCardDEA.images.png.value;
                 //              alert(imgHide);
                 if (oneCards) {
-                    setdealerHand([...dealerHand, randomCard,randomCardDEA[1] === 0])
+                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0])
 
 
                 } else {
@@ -120,10 +123,12 @@ const GameBoard = () => {
 
             if (totalScoreDealer > 21) {
                 alert("Perdiste");
-                resetGame();
+                resetGame(true);
             } else if (totalScoreDealer === 21) {
                 alert("Ganaste");
-                resetGame();
+                resetGame(true);
+    
+
             }
 
 
@@ -144,12 +149,12 @@ const GameBoard = () => {
             }
             setTotalScore(totalScore + (isNaN(cardValue) ? 0 : cardValue));
 
-            if (totalScore > 21) {
+            if (totalScore  > 21) {
                 alert("Perdiste");
-                resetGame();
+                resetGame(true);
             } else if (totalScore === 21) {
                 alert("Ganaste");
-                resetGame();
+                resetGame(true);
             }
         }
     };
