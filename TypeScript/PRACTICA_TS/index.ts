@@ -141,7 +141,7 @@ function Main(): void {
 
 
     //OBJETOS ENEMIGOS
-    const Gyobu_Oniwa = new Enemigo("Gyobu Oniwa");
+    const Gyobu_Oniwa = new Enemigo(" Gyobu Oniwa ");
     const Lautrec = new Enemigo("Lautrec");
     const Pablo = new Enemigo("Pablo Motril");
     const Vicaria_Amelia = new Enemigo("Vicaria Amelia");
@@ -174,7 +174,7 @@ function Main(): void {
 
 
 
-    let nombreUsuario: string = readlineSync.question("Introduce tu nombre ");
+    let nombreUsuario: string = readlineSync.question(" Introduce tu nombre ");
     console.log("Bienvenido:  " + nombreUsuario + "!");
 
     //OBJETO JUGADOR;
@@ -189,8 +189,8 @@ function Main(): void {
     let decision;
 
     do {
-        console.log('Tu fuerza inicial es ' + jugador.getAtaque());
-        decision = readlineSync.keyInYNStrict('Quieres cambiar tu fuerza por 1 dinero?');
+        console.log(' Tu fuerza inicial es ' + jugador.getAtaque());
+        decision = readlineSync.keyInYNStrict(' Quieres cambiar tu fuerza por 1 dinero? ');
 
         if (decision) {
             if (jugador.getDinero() >= 1) {
@@ -199,7 +199,7 @@ function Main(): void {
                 console.log('Tu nueva fuerza es ' + jugador.getAtaque());
                 console.log(" ");
             } else {
-                console.log('No tienes suficiente dinero para cambiar la fuerza.');
+                console.log(' No tienes suficiente dinero para cambiar la fuerza.');
                 console.log(" ");
             }
         }
@@ -224,28 +224,28 @@ function Main(): void {
         while (continuar) {
 
             //comprobar 
-            const opcion = readlineSync.question("Selecciona una opcion:");
+            const opcion = readlineSync.question(" Selecciona una opcion: " );
 
             switch (opcion) {
                 case '1':
-                    console.log("Luchando contra el enemigo...");
+                    console.log(" Luchando contra el enemigo... ");
                     Luchar();
                     break;
                 case '2':
-                    console.log("Comprando ítems...");
+                    console.log(" Comprando ítems... ");
                     mostrarPanelItems();
                     comprarItems();
                     break;
                 case '3':
-                    console.log("Consultando estadísticas...");
+                    console.log(" Consultando estadísticas... ");
                     jugador.mostrarEstadisticas();
                     break;
                 case '4':
-                    console.log("Saliendo del juego. ¡Hasta luego!");
+                    console.log(" Saliendo del juego. ¡Hasta luego! ");
                     continuar = false;
                     break;
                 default:
-                    console.log("Opción no válida. Por favor, selecciona una opción válida.");
+                    console.log(" Opción no válida. Por favor, selecciona una opción válida. ");
                     break;
             }
         }

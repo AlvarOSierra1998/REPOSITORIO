@@ -55,7 +55,7 @@ const GameBoard = () => {
         try {
             const response = await fetch(API);
             const data = await response.json();
-            
+
 
             if (data.success) {
                 const availableCards = data.cards.filter(card => !selectedCards.some(selectedCard => selectedCard.code === card.code));
@@ -71,15 +71,18 @@ const GameBoard = () => {
                 //DEALER
                 const randomIndexD = Math.floor(Math.random() * availableCards.length);
                 const randomCardDEA = availableCards[randomIndexD];
- //               const imgHide =randomCardDEA.images.png.value;
-  //              alert(imgHide);
+                //               const imgHide =randomCardDEA.images.png.value;
+                //              alert(imgHide);
                 if (oneCards) {
-                    setdealerHand([...dealerHand, randomCardDEA])
+                    setdealerHand([...dealerHand, randomCard,randomCardDEA[1] === 0])
+
 
                 } else {
-                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1]]);
+                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0]);
+
 
                 }
+
 
                 console.log(oneCards);
 
@@ -100,17 +103,20 @@ const GameBoard = () => {
 
     //PLANTARSE
     const puntuacionDealer = async () => {
-        const randomCard = await getRandomCarDealer();
+        let randomCardDEA = await getRandomCarDealer();
 
-        if (randomCard) {
+        if (randomCardDEA) {
             // Calcular el valor numérico de la carta y sumarlo a la puntuación total
-            let cardValue = parseInt(randomCard.value);
-            if (["QUEEN", "KING", "JACK"].includes(randomCard.value)) {
-                cardValue = 10;
-            } else if (["ACE"].includes(randomCard.value)) {
-                cardValue = 11;
+            let cardValueD = parseInt(randomCardDEA.value);
+            if (["QUEEN", "KING", "JACK"].includes(randomCardDEA.value)) {
+                cardValueD = 10;
+
+
+            } else if (["ACE"].includes(randomCardDEA.value)) {
+                cardValueD = 11;
+
             }
-            setTotalScoreDealer(totalScoreDealer + (isNaN(cardValue) ? 0 : cardValue));
+            setTotalScoreDealer(totalScoreDealer + (isNaN(cardValueD) ? 0 : cardValueD));
 
             if (totalScoreDealer > 21) {
                 alert("Perdiste");
@@ -119,12 +125,10 @@ const GameBoard = () => {
                 alert("Ganaste");
                 resetGame();
             }
-            
-            
-            getRandomCarDealer();
+
+
         }
     };
-
 
 
     const handleGetRandomCard = async () => {
@@ -165,7 +169,7 @@ const GameBoard = () => {
                         <div>
                             <img
                                 className='carta'
-                                src={index === 1 ? 'https://www.deckofcardsapi.com/static/img/back.png' : card.image }
+                                src={index === 1 ? 'https://www.deckofcardsapi.com/static/img/back.png' : card.image}
                                 alt="Carta" />
                         </div>
                     </div>
