@@ -1,205 +1,270 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Cards.css';
 
-const API = "https://deckofcardsapi.com/api/deck/new/draw/?count=49";
+const baraja_inicial = [
+    { nombre: '2_of_clubs.png', valor: 2 },
+    { nombre: '3_of_clubs.png', valor: 3 },
+    { nombre: '4_of_clubs.png', valor: 4 },
+    { nombre: '5_of_clubs.png', valor: 5 },
+    { nombre: '6_of_clubs.png', valor: 6 },
+    { nombre: '7_of_clubs.png', valor: 7 },
+    { nombre: '8_of_clubs.png', valor: 8 },
+    { nombre: '9_of_clubs.png', valor: 9 },
+    { nombre: '10_of_clubs.png', valor: 10 },
+    { nombre: 'jack_of_clubs2.png', valor: 10 },
+    { nombre: 'queen_of_clubs2.png', valor: 10 },
+    { nombre: 'king_of_clubs2.png', valor: 10 },
+    { nombre: 'ace_of_clubs.png', valor: 11 },
+    { nombre: '2_of_diamonds.png', valor: 2 },
+    { nombre: '3_of_diamonds.png', valor: 3 },
+    { nombre: '4_of_diamonds.png', valor: 4 },
+    { nombre: '5_of_diamonds.png', valor: 5 },
+    { nombre: '6_of_diamonds.png', valor: 6 },
+    { nombre: '7_of_diamonds.png', valor: 7 },
+    { nombre: '8_of_diamonds.png', valor: 8 },
+    { nombre: '9_of_diamonds.png', valor: 9 },
+    { nombre: '10_of_diamonds.png', valor: 10 },
+    { nombre: 'jack_of_diamonds2.png', valor: 10 },
+    { nombre: 'queen_of_diamonds2.png', valor: 10 },
+    { nombre: 'king_of_diamonds2.png', valor: 10 },
+    { nombre: 'ace_of_diamonds.png', valor: 11 },
+    { nombre: '2_of_hearts.png', valor: 2 },
+    { nombre: '3_of_hearts.png', valor: 3 },
+    { nombre: '4_of_hearts.png', valor: 4 },
+    { nombre: '5_of_hearts.png', valor: 5 },
+    { nombre: '6_of_hearts.png', valor: 6 },
+    { nombre: '7_of_hearts.png', valor: 7 },
+    { nombre: '8_of_hearts.png', valor: 8 },
+    { nombre: '9_of_hearts.png', valor: 9 },
+    { nombre: '10_of_hearts.png', valor: 10 },
+    { nombre: 'jack_of_hearts2.png', valor: 10 },
+    { nombre: 'queen_of_hearts2.png', valor: 10 },
+    { nombre: 'king_of_hearts2.png', valor: 10 },
+    { nombre: 'ace_of_hearts.png', valor: 11 },
+    { nombre: '2_of_spades.png', valor: 2 },
+    { nombre: '3_of_spades.png', valor: 3 },
+    { nombre: '4_of_spades.png', valor: 4 },
+    { nombre: '5_of_spades.png', valor: 5 },
+    { nombre: '6_of_spades.png', valor: 6 },
+    { nombre: '7_of_spades.png', valor: 7 },
+    { nombre: '8_of_spades.png', valor: 8 },
+    { nombre: '9_of_spades.png', valor: 9 },
+    { nombre: '10_of_spades.png', valor: 10 },
+    { nombre: 'jack_of_spades2.png', valor: 10 },
+    { nombre: 'queen_of_spades2.png', valor: 10 },
+    { nombre: 'king_of_spades2.png', valor: 10 },
+    { nombre: 'ace_of_spades.png', valor: 11 },
+];
+
+
+function shuffleDeck(deck) {
+    // Crear una copia del array original para evitar modificarlo
+    const shuffledDeck = [...deck];
+
+    // Algoritmo de barajado Fisher-Yates
+    for (let i = shuffledDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        // Intercambiar elementos en los índices i y j
+        [shuffledDeck[i], shuffledDeck[j]] = [shuffledDeck[j], shuffledDeck[i]];
+    }
+
+    return shuffledDeck;
+}
 
 const GameBoard = () => {
-    // ESTADOS:
     const [totalScore, setTotalScore] = useState(0);
     const [totalScoreDealer, setTotalScoreDealer] = useState(0);
-    const [selectedCards, setSelectedCards] = useState([]);
-    const [dealerHand, setdealerHand] = useState([]);
-    const [oneCards, setoneCards] = useState(false);
-    const [playerPlanted, setPlayerPlanted] = useState(false);
-    const [hiddenCardUrl, setHiddenCardUrl] = useState('https://www.deckofcardsapi.com/static/img/back.png');
+    const [CartaMostrarDealer, setCartaMostrarDealer] = useState(false);
+    const [PlayerHand, setPlayerHand] = useState([]);
+    const [barajada, setBarajada] = useState([]);
+    const [dealerHand, setDealerHand] = useState([]);
+    const [gameInProgress, setGameProgress] = useState(true);
+    const [message, setMessage] = useState(false);
+    const [restart, setRestart] = useState(false);
+    /* const resetGame = () => {
+         setSelectedCards([]);
+         setDealerHand([]);
+         setTotalScoreDealer(0);
+         setTotalScore(0);
+         setPlayerPlanted(false);
+         setOneCards(false);
+     };*/
 
-    // RESET DEL GAME
-    const resetGame = () => {
-        setSelectedCards([]);
-        setdealerHand([]);
-        setTotalScoreDealer(0);
-        setTotalScore(0);
-        setPlayerPlanted(false);
-        setHiddenCardUrl('https://www.deckofcardsapi.com/static/img/back.png');
+    // Función para barajar la baraja de cartas usando el algoritmo Fisher-Yates
+    useEffect(() => {
+        const baraja = shuffleDeck([...baraja_inicial]);
+        setBarajada(baraja);
+
+        const CartaInical = [baraja.pop()];
+        setPlayerHand(CartaInical);
+
+        const CartaInicalDealer = [baraja.pop(), { nombre: 'https://www.deckofcardsapi.com/static/img/back.png', valor: 0 }];
+        setDealerHand(CartaInicalDealer);
+
+        setTotalScore(calculateScore(CartaInical));
+        setTotalScoreDealer(calculateScore(CartaInicalDealer));
+
+    }, [])
+
+
+
+
+    const calculateScore = (cards) => {
+
+        return cards.reduce((total, card) => total + card.valor, 0);
     };
 
-    // OBTENER CARTA RANDOM
-    const getRandomCard = async () => {
-        try {
-            const response = await fetch(API);
-            const data = await response.json();
 
-            if (data.success) {
-                const availableCards = data.cards.filter(card => !selectedCards.some(selectedCard => selectedCard.code === card.code));
 
-                if (availableCards.length === 0) {
-                    // Todas las cartas han sido seleccionadas, reiniciar la lista
-                    resetGame();
-                }
 
-                const randomIndex = Math.floor(Math.random() * availableCards.length);
-                const randomCard = availableCards[randomIndex];
-                // Agregar la carta seleccionada a la lista
-                setSelectedCards([...selectedCards, randomCard]);
-                // ARRAY TODAS CARTAS console.log(availableCards)
-                return randomCard;
-            } else {
-                throw new Error("Error en la respuesta de la API");
-            }
-        } catch (error) {
-            console.error("Error al obtener carta aleatoria:", error);
-            return null;
+    const plantarse = () => {
+
+        setCartaMostrarDealer(true);
+
+        let dealerHandle = [...dealerHand];
+
+        let suma;
+
+        if (dealerHand.some(card => card.valor === 0)) {
+            dealerHandle = dealerHandle.slice(0, 1).concat(dealerHandle.slice(2));
+            const cardD = barajada.pop();
+            dealerHandle.push(cardD);
+            setDealerHand(dealerHandle);
+            suma = calculateScore(dealerHandle);
+            setTotalScoreDealer(suma);
+        }
+
+        while (suma < 17) {
+            const card = barajada.pop();
+            dealerHandle = [...dealerHandle, card];
+            setDealerHand(dealerHandle);
+            suma = calculateScore(dealerHandle);
+            setTotalScoreDealer(suma);
+
+        }
+        //preguntar
+        compareScores(suma);
+
+        const res = compareScores(suma);
+        setMessage([...message, res]);
+        setGameProgress(false);
+        setRestart(true);
+
+    };
+
+    const compareScores = (suma) => {
+        if (totalScore === 21) {
+            // Blackjack del jugador
+            return "¡Blackjack! El jugador gana.";
+        } else if (suma === 21) {
+            // Blackjack del crupier
+            return "¡Blackjack! El crupier gana.";
+        } else if (totalScore > 21) {
+            // El jugador ha perdido
+            return "¡Te has pasado de 21! ¡Has perdido.";
+        } else if (suma > 21) {
+            // El crupier ha perdido
+            return "El crupier ha perdido.";
+        } else if (totalScore > suma) {
+            // El jugador gana
+            return "El jugador gana.";
+        } else if (suma > totalScore) {
+            // El crupier gana
+            return "El crupier gana.";
+        } else {
+            // Empate
+            return "¡Es un empate!";
         }
     };
 
-    // GENERA UNA CARTA ALEATORIA PARA EL DEALER
-    const getRandomCarDealer = async () => {
-        try {
-            const response = await fetch(API);
-            const data = await response.json();
+    //pedir carta jugador
+    const handleGetRandomCard = () => {
 
-            if (data.success) {
-                const availableCards = data.cards.filter(card => !selectedCards.some(selectedCard => selectedCard.code === card.code));
+        const card = barajada.pop(); // Sacar una carta del mazo barajado
+        const updatedPlayerCards = [...PlayerHand, card]; // Añadir la carta extra a la mano del jugador
+        // Calcular la puntuación del jugador con la nueva carta
+        const updatedPlayerScore = calculateScore(updatedPlayerCards);
 
-                if (availableCards.length === 0) {
-                    // Todas las cartas han sido seleccionadas, reiniciar la lista
-                    resetGame();
-                }
-
-                const randomIndex = Math.floor(Math.random() * availableCards.length);
-                const randomCard = availableCards[randomIndex];
-
-                //DEALER
-                const randomIndexD = Math.floor(Math.random() * availableCards.length);
-                const randomCardDEA = availableCards[randomIndexD];
-
-                // Actualizar la URL de la carta oculta del crupier
-                setHiddenCardUrl(randomCardDEA.image);
-
-                if (oneCards) {
-                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0]);
-                    console.log(dealerHand);
-                } else {
-                    setdealerHand([...dealerHand, randomCard, randomCardDEA[1] === 0]);
-                    console.log(dealerHand);
-                }
-
-                console.log(oneCards);
-
-                setoneCards(true);
-                // Agregar la carta seleccionada a la lista
-
-                return randomCard;
-            } else {
-                throw new Error("Error en la respuesta de la API");
-            }
-        } catch (error) {
-            console.error("Error al obtener carta aleatoria:", error);
-            return null;
+        // Verificar si el jugador se ha pasado de 21
+        if (updatedPlayerScore > 21) {
+            setPlayerHand([...PlayerHand, card]);
+            //botones 
+            setTotalScore(updatedPlayerScore);
+            // Aquí puedes manejar la lógica para indicar al jugador que ha perdido, como actualizar el estado o mostrar un mensaje al usuario
+        } else {
+            setTotalScore(updatedPlayerScore);
+            setPlayerHand([...PlayerHand, card]); // Actualizar la mano del jugador solo si no se ha pasado de 21
         }
+
     };
 
-    // PUNTUACION DEALER
-    const puntuacionDealer = async () => {
-        if (!playerPlanted) {
-            alert("¡El jugador debe plantarse antes de que el crupier revele cartas!");
-            return;
+    const pedir_dealer = () => {
+        const cardD = barajada.pop();
+        const updateDealerCards = [...dealerHand, cardD];
+        const updateScoreDealer = calculateScore(updateDealerCards);
+
+        // Verificar si el jugador se ha pasado de 21
+        if (updateScoreDealer > 21) {
+            setDealerHand([...dealerHand, cardD]);
+            //botones 
+            setTotalScore(updateScoreDealer);
         }
+        setTotalScoreDealer(updateScoreDealer);
+        setDealerHand(updateDealerCards);
 
-        let randomCardDEA = await getRandomCarDealer();
-
-        if (randomCardDEA) {
-            // Calcular el valor numérico de la carta y sumarlo a la puntuación total
-            let cardValueD = parseInt(randomCardDEA.value);
-            if (["QUEEN", "KING", "JACK"].includes(randomCardDEA.value)) {
-                cardValueD = 10;
-            } else if (["ACE"].includes(randomCardDEA.value)) {
-                cardValueD = 11;
-            }
-            // OPERACION QUE SUMA LOS VALORES
-            setTotalScoreDealer(totalScoreDealer + (isNaN(cardValueD) ? 0 : cardValueD));
-
-            if (totalScoreDealer > 21) {
-                alert("Perdiste");
-                resetGame(true);
-            } else if (totalScoreDealer === 21) {
-                alert("Ganaste");
-                resetGame(true);
-            }
-        }
-    };
-
-    // PLANTARSE
-    const plantarse = async () => {
-        setPlayerPlanted(true);
-    };
-
-    // SACA LAS CARTAS ALEATORIAS PARA EL PLAYER
-    const handleGetRandomCard = async () => {
-        if (playerPlanted) {
-            alert("¡El jugador ya se ha plantado!");
-            return;
-        }
-
-        const randomCard = await getRandomCard();
-
-        if (randomCard) {
-            // Calcular el valor numérico de la carta y sumarlo a la puntuación total
-            let cardValue = parseInt(randomCard.value);
-            if (["QUEEN", "KING", "JACK"].includes(randomCard.value)) {
-                cardValue = 10;
-            } else if (["ACE"].includes(randomCard.value)) {
-                cardValue = 11;
-            }
-
-            setTotalScore(totalScore + (isNaN(cardValue) ? 0 : cardValue));
-
-            if (totalScore > 21) {
-                alert("Perdiste");
-                resetGame(true);
-            } else if (totalScore === 21) {
-                alert("Ganaste");
-                resetGame(true);
-            }
-        }
-    };
-
+    }
+const handleRestart = ( ) => {
+    setGameProgress(true);
+    
+}
     return (
         <div>
-            <div>
-                <div>
-                    <p className='total'>Puntuación Dealer: {totalScoreDealer}</p>
-                    <button className='boton-random' onClick={puntuacionDealer}>Pedir Dealer</button>
-                    <button className='boton-plantarse' onClick={plantarse}>Plantarse</button>
-                </div>
-                {dealerHand.map((card, index) => (
-                    <div className='container-cards' key={index}>
-                        <div>
-                            <img
-                                className='carta'
-                                src={index === 1 ? hiddenCardUrl : card.image}
-                                alt="Carta"
-                            />
-                        </div>
-                    </div>
-                ))}
-            </div>
 
-            <div>
-                {selectedCards.map((card, index) => (
-                    <div className='container-cards' key={index}>
-                        <div>
-                            <img className='carta' src={card.image} alt="Carta" />
-                        </div>
+
+            <div className="root">
+                <div>
+                    <div>
+                        <h2>Puntuación del Crupier: {totalScoreDealer}</h2>
+                        {/* Mostrar las cartas del crupier, ocultando la primera carta si aún no se ha revelado */}
+                        {dealerHand.map((card, index) => (
+                            <img
+                                key={index}
+                                src={`../assets/img/${index === 1 && !CartaMostrarDealer ? 'back.png' : card.nombre}`}
+                                alt={card.nombre}
+                                style={{ width: '100px', height: '150px' }}
+                            />
+                        ))}
                     </div>
-                ))}
-            </div>
-            <div>
-                <p className='total'>Puntuación jugador: {totalScore}</p>
-                <button className='boton-random' onClick={handleGetRandomCard}>Pedir</button>
+                    <div>
+                        {/* Botones para pedir una carta adicional ("hit") o plantarse */}
+
+                        <button onClick={pedir_dealer} disabled={!gameInProgress}>Pedir carta crupier</button>
+                        {restart && <button onClick={!handleRestart}>Reiniciar Partida</button>}
+                    </div>
+                    <div>
+                        <h2>Puntuación del Jugador: {totalScore}</h2>
+                        {/* Mostrar las cartas del jugador */}
+                        {PlayerHand.map((card, index) => (
+                            <img
+                                key={index}
+                                src={`../assets/img/${card.nombre}`}
+                                alt={card.nombre}
+                                style={{ width: '100px', height: '150px' }}
+                            />
+                        ))}
+                        <br></br>
+                        <button onClick={handleGetRandomCard} disabled={!gameInProgress}>Pedir carta</button>
+                        <button onClick={plantarse} disabled={!gameInProgress}>Plantarse</button>
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
             </div>
         </div>
     );
-};
+
+}
 
 export default GameBoard;
