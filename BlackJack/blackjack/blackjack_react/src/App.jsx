@@ -11,9 +11,12 @@ function Tablero() {
     <>
       <main>
         <div className='board'>
-          
-            
           <Card />
+          <div className="carta-hueco"></div>
+          <div className="carta-hueco"></div>
+          <div className="carta-hueco"></div>
+          <div className="carta-hueco"></div>
+          <div className="carta-hueco"></div>
         </div>
       </main>
     </>
