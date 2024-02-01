@@ -1,0 +1,7 @@
+div img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+}
