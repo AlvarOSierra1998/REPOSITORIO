@@ -18,12 +18,14 @@ const almacenar = () => {
     }
     console.log(localStorage.getItem('res', resultado))*/
 
-    ;
+    let storedData = localStorage.getItem('storedData');
+    let storedObjects = storedData ? JSON.parse(storedData) : [];
 
 
     //BORGOÑOTA
     if (userInput === "Borgoñota") {
         
+        storedObjects.push(borgoñota);
         localStorage.setItem('dataBorgoñota', JSON.stringify(borgoñota));
         let StorageDataBorgo = localStorage.getItem('dataBorgoñota');
         let ObtainedItemBorgo = JSON.parse(StorageDataBorgo);
@@ -45,7 +47,7 @@ const almacenar = () => {
 
     } else if (userInput === "Almete") {
         //ALMETE
-        
+        storedObjects.push(almete);
         localStorage.setItem('dataAlmete', JSON.stringify(almete));
         let StorageDataAlmete = localStorage.getItem('dataAlmete');
         let ObtainedItemAlmete = JSON.parse(StorageDataAlmete);
@@ -64,7 +66,8 @@ const almacenar = () => {
         ///////////////////////////////////////////
     } else if (userInput === "Bacinete") {
         //BACINET
-       
+        storedObjects.push(bacinete);
+    
         localStorage.setItem('dataBacinete', JSON.stringify(bacinete));
         let StorageDataBacinete = localStorage.getItem('dataBacinete');
         let ObtainedItemBacinet = JSON.parse(StorageDataBacinete);
@@ -83,15 +86,14 @@ const almacenar = () => {
     } else {
         console.log("el item no esta en la lista");
         return;
+    
     }
 
-
 }
-const mostrarContenido = () => {
 
-    let storedData = localStorage.getItem('storedData');
-    let storedObjects = storedData ? JSON.parse(storedData) : [];
-    localStorage.setItem('storedData', JSON.stringify(storedObjects));
+const mostrar = () =>{
+    
+
 }
 
 const eliminarOne = () => {
