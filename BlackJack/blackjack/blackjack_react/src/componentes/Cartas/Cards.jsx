@@ -104,7 +104,7 @@ const GameBoard = () => {
         setTotalScore(calculateScore(CartaInical));
         setTotalScoreDealer(calculateScore(CartaInicalDealer));
 
-    }, [])
+    }, [gameInProgress])
 
 
 
@@ -132,6 +132,8 @@ const GameBoard = () => {
             setDealerHand(dealerHandle);
             suma = calculateScore(dealerHandle);
             setTotalScoreDealer(suma);
+            setGameProgress(false);
+            setRestart(true);
         }
 
         while (suma < 17) {
@@ -140,6 +142,8 @@ const GameBoard = () => {
             setDealerHand(dealerHandle);
             suma = calculateScore(dealerHandle);
             setTotalScoreDealer(suma);
+            setGameProgress(false);
+            setRestart(true);
 
         }
         //preguntar
@@ -155,30 +159,34 @@ const GameBoard = () => {
     const compareScores = (suma) => {
         if (totalScore === 21) {
             // Blackjack del jugador
-            return "¡Blackjack! El jugador gana.";
+            return alert("¡Blackjack! El jugador gana.");
+
         } else if (suma === 21) {
             // Blackjack del crupier
-            return "¡Blackjack! El crupier gana.";
+            return alert("¡Blackjack! El crupier gana.");
         } else if (totalScore > 21) {
             // El jugador ha perdido
-            return "¡Te has pasado de 21! ¡Has perdido.";
+            return alert("¡Te has pasado de 21! ¡Has perdido.");
         } else if (suma > 21) {
             // El crupier ha perdido
-            return "El crupier ha perdido.";
+            return alert("El crupier ha perdido.");
         } else if (totalScore > suma) {
             // El jugador gana
-            return "El jugador gana.";
+            return alert("El jugador gana.");
         } else if (suma > totalScore) {
             // El crupier gana
-            return "El crupier gana.";
+            return alert("El crupier gana.");
         } else {
             // Empate
-            return "¡Es un empate!";
+            return alert("¡Es un empate!");
         }
+
     };
+
 
     //pedir carta jugador
     const handleGetRandomCard = () => {
+
 
         const card = barajada.pop(); // Sacar una carta del mazo barajado
         const updatedPlayerCards = [...PlayerHand, card]; // Añadir la carta extra a la mano del jugador
@@ -188,8 +196,12 @@ const GameBoard = () => {
         // Verificar si el jugador se ha pasado de 21
         if (updatedPlayerScore > 21) {
             setPlayerHand([...PlayerHand, card]);
-            //botones 
+
+            alert("perdiste")
             setTotalScore(updatedPlayerScore);
+            //botones 
+            setGameProgress(false);
+            setRestart(true);
             // Aquí puedes manejar la lógica para indicar al jugador que ha perdido, como actualizar el estado o mostrar un mensaje al usuario
         } else {
             setTotalScore(updatedPlayerScore);
@@ -197,6 +209,7 @@ const GameBoard = () => {
         }
 
     };
+
 
     const pedir_dealer = () => {
         const cardD = barajada.pop();
@@ -207,23 +220,36 @@ const GameBoard = () => {
         if (updateScoreDealer > 21) {
             setDealerHand([...dealerHand, cardD]);
             //botones 
+            alert("El dealer ha perdido")
+
+            setGameProgress(false);
+            setRestart(true);
+
             setTotalScore(updateScoreDealer);
         }
         setTotalScoreDealer(updateScoreDealer);
         setDealerHand(updateDealerCards);
 
     }
-const handleRestart = ( ) => {
-    setGameProgress(true);
-    
-}
+    const handleRestart = () => {
+        setGameProgress(true);
+        setRestart(false);
+        setCartaMostrarDealer(false);
+        setPlayerHand([]);
+        setDealerHand([]);
+        setBarajada([]);
+        setTotalScore(0);
+        setTotalScoreDealer(0);
+
+    }
+
     return (
         <div>
 
 
             <div className="root">
                 <div>
-                    <div>
+                    <div className='cardsFlex'>
                         <h2>Puntuación del Crupier: {totalScoreDealer}</h2>
                         {/* Mostrar las cartas del crupier, ocultando la primera carta si aún no se ha revelado */}
                         {dealerHand.map((card, index) => (
@@ -234,14 +260,16 @@ const handleRestart = ( ) => {
                                 style={{ width: '100px', height: '150px' }}
                             />
                         ))}
+
                     </div>
                     <div>
                         {/* Botones para pedir una carta adicional ("hit") o plantarse */}
 
-                        <button onClick={pedir_dealer} disabled={!gameInProgress}>Pedir carta crupier</button>
-                        {restart && <button onClick={!handleRestart}>Reiniciar Partida</button>}
+                        <button className='boton-p' onClick={pedir_dealer} disabled={!gameInProgress}>Pedir carta crupier</button>
+                        {restart &&
+                            <button className='boton-p' onClick={handleRestart}>Reiniciar Partida</button>}
                     </div>
-                    <div>
+                    <div className='cardsFlex'>
                         <h2>Puntuación del Jugador: {totalScore}</h2>
                         {/* Mostrar las cartas del jugador */}
                         {PlayerHand.map((card, index) => (
@@ -253,11 +281,11 @@ const handleRestart = ( ) => {
                             />
                         ))}
                         <br></br>
-                        <button onClick={handleGetRandomCard} disabled={!gameInProgress}>Pedir carta</button>
-                        <button onClick={plantarse} disabled={!gameInProgress}>Plantarse</button>
+                        <button className='button-p' onClick={handleGetRandomCard} disabled={!gameInProgress}>Pedir carta</button>
+                        <button className='button-p' onClick={plantarse} disabled={!gameInProgress}>Plantarse</button>
                     </div>
                     <div>
-                        
+
                     </div>
                 </div>
 

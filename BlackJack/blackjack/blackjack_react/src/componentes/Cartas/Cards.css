@@ -1,3 +1,58 @@
-h2{
+h2 {
     color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+
+    .cardsFlex {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 111%;
+    }
+
+    .button-p {
+        padding: 1rem;
+        background: transparent;
+        color: rgb(0, 0, 0);
+        outline: none;
+        border: none;
+        background-color: chartreuse;
+        border-radius: 4px;
+        display: inline-flex;
+        float: left;
+        margin: 10%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .button-p {
+        padding: 1rem;
+        background: transparent;
+        color: rgb(179, 255, 0);
+        outline: none;
+        border: none;
+        background-color: rgb(0, 0, 0);
+        border-radius: 4px;
+        display: inline-flex;
+        float: left;
+        margin: auto;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+
+    .button-p:hover {
+        background-color: black;
+        color: rgb(0, 0, 0);
+        transition: .3s ease-in-out;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #41ff2b, #37de24);
+        box-shadow: 38px 38px 100px #2eb91e,
+            -38px -38px 100px #4cff32;
+            
+    }
 }
