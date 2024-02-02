@@ -13,10 +13,10 @@ function Tablero() {
         <div className='board'>
           <Card />
           <div className="carta-hueco"></div>
-          <div className="carta-hueco"></div>
-          <div className="carta-hueco"></div>
-          <div className="carta-hueco"></div>
-          <div className="carta-hueco"></div>
+          <div className="carta-hueco2"></div>
+          <div className="carta-hueco3"></div>
+          <div className="carta-huecoCrupier1"></div>
+          <div className="carta-huecoCrupier2"></div>
         </div>
       </main>
     </>

@@ -1,18 +1,33 @@
 
 
 
-const almacenar = () => {
 
+const almacenar = () => {
     let userInput = prompt("Que Casco quieres buscar?");
 
-    
-    
-    let almete = { nombre: "Almete", Siglo: "XV", origen: " Italia, Francia, Inglaterra y España", img: "https://upload.wikimedia.org/wikipedia/commons/1/11/ClassicArmet_by_Emmanuel_Viollet-le-Duc.jpg" }
-    let borgoñota = { nombre: "Borgoñota", Siglo: "XVI & XVII", origen: "Region de Borgoña(Francia)", img: "https://i.pinimg.com/736x/29/2c/1f/292c1f15f5dc9dafbd8e3aa10f31d569--los.jpg" }
-    let bacinete = { nombre: "Bacinete", Siglo: "XIII", origen: "Alemania", img: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Dictionnaire_raisonn%C3%A9_du_mobilier_fran%C3%A7ais_de_l%E2%80%99%C3%A9poque_carlovingienne_%C3%A0_la_Renaissance%2C_tome_5_-_183.png" }
-    
+    let borgoñota = {
+        nombre: "Borgoñota",
+        Siglo: "XVI & XVII",
+        origen: "Region de Borgoña(Francia)",
+        img: "https://i.pinimg.com/736x/29/2c/1f/292c1f15f5dc9dafbd8e3aa10f31d569--los.jpg"
+    };
+    let almete = {
+        nombre: "Almete",
+        Siglo: "XV",
+        origen: " Italia, Francia, Inglaterra y España",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/11/ClassicArmet_by_Emmanuel_Viollet-le-Duc.jpg"
+    };
+    let bacinete = {
+        nombre: "Bacinete",
+        Siglo: "XIII",
+        origen: "Alemania",
+        img: "https://upload.wikimedia.org/wikipedia/commons/e/e6/Dictionnaire_raisonn%C3%A9_du_mobilier_fran%C3%A7ais_de_l%E2%80%99%C3%A9poque_carlovingienne_%C3%A0_la_Renaissance%2C_tome_5_-_183.png"
+    };
+
+
+
     let resultado = document.getElementById('res');
-    
+
     /*if (!localStorage.getItem('res', resultado)) {
         localStorage.setItem('res', resultado, JSON.stringify());
     }
@@ -24,7 +39,7 @@ const almacenar = () => {
 
     //BORGOÑOTA
     if (userInput === "Borgoñota") {
-        
+
         storedObjects.push(borgoñota);
         localStorage.setItem('dataBorgoñota', JSON.stringify(borgoñota));
         let StorageDataBorgo = localStorage.getItem('dataBorgoñota');
@@ -67,7 +82,7 @@ const almacenar = () => {
     } else if (userInput === "Bacinete") {
         //BACINET
         storedObjects.push(bacinete);
-    
+
         localStorage.setItem('dataBacinete', JSON.stringify(bacinete));
         let StorageDataBacinete = localStorage.getItem('dataBacinete');
         let ObtainedItemBacinet = JSON.parse(StorageDataBacinete);
@@ -86,15 +101,11 @@ const almacenar = () => {
     } else {
         console.log("el item no esta en la lista");
         return;
-    
+
     }
 
 }
 
-const mostrar = () =>{
-    
-
-}
 
 const eliminarOne = () => {
 
