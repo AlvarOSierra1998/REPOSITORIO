@@ -124,7 +124,7 @@ function borrarInd() {
 
     } else if (userInput === "Bacinete") {
     
-        localStorage.removeItem("dataBacinet");
+        localStorage.removeItem("dataBacinete");
     }
 
 
