@@ -1,23 +1,24 @@
 
 
 
-
 const almacenar = () => {
     let userInput = prompt("Que Casco quieres buscar?");
 
-    let borgoñota = {
+    var borgoñota = {
         nombre: "Borgoñota",
         Siglo: "XVI & XVII",
         origen: "Region de Borgoña(Francia)",
         img: "https://i.pinimg.com/736x/29/2c/1f/292c1f15f5dc9dafbd8e3aa10f31d569--los.jpg"
     };
-    let almete = {
+    var almete = {
+
         nombre: "Almete",
         Siglo: "XV",
         origen: " Italia, Francia, Inglaterra y España",
         img: "https://upload.wikimedia.org/wikipedia/commons/1/11/ClassicArmet_by_Emmanuel_Viollet-le-Duc.jpg"
     };
-    let bacinete = {
+    var bacinete = {
+
         nombre: "Bacinete",
         Siglo: "XIII",
         origen: "Alemania",
@@ -26,15 +27,18 @@ const almacenar = () => {
 
 
 
-    let resultado = document.getElementById('res');
+
+
+    var resultado = document.getElementById('res');
 
     /*if (!localStorage.getItem('res', resultado)) {
         localStorage.setItem('res', resultado, JSON.stringify());
     }
     console.log(localStorage.getItem('res', resultado))*/
 
-    let storedData = localStorage.getItem('storedData');
-    let storedObjects = storedData ? JSON.parse(storedData) : [];
+    var storedData = localStorage.getItem('storedData');
+    var storedObjects = storedData ? JSON.parse(storedData) : [];
+
 
 
     //BORGOÑOTA
@@ -42,11 +46,11 @@ const almacenar = () => {
 
         storedObjects.push(borgoñota);
         localStorage.setItem('dataBorgoñota', JSON.stringify(borgoñota));
-        let StorageDataBorgo = localStorage.getItem('dataBorgoñota');
-        let ObtainedItemBorgo = JSON.parse(StorageDataBorgo);
+        var StorageDataBorgo = localStorage.getItem('dataBorgoñota');
+        var ObtainedItemBorgo = JSON.parse(StorageDataBorgo);
         console.log('ObtainedBorgo', ObtainedItemBorgo);
         //MOSTRAR LOS ELEMENTOS DE LA BORGOÑOTA EN UN DIV
-        let MostrarElemento = document.createElement('div');
+        var MostrarElemento = document.createElement('div');
         MostrarElemento.innerHTML = `
         <h1>${ObtainedItemBorgo.nombre}</h1>
         <ul>
@@ -64,11 +68,11 @@ const almacenar = () => {
         //ALMETE
         storedObjects.push(almete);
         localStorage.setItem('dataAlmete', JSON.stringify(almete));
-        let StorageDataAlmete = localStorage.getItem('dataAlmete');
-        let ObtainedItemAlmete = JSON.parse(StorageDataAlmete);
+        var StorageDataAlmete = localStorage.getItem('dataAlmete');
+        var ObtainedItemAlmete = JSON.parse(StorageDataAlmete);
         console.log('ObtainedAlmete', ObtainedItemAlmete);
         //MOSTRAR LOS ELEMENTOS DE LA BORGOÑOTA 
-        let MostrarElemento = document.createElement('div');
+        var MostrarElemento = document.createElement('div');
         MostrarElemento.innerHTML = `
         <h1>${ObtainedItemAlmete.nombre}</h1>
         <ul>
@@ -84,11 +88,11 @@ const almacenar = () => {
         storedObjects.push(bacinete);
 
         localStorage.setItem('dataBacinete', JSON.stringify(bacinete));
-        let StorageDataBacinete = localStorage.getItem('dataBacinete');
+        var StorageDataBacinete = localStorage.getItem('dataBacinete');
         let ObtainedItemBacinet = JSON.parse(StorageDataBacinete);
         console.log('ObtainedBaci', ObtainedItemBacinet);
 
-        let MostrarElemento = document.createElement('div');
+        var MostrarElemento = document.createElement('div');
         MostrarElemento.innerHTML = `
         <h1>${ObtainedItemBacinet.nombre}</h1>
         <ul>
@@ -104,14 +108,38 @@ const almacenar = () => {
 
     }
 
+   
+    
+
+}
+
+function borrarInd() {
+    let userInput = prompt("Que Casco quieres borrar?");
+    if (userInput === "Borgoñota") {
+        localStorage.removeItem("dataBorgoñota");
+        MostrarElemento.style.display = "none";
+
+    } else if (userInput === "Almete") {
+        localStorage.removeItem("dataAlmete");
+
+    } else if (userInput === "Bacinete") {
+    
+        localStorage.removeItem("dataBacinet");
+    }
+
+
 }
 
 
-const eliminarOne = () => {
-
-
-}
+//borrar todo
 const limpiarLista = () => {
 
+    localStorage.clear();
+    res.innerHTML = " ";
+
+
 
 }
+
+
+
