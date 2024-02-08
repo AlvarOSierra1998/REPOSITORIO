@@ -11,7 +11,7 @@ function Tablero() {
     <>
       <main>
         <div className='board'>
-          <Card />
+          <Card /> 
           <div className="carta-hueco"></div>
           <div className="carta-hueco2"></div>
           <div className="carta-hueco3"></div>

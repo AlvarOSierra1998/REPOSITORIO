@@ -1,79 +1,71 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+html,body{
   margin: 0;
+  padding: 0;
+}
+/*nav{
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  
+}*/
+.foto{
+    width: 1366px;
+    height: 768px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+}
+.foto>img{
+  width: auto;
+}
+
+.txtVa{
+  width: 50%;
+  margin: auto;
+  font-size: 1.9em;
+}
+.botones{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+/*.brd-img{
+  border-image: fill 0 linear-gradient(#0003, #0000);
+}*/
+.gradiante {
+  height: 900px;
+  background: linear-gradient(219deg, #76d6db, #ffffff, #e3e2f2);
+  background-size: 600% 600%;
+
+  -webkit-animation: FondoGradiante 29s ease infinite;
+  -moz-animation: FondoGradiante 29s ease infinite;
+  -o-animation: FondoGradiante 29s ease infinite;
+  animation: FondoGradiante 29s ease infinite;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@-webkit-keyframes FondoGradiante {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+@-moz-keyframes FondoGradiante {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
 }
-button:hover {
-  border-color: #646cff;
+@-o-keyframes FondoGradiante {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@keyframes FondoGradiante {
+  0%{background-position:51% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:51% 0%}
 }
