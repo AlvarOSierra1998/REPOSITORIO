@@ -50,17 +50,37 @@
               </p>
 
               <!---Stats--->
-              <button>Stats</button>
-              <ul>
+              <button @click="stats">Stats</button>
+              <ul v-if="estadisticasInfo">
                 <li>a</li>
                 <li>a</li>
                 <li>a</li>
               </ul>
 
               <!---WEAPON-->
-              <button>Weapon</button>
+              <button @click ="weapon">Weapon</button>
               <!--grynoth-->
-              <img src="" alt="">
+              <table v-if="grynothOn">
+                  <tbody>
+                    <tr>
+                      <th>Grynoth</th>
+                    </tr>
+                    <tr>
+                        <td class="tdsVase">Attack</td>
+                        <td class="tdsVase">68</td>
+                        <tr>
+                          <td class="tdsVase">HP</td>
+                        <td class="tdsVase">575</td>
+                        </tr>
+                       
+                      <td>
+                        <img class="grynoth" src="./assets/img/Grynoth.png" alt="Grynoth">
+                      </td>
+                    </tr>
+                    
+                      
+                  </tbody>
+              </table>
 
             </blockquote>
           </div>
@@ -77,9 +97,21 @@
 import { ref } from 'vue';
 
 
+//statsVASE
+const estadisticasInfo = ref(false);
+const stats = () => {
+  estadisticasInfo.value = !estadisticasInfo.value
+};
+
+//infoVASE
 const mostrarInfo = ref(false);
 const mostrarVaseraga = () => {
   mostrarInfo.value = !mostrarInfo.value;
+};
+
+const grynothOn = ref(false);
+const weapon = () => {
+  grynothOn.value = !grynothOn.value;
 };
 
 </script>

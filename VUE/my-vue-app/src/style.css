@@ -35,6 +35,20 @@ html,body{
   justify-content: center;
   margin: auto;
 }
+tbody .grynoth{
+  width: 50%;
+  margin: auto;
+  border: 1px solid white;
+}
+table, th, td{
+  display: block;
+  width: auto;
+  margin: auto;
+  border: 1px solid white;
+}
+.tdsVase{
+  text-align: right;
+}
 /*.brd-img{
   border-image: fill 0 linear-gradient(#0003, #0000);
 }*/
