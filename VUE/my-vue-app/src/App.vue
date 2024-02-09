@@ -58,30 +58,51 @@
               </ul>
 
               <!---WEAPON-->
-              <button @click ="weapon">Weapon</button>
+              <button @click="weapon">Weapon</button>
               <!--grynoth-->
-              <table v-if="grynothOn">
-                  <tbody>
+              <div v-if="grynothOn">
+                <img class="grynoth" src="./assets/img/Grynoth.png" alt="Grynoth">
+                <div class="table-title">
+                  <h3>Data Table</h3>
+                  
+                </div>
+                <table class="table-fill">
+                  <thead>
                     <tr>
-                      <th>Grynoth</th>
+                      <th class="text-left">Month</th>
+                      <th class="text-left">Sales</th>
+                      <th class="text-left">Sales</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-hover">
+                    <tr>
+                      <td class="text-left">January</td>
+                      <td class="text-left">$ 50,000.00</td>
+                      <td class="text-left">$ 50,000.00</td>
                     </tr>
                     <tr>
-                        <td class="tdsVase">Attack</td>
-                        <td class="tdsVase">68</td>
-                        <tr>
-                          <td class="tdsVase">HP</td>
-                        <td class="tdsVase">575</td>
-                        </tr>
-                       
-                      <td>
-                        <img class="grynoth" src="./assets/img/Grynoth.png" alt="Grynoth">
-                      </td>
+                      <td class="text-left">February</td>
+                      <td class="text-left">$ 10,000.00</td>
+                      <td class="text-left">$ 50,000.00</td>
                     </tr>
-                    
-                      
+                    <tr>
+                      <td class="text-left">March</td>
+                      <td class="text-left">$ 85,000.00</td>
+                      <td class="text-left">$ 50,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">April</td>
+                      <td class="text-left">$ 56,000.00</td>
+                      <td class="text-left">$ 50,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="text-left">May</td>
+                      <td class="text-left">$ 98,000.00</td>
+                      <td class="text-left">$ 50,000.00</td>
+                    </tr>
                   </tbody>
-              </table>
-
+                </table>
+              </div>
             </blockquote>
           </div>
         </div>
@@ -122,43 +143,86 @@ const weapon = () => {
   background: transparent;
   outline: none;
   border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  margin-bottom: 10px;
+}
 
+.vaseragaB:hover {
+  transition: all .3 ease;
+  background-color: black;
+  color: #ac12db;
+  padding: 1em;
+  border-radius: 10px;
 }
 
 .vaseragaInfo {
   display: flex;
   align-items: center;
   justify-content: center;
-    background: linear-gradient(270deg, #362654, #e2d9f5, #42375a, #5c2b6b);
-    background-size: 800% 800%;
+  background: linear-gradient(270deg, #362654, #e2d9f5, #42375a, #5c2b6b);
+  background-size: 800% 800%;
 
-    -webkit-animation: FondoGradianteVaseraga 17s ease infinite;
-    -moz-animation: FondoGradianteVaseraga 17s ease infinite;
-    -o-animation: FondoGradianteVaseraga 17s ease infinite;
-    animation: FondoGradianteVaseraga 17s ease infinite;
+  -webkit-animation: FondoGradianteVaseraga 17s ease infinite;
+  -moz-animation: FondoGradianteVaseraga 17s ease infinite;
+  -o-animation: FondoGradianteVaseraga 17s ease infinite;
+  animation: FondoGradianteVaseraga 17s ease infinite;
 }
+
 /*ANIMACIONVASERAGA*/
 @-webkit-keyframes FondoGradianteVaseraga {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
+
 @-moz-keyframes FondoGradianteVaseraga {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
+
 @-o-keyframes FondoGradianteVaseraga {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
+
 @keyframes FondoGradianteVaseraga {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+  0% {
+    background-position: 0% 50%
+  }
 
+  50% {
+    background-position: 100% 50%
+  }
 
-</style>
+  100% {
+    background-position: 0% 50%
+  }
+}</style>
 
