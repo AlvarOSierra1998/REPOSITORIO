@@ -40,10 +40,28 @@ body {
 }
 
 .grynoth {
-  width: 50%;
+  width: 200%;
   margin: auto;
-  border: 1px solid white;
+  display: flex;
+  border-radius: 20%;
+
+
+  
 }
+.tdinfoV{
+  width: 50%;
+}
+h2{
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2em;
+}
+h1{
+  text-align: center;
+  font-weight: lighter;
+  font-size:4em;
+}
+
 
 
 .tdsVase {
@@ -66,6 +84,7 @@ div.table-title {
   font-family: "Roboto", helvetica, arial, sans-serif;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
+  text-align: center;
 }
 
 
@@ -82,11 +101,11 @@ div.table-title {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
+  
 }
 
 th {
   color: #D5DDE5;
-  ;
   background: #1b1e24;
   border-bottom: 4px solid #9ea7af;
   border-right: 1px solid #343a45;
@@ -116,11 +135,7 @@ tr {
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-tr:hover td {
-  background: #4E5066;
-  color: #FFFFFF;
-  border-top: 1px solid #22262e;
-}
+
 
 tr:first-child {
   border-top: none;
@@ -130,13 +145,9 @@ tr:last-child {
   border-bottom: none;
 }
 
-tr:nth-child(odd) td {
-  background: #EBEBEB;
-}
 
-tr:nth-child(odd):hover td {
-  background: #4E5066;
-}
+
+
 
 tr:last-child td:first-child {
   border-bottom-left-radius: 3px;

@@ -28,7 +28,7 @@
 
       <!--MAIN-->
       <section>
-        <h1>Personajes</h1>
+        <h1>Characters</h1>
         <!--lista perosnajes-->
         <!---VASERAGA-->
         <div>
@@ -61,44 +61,45 @@
               <button @click="weapon">Weapon</button>
               <!--grynoth-->
               <div v-if="grynothOn">
-                <img class="grynoth" src="./assets/img/Grynoth.png" alt="Grynoth">
                 <div class="table-title">
-                  <h3>Data Table</h3>
-                  
+                  <h2><i>Great Scythe Grynot.</i></h2>
                 </div>
                 <table class="table-fill">
                   <thead>
                     <tr>
-                      <th class="text-left">Month</th>
-                      <th class="text-left">Sales</th>
-                      <th class="text-left">Sales</th>
+                      <td class="tdinfoV">
+                        Restricted file - code name: Grynoth. A massive scythe of lunar origin. This seal weapon
+                        harnesses ethereal darkness. While Grynoth augments its contractor's endurance, it has a tendency
+                        to over-amplify the wielder's animosity. Great care must be taken in choosing Grynoth's
+                        contractor.
+                      </td>
+                      <td>
+                        <img class="grynoth" src="./assets/img/Grynoth.png" alt="Grynoth">
+                      </td>
+
+
+                    </tr>
+                    <tr>
+                      <th class="text-left">Stats</th>
+                      <th class="text-left">Level 1</th>
+                      <th class="text-left">Level 100</th>
                     </tr>
                   </thead>
                   <tbody class="table-hover">
                     <tr>
-                      <td class="text-left">January</td>
-                      <td class="text-left">$ 50,000.00</td>
-                      <td class="text-left">$ 50,000.00</td>
+                      <td class="text-left">HP</td>
+                      <td class="text-left">39</td>
+                      <td class="text-left">253</td>
                     </tr>
                     <tr>
-                      <td class="text-left">February</td>
-                      <td class="text-left">$ 10,000.00</td>
-                      <td class="text-left">$ 50,000.00</td>
+                      <td class="text-left">ATK</td>
+                      <td class="text-left">401</td>
+                      <td class="text-left">2321</td>
                     </tr>
                     <tr>
-                      <td class="text-left">March</td>
-                      <td class="text-left">$ 85,000.00</td>
-                      <td class="text-left">$ 50,000.00</td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">April</td>
-                      <td class="text-left">$ 56,000.00</td>
-                      <td class="text-left">$ 50,000.00</td>
-                    </tr>
-                    <tr>
-                      <td class="text-left">May</td>
-                      <td class="text-left">$ 98,000.00</td>
-                      <td class="text-left">$ 50,000.00</td>
+                      <td class="text-left">C.A<sup>x</sup></td>
+                      <td class="text-left">??</td>
+                      <td class="text-left">??</td>
                     </tr>
                   </tbody>
                 </table>
@@ -106,6 +107,46 @@
             </blockquote>
           </div>
         </div>
+      </section>
+      <section>
+      <div>
+        <!---<div>
+          <input v-model="nombreBuscado" placeholder="Escribe el nombre">
+          <button @click="buscarProducto">Buscar</button>
+
+          <div v-if="productoEncontrado">
+            <p>ID: {{ productoEncontrado.id }}</p>
+            <p>Nombre: {{ productoEncontrado.name }}</p>
+            <p>Precio: {{ productoEncontrado.price }}</p>
+            <p>Categoría: {{ productoEncontrado.category }}</p>
+          </div>
+          <div v-else>
+            <p>No se encontró información para el nombre proporcionado.</p>
+          </div>
+        </div>-->
+          <h2>Agregar Elementos</h2>
+
+          <input type="text" v-model="nuevoElemento" @keyup.enter="agregarElemento" placeholder="Ingrese un elemento">
+
+          <div>
+            <ul>
+              <li v-for="(elemento, index) in elementos" :key="index">{{ elemento }}</li>
+
+            </ul>
+            <button @click="limpiarLista"> Team Reset </button>
+          </div>
+
+          <input type="text" v-model="nuevoEl" @keyup.enter="addItems" placeholder="Ingrese un item">
+
+
+          <div v-for = "(item, index) in Items" :key= "index">
+            {{ item }}
+
+          </div>
+
+
+        </div>
+
       </section>
     </main>
   </body>
@@ -116,6 +157,33 @@
 
 <script setup>
 import { ref } from 'vue';
+
+
+/*const nombreBuscado = ref('');
+const productoEncontrado = ref(null);
+
+const buscarProducto = async () => {
+  try {
+    const response = await fetch('./personajes.json'); // Reemplaza 'URL_DE_TU_API' con la URL real de tu API.
+
+    if (response.ok) {
+      const data = await response.json();
+      productoEncontrado.value = data.productos.find(producto => producto.name === nombreBuscado.value);
+      console.log('Data from API:', data);
+    } else {
+      console.error('Error al obtener datos:', response.statusText);
+    }
+    if (!response.ok) {
+      console.error('Error al obtener datos:', response.status, response.statusText);
+      const errorData = await response.text();  // Obtener el contenido del error
+      console.error('Error Data:', errorData);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};*/
+
+
 
 
 //statsVASE
@@ -135,7 +203,61 @@ const weapon = () => {
   grynothOn.value = !grynothOn.value;
 };
 
+//PRUEBA
+const Items = ref ([
+  {
+    id: 1,
+    name: "Vaseraga",
+    url: "./assets/img/vaseraga.png",
+    weapon: "Grynoth"
+  },
+  {
+    id: 1,
+    name: "Vaseraga",
+    url: "./assets/img/vaseraga.png",
+    weapon: "Grynoth"
+  }
+]);
+
+const newEl= ref('');
+const addItems = () => {
+  if(Items.name == "Vaseraga"){
+  elementos.value.push(newEl.value)
+}
+}
+
+
+
+
+//ELEMENTOS
+
+const nuevoElemento = ref('');
+const elementos = ref([]);
+
+const agregarElemento = () => {
+  if (nuevoElemento.value.trim() !== '') {
+    elementos.value.push(nuevoElemento.value);
+    nuevoElemento.value = ''; // Limpiar el input después de agregar
+  }
+};
+
+const limpiarLista = () => {
+  elementos.value = []
+}
+
+
+
+
+
+
+
+
+
 </script>
+
+<!--BUILD YOUR TEAM-->
+
+
 
 <!--estilos solo para funciones-->
 <style scoped >
@@ -224,5 +346,6 @@ const weapon = () => {
   100% {
     background-position: 0% 50%
   }
-}</style>
+}
+</style>
 
