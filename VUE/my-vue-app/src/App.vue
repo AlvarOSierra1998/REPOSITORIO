@@ -109,8 +109,8 @@
         </div>
       </section>
       <section>
-      <div>
-        <!---<div>
+        <div>
+          <!---<div>
           <input v-model="nombreBuscado" placeholder="Escribe el nombre">
           <button @click="buscarProducto">Buscar</button>
 
@@ -123,7 +123,7 @@
           <div v-else>
             <p>No se encontró información para el nombre proporcionado.</p>
           </div>
-        </div>-->
+        </div>--
           <h2>Agregar Elementos</h2>
 
           <input type="text" v-model="nuevoElemento" @keyup.enter="agregarElemento" placeholder="Ingrese un elemento">
@@ -136,12 +136,32 @@
             <button @click="limpiarLista"> Team Reset </button>
           </div>
 
-          <input type="text" v-model="nuevoEl" @keyup.enter="addItems" placeholder="Ingrese un item">
+          <input type="text" v-model="nuevoEl" @keyup.enter="addItems" placeholder="Ingrese un item">-->
 
+          <!--PRUEBA>-->
+          <div>
+            <label for="productName">Ingrese el nombre del producto:</label>
+            <input v-model="productName" id="productName" />
 
-          <div v-for = "(item, index) in Items" :key= "index">
-            {{ item }}
+            <button @click="searchProduct">Buscar Producto</button>
 
+            <div v-if="foundProducts.length > 0">
+              <h3>Productos Encontrados:</h3>
+              <div v-for="(product, index) in foundProducts" :key="index" class="product-info">
+                <div v-if="product.img">
+                  <img :src="product.img" alt="Product Photo" class="product-photo" />
+                </div>
+                <p><h2>Nombre: {{ product.name }}</h2></p>
+                <p><h2>Precio: {{ product.price }}</h2></p>
+                <p><h2>Categoría: {{ product.category }}</h2></p>
+
+                <hr />
+              </div>
+              <button @click="clearResults">Limpiar Resultados</button>
+            </div>
+            <div v-else>
+              <p>No se encontró ningún producto con ese nombre.</p>
+            </div>
           </div>
 
 
@@ -204,33 +224,55 @@ const weapon = () => {
 };
 
 //PRUEBA
-const Items = ref ([
+
+const products = [
   {
-    id: 1,
-    name: "Vaseraga",
-    url: "./assets/img/vaseraga.png",
-    weapon: "Grynoth"
+    "name": "Vaseraga",
+    "price": 19.99,
+    "category": "Electrónicos",
+    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png"
+    //"img": "../src/assets/img/vaseraga.png"
   },
   {
-    id: 1,
-    name: "Vaseraga",
-    url: "./assets/img/vaseraga.png",
-    weapon: "Grynoth"
+    "id": 2,
+    "name": "Producto B",
+    "price": 29.99,
+    "category": "Ropa",
+    "img": ""
+
+  },
+  {
+    "id": 3,
+    "name": "Producto C",
+    "price": 9.99,
+    "category": "Hogar"
+  },
+  {
+    "id": 4,
+    "name": "Producto D",
+    "price": 39.99,
+    "category": "Electrónicos"
   }
-]);
+];
 
-const newEl= ref('');
-const addItems = () => {
-  if(Items.name == "Vaseraga"){
-  elementos.value.push(newEl.value)
-}
-}
+const productName = ref('');
+const foundProducts = ref([]);
 
 
+const searchProduct = () => {
+  const product = products.find(p => p.name.toLowerCase() === productName.value.toLowerCase());
+  if (product) {
+    foundProducts.value = [...foundProducts.value, product];
+
+  }
+};
+const clearResults = () => {
+  foundProducts.value = [];
+};
 
 
 //ELEMENTOS
-
+/*
 const nuevoElemento = ref('');
 const elementos = ref([]);
 
@@ -241,9 +283,11 @@ const agregarElemento = () => {
   }
 };
 
+
 const limpiarLista = () => {
   elementos.value = []
-}
+}*/
+
 
 
 
@@ -261,6 +305,11 @@ const limpiarLista = () => {
 
 <!--estilos solo para funciones-->
 <style scoped >
+.product-info {
+  display: inline-block;
+  margin: auto;
+}
+
 .vaseragaB {
   background: transparent;
   outline: none;
