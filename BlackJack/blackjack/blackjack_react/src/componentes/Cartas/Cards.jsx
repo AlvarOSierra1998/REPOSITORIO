@@ -54,6 +54,7 @@ const baraja_inicial = [
     { nombre: 'queen_of_spades2.png', valor: 10 },
     { nombre: 'king_of_spades2.png', valor: 10 },
     { nombre: 'ace_of_spades.png', valor: 11 },
+    
 ];
 
 
@@ -265,12 +266,12 @@ const GameBoard = () => {
                     <div>
                         {/* Botones para pedir una carta adicional ("hit") o plantarse */}
 
-                        <button className='boton-p' onClick={pedir_dealer} disabled={!gameInProgress}>Pedir carta crupier</button>
+                        <button className='boton' onClick={pedir_dealer} disabled={!gameInProgress}>Pedir carta crupier</button>
                         {restart &&
-                            <button className='boton-p' onClick={handleRestart}>Reiniciar Partida</button>}
+                            <button className='boton' onClick={handleRestart}>Reiniciar Partida</button>}
                     </div>
                     <div className='cardsFlex'>
-                        <h2>Puntuación del Jugador: {totalScore}</h2>
+                        <h2 className='h2-player'>Puntuación del Jugador: {totalScore}</h2>
                         {/* Mostrar las cartas del jugador */}
                         {PlayerHand.map((card, index) => (
                             <img

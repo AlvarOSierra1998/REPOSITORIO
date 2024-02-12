@@ -1,5 +1,38 @@
-h2 {
+.h2-player {
     color: aliceblue;
+    text-align: left;
+    position: relative;
+    left: -10%;
+    top: 10%;
+}
+h2{
+    color: white;
+}
+
+.boton{
+    padding: 0.6rem;
+    background: transparent;
+    color: rgb(0, 255, 34);
+    outline: none;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+    display: inline-flex;
+    float: left;
+    margin: auto;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+.boton:hover{
+    background-color: black;
+    color: rgb(0, 0, 0);
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #41ff2b, #37de24);
+    box-shadow: 38px 38px 100px #2eb91e,
+                -38px -38px 100px #4cff32;
 }
 
 @media screen and (max-width: 768px) {

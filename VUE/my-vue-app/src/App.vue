@@ -151,12 +151,19 @@
                 <div v-if="product.img">
                   <img :src="product.img" alt="Product Photo" class="product-photo" />
                 </div>
-                <p><h2>Nombre: {{ product.name }}</h2></p>
-                <p><h2>Precio: {{ product.price }}</h2></p>
-                <p><h2>Categoría: {{ product.category }}</h2></p>
+                <p>
+                <h2>Nombre: {{ product.name }}</h2>
+                </p>
+                <p>
+                <h2>Precio: {{ product.price }}</h2>
+                </p>
+                <p>
+                <h2>Categoría: {{ product.category }}</h2>
+                </p>
 
                 <hr />
               </div>
+              <button @click="Eliminar(index)">Delete</button>
               <button @click="clearResults">Limpiar Resultados</button>
             </div>
             <div v-else>
@@ -166,6 +173,7 @@
 
 
         </div>
+
 
       </section>
     </main>
@@ -235,10 +243,10 @@ const products = [
   },
   {
     "id": 2,
-    "name": "Producto B",
+    "name": "Io",
     "price": 29.99,
     "category": "Ropa",
-    "img": ""
+    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png"
 
   },
   {
@@ -269,6 +277,23 @@ const searchProduct = () => {
 const clearResults = () => {
   foundProducts.value = [];
 };
+const Eliminar = (index) => {
+  foundProducts.value.splice(index, 1);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //ELEMENTOS
@@ -288,23 +313,15 @@ const limpiarLista = () => {
   elementos.value = []
 }*/
 
-
-
-
-
-
-
-
-
-
 </script>
 
-<!--BUILD YOUR TEAM-->
 
 
 
 <!--estilos solo para funciones-->
 <style scoped >
+
+
 .product-info {
   display: inline-block;
   margin: auto;
