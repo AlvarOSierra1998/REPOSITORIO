@@ -23,7 +23,7 @@ body {
 }
 
 .foto>img {
-  width: auto;
+  width: 60%;
 }
 
 .txtVa {
@@ -268,4 +268,24 @@ td.text-right {
   100% {
     background-position: 51% 0%
   }
+}
+
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 6s;
+  
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }

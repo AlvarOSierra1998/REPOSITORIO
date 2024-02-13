@@ -9,7 +9,7 @@
     <main>
       <section class="gradiante">
         <div class="foto">
-          <img src="./assets/img/Gbf_relink_logo.png" alt="Imagen">
+          <img class="animate__animated animate__fadeIn" src="./assets/img/Gbf_relink_logo.png" alt="Imagen">
         </div>
         <div style="overflow: hidden;">
           <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
@@ -107,6 +107,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 
 import personajes from './components/characters.vue';
 

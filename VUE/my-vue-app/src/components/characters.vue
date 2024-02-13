@@ -13,7 +13,7 @@
                 <button @click="mostrarVane" :class="{ vaneB: mostrarVane }">
                     <h2>Vane</h2>
                 </button>
-                <button @click="mostrarKatalina" :class="{ vaseragaB: mostrarKatalina }">
+                <button @click="mostrarKatalina" :class="{ KatalinaB: mostrarKatalina }">
                     <h2>Katalina</h2>
                 </button>
                 <button @click="mostrarPercival" :class="{ vaseragaB: mostrarPercival }">
@@ -64,13 +64,14 @@
                 <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
                 <blockquote class="txtVa">
                     <p>
-                        <q>
-                            <i>
-                                This towering Draph warrior belongs to the Society, an organization which hunts primal
-                                beasts. He has
-                                formed a contract with the seal weapon known as Great Scythe Grynoth.
-                            </i>
-                        </q>
+                    <h2>Vaseraga</h2>
+                    <q>
+                        <i>
+                            This towering Draph warrior belongs to the Society, an organization which hunts primal
+                            beasts. He has
+                            formed a contract with the seal weapon known as Great Scythe Grynoth.
+                        </i>
+                    </q>
                     </p>
                     <!---Stats--->
                     <button @click="statsV">Stats</button>
@@ -129,8 +130,12 @@
                     </div>
                 </blockquote>
             </div>
+
         </div>
+
+
     </section>
+
 
     <!---VANE---->
     <section>
@@ -143,14 +148,15 @@
                 <img class="imgvas" src="../assets/img/Vane.png" alt="Vane">
                 <blockquote class="txtVa">
                     <p>
-                        <q>
-                            <i>
-                                Knight of Fellowship
-                                A knight of valor, he pours his heart and soul into protecting his homeland, his friends,
-                                and his comrades-in-arms.
+                    <h2>Vane</h2>
+                    <q>
+                        <i>
+                            Knight of Fellowship
+                            A knight of valor, he pours his heart and soul into protecting his homeland, his friends,
+                            and his comrades-in-arms.
 
-                            </i>
-                        </q>
+                        </i>
+                    </q>
                     </p>
                     <!---Stats--->
                     <button @click="statsVane">Stats</button>
@@ -161,7 +167,7 @@
                     </ul>
                     <!---WEAPON-->
                     <button @click="alabardaOn">Weapon</button>
-                    <!--grynoth-->
+                    <!---ALABARDA-->
                     <div v-if="alabardaVane">
                         <div class="table-title">
                             <h2><i>Alabarda.</i></h2>
@@ -188,13 +194,90 @@
                             <tbody class="table-hover">
                                 <tr>
                                     <td class="text-left">HP</td>
-                                    <td class="text-left">39</td>
-                                    <td class="text-left">253</td>
+                                    <td class="text-left">29</td>
+                                    <td class="text-left">181</td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">ATK</td>
-                                    <td class="text-left">401</td>
-                                    <td class="text-left">2321</td>
+                                    <td class="text-left">280</td>
+                                    <td class="text-left">1630</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!--lista perosnajes-->
+
+        <!---KATALINA---->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoKatalina" :class="{ KataInfo: mostrarInfoKatalina }">
+                <img class="imgvas" src="../assets/img/Katalina.png" alt="Katalina">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>KATALINA</h2>
+                    <q>
+                        <i>
+
+                            Skybound Protector
+                            Katalina once swore an oath of knighthood to the Erste Empire, but those days are long
+                            behind her. Her knightly duty continues, though now in the service of protecting Lyria.
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsKatalina">Stats</button>
+                    <ul v-if="estadisticasInfoKatalina">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="estoqueOn">Weapon</button>
+                    <!---ALABARDA-->
+                    <div v-if="estoque">
+                        <div class="table-title">
+                            <h2><i>Rukalsa.</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        This sword was given to a young girl on the day she vowed to become a chivalrous
+                                        knight. Since then, it has watched as months turned to years and a girl frew into a
+                                        guardian. now it rests at her hip, ready to be drawn in defense of her friends and
+                                        allies.
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/rukalsa.png" alt="Alabarda">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">29</td>
+                                    <td class="text-left">181</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">280</td>
+                                    <td class="text-left">1630</td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">C.A<sup>x</sup></td>
@@ -246,66 +329,76 @@ const alabardaVane = ref(false);
 const alabardaOn = () => {
     alabardaVane.value = !alabardaVane.value;
 };
+/////////////////////////////////////////////////
+
+//info katalina
+
+const estadisticasInfoKatalina = ref(false);
+const statsKatalina = () => {
+    estadisticasInfoKatalina.value = !estadisticasInfoKatalina.value
+};
+const mostrarInfoKatalina = ref(false);
+const mostrarKatalina = () => {
+    mostrarInfoKatalina.value = !mostrarInfoKatalina.value;
+};
+
+//weaponVane
+const estoque = ref(false);
+const estoqueOn = () => {
+    estoque.value = !estoque.value;
+};
+
 
 </script>
 
 <style scoped>
-.vaseragaB {
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    margin-bottom: 10px;
-}
-
+/*VASERAGA*/
 .weapon {
     width: 200%;
     margin: auto;
     display: flex;
     border-radius: 20%;
-
-
-
 }
 
-.vaseragaB:hover {
-    transition: all .3 ease;
-    background-color: black;
-    color: #ac12db;
-    padding: 1em;
-    border-radius: 10px;
+/**CTRL + K + u comentario al seleccionar, fuente: José Manuel García Muñoz* AKA lojnoe */
+.vaseragaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
 }
 
-
-.vaneB::before,
-.vaneB::after {
+.vaseragaB::before,
+.vaseragaB::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(89,202,216,0.8) 0%, rgba(89,202,216,0) 70%);
+    background-image: linear-gradient(to top, rgba(128, 52, 199, 0.8) 0%, rgba(89, 202, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
+    border-radius: 10px;
     transition: opacity .3s ease, background-position .3s ease;
 }
 
-.vaneB::before {
+.vaseragaB::before {
     top: 0;
     left: 0;
 }
 
-.vaneB::after {
+.vaseragaB::after {
     bottom: 0;
     right: 0;
 }
 
-.vaneB:hover::before,
-.vaneB:hover::after {
+.vaseragaB:hover::before,
+.vaseragaB:hover::after {
     opacity: 1;
     background-position: top;
 }
-
 
 .vaseragaInfo {
     display: flex;
@@ -377,22 +470,7 @@ const alabardaOn = () => {
     }
 }
 
-/*.vaneB{
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-.vaneB:hover {
-    transition: all .3 ease;
-    background-image: linear-gradient(to top, rgba(89,202,216,0.8) 0%, rgba(89,202,216,0) 70%);
-    color: #ff9306;
-    border-radius: 10px;
-    
-    
-}*/
+/*VANE**/
 .vaneB {
     position: relative;
     background: transparent;
@@ -409,7 +487,7 @@ const alabardaOn = () => {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(89,202,216,0.8) 0%, rgba(89,202,216,0) 70%);
+    background-image: linear-gradient(to top, rgba(240, 174, 51, 0.8) 0%, rgba(89, 202, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -502,4 +580,114 @@ const alabardaOn = () => {
     }
 }
 
-/**/</style>
+
+/**KATALINA */
+
+.KatalinaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.KatalinaB::before,
+.KatalinaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(2, 161, 253, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.KatalinaB::before {
+    top: 0;
+    left: 0;
+}
+
+.KatalinaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.KatalinaB:hover::before,
+.KatalinaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.KataInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #9ac4c1, #121957, #dfdfdf, #9dcacc);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteVane 17s ease infinite;
+    -moz-animation: FondoGradianteVane 17s ease infinite;
+    -o-animation: FondoGradianteVane 17s ease infinite;
+    animation: FondoGradianteVane 17s ease infinite;
+}
+
+/*ANIMACIONKATA*/
+@-webkit-keyframes FondoGradianteKatalina {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteKatalina {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteKatalina {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteKatalina {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}</style>
