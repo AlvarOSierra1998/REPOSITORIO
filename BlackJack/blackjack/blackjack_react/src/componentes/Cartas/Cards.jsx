@@ -133,8 +133,7 @@ const GameBoard = () => {
             setDealerHand(dealerHandle);
             suma = calculateScore(dealerHandle);
             setTotalScoreDealer(suma);
-            setGameProgress(false);
-            setRestart(true);
+           
         }
 
         while (suma < 17) {
@@ -143,8 +142,7 @@ const GameBoard = () => {
             setDealerHand(dealerHandle);
             suma = calculateScore(dealerHandle);
             setTotalScoreDealer(suma);
-            setGameProgress(false);
-            setRestart(true);
+           
 
         }
         //preguntar

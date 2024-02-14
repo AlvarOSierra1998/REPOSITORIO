@@ -8,7 +8,9 @@
 h2{
     color: white;
 }
-
+.mensajes{
+    background-color: red;
+}
 .boton{
     padding: 0.6rem;
     background: transparent;

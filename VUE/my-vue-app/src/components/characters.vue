@@ -6,9 +6,9 @@
         <!--lista perosnajes-->
         <!---VASERAGA-->
         <div>
-            <div class="botones">
+            <div ref="parallax" class="botones parallax">
                 <button @click="mostrarVaseraga" :class="{ vaseragaB: mostrarVaseraga }">
-                    <h2>VASERAGA</h2>
+                    <h2>Vaseraga</h2>
                 </button>
                 <button @click="mostrarVane" :class="{ vaneB: mostrarVane }">
                     <h2>Vane</h2>
@@ -16,49 +16,48 @@
                 <button @click="mostrarKatalina" :class="{ KatalinaB: mostrarKatalina }">
                     <h2>Katalina</h2>
                 </button>
-                <button @click="mostrarPercival" :class="{ vaseragaB: mostrarPercival }">
+                <button @click="mostrarPercival" :class="{ PercivalB: mostrarPercival }">
                     <h2>Percival</h2>
                 </button>
-                <button @click="mostrarIo" :class="{ vaseragaB: mostrarIo }">
+                <button @click="mostrarIo" :class="{ IoB: mostrarIo }">
                     <h2>Io</h2>
                 </button>
-                <button @click="mostrarYodarha" :class="{ vaseragaB: mostrarYodarha }">
+                <button @click="mostrarYodarha" :class="{ YodarhaB: mostrarYodarha }">
                     <h2>Yodarha</h2>
                 </button>
-                <button @click="mostrarRackam" :class="{ vaseragaB: mostrarRackam }">
+                <button @click="mostrarRackam" :class="{ RackamB: mostrarRackam }">
                     <h2>Rackam</h2>
                 </button>
-                <button @click="mostrarEugen" :class="{ vaseragaB: mostrarEugen }">
+                <button @click="mostrarEugen" :class="{ EugenB: mostrarEugen }">
                     <h2>Eugen</h2>
                 </button>
-                <button @click="mostrarRosetta" :class="{ vaseragaB: mostrarRosetta }">
+                <button @click="mostrarRosetta" :class="{ RosettaB: mostrarRosetta }">
                     <h2>Rosetta</h2>
                 </button>
-                <button @click="mostrarLancelot" :class="{ vaseragaB: mostrarLancelot }">
+                <button @click="mostrarLancelot" :class="{ LancelotB: mostrarLancelot }">
                     <h2>Lancelot</h2>
                 </button>
-                <button @click="mostrarSiegfried" :class="{ vaseragaB: mostrarSiegfried }">
+                <button @click="mostrarSiegfried" :class="{ SiegfriedB: mostrarSiegfried }">
                     <h2>Siegfried</h2>
                 </button>
-                <button @click="mostrarCharlotta" :class="{ vaseragaB: mostrarCharlotta }">
+                <button @click="mostrarCharlotta" :class="{ CharlottaB: mostrarCharlotta }">
                     <h2>Charlotta</h2>
                 </button>
-                <button @click="mostrarNarmaya" :class="{ vaseragaB: mostrarNarmaya }">
+                <button @click="mostrarNarmaya" :class="{ NarmayaB: mostrarNarmaya }">
                     <h2>Narmaya</h2>
                 </button>
-                <button @click="mostrarZeta" :class="{ vaseragaB: mostrarZeta }">
+                <button @click="mostrarZeta" :class="{ ZetaB: mostrarZeta }">
                     <h2>Zeta</h2>
                 </button>
-                <button @click="mostrarFerry" :class="{ vaseragaB: mostrarFerry }">
+                <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
                     <h2>Ferry</h2>
                 </button>
-                <button @click="mostrarGha" :class="{ vaseragaB: mostrarGha }">
+                <button @click="mostrarGha" :class="{ GhaB: mostrarGha }">
                     <h2>Ghandagoza</h2>
                 </button>
-                <button @click="mostrarCagli" :class="{ vaseragaB: mostrarCagli }">
+                <button @click="mostrarCagli" :class="{ CagliB: mostrarCagli }">
                     <h2>Cagliostro</h2>
                 </button>
-
             </div>
             <div v-if="mostrarInfo" :class="{ vaseragaInfo: mostrarInfo }">
                 <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
@@ -132,16 +131,11 @@
             </div>
 
         </div>
-
-
     </section>
-
 
     <!---VANE---->
     <section>
         <!--lista perosnajes-->
-
-        <!---VANE---->
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoV" :class="{ VaneInfo: mostrarInfoV }">
@@ -215,10 +209,8 @@
         </div>
     </section>
 
+    <!---KATALINA---->
     <section>
-        <!--lista perosnajes-->
-
-        <!---KATALINA---->
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoKatalina" :class="{ KataInfo: mostrarInfoKatalina }">
@@ -259,7 +251,7 @@
                                         allies.
                                     </td>
                                     <td>
-                                        <img class="weapon" src="../assets/img/rukalsa.png" alt="Alabarda">
+                                        <img class="weapon" src="../assets/img/rukalsa.png" alt="Estoque Rukalsa">
                                     </td>
                                 </tr>
                                 <tr>
@@ -291,10 +283,236 @@
             </div>
         </div>
     </section>
+
+    <!---PERCIVAL---->
+    <section>
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoPercival" :class="{ PercivalInfo: mostrarInfoPercival }">
+                <img class="imgvas" src="../assets/img/Percival.png" alt="Percival">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>PERCIVAL</h2>
+                    <q>
+                        <i>
+                            Lord of Flames
+                            Possessing the makings of a king, this young man strives to create a kingdom free of war with
+                            other like-minded individuals.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsPercival">Stats</button>
+                    <ul v-if="estadisticasInfoPercival">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="espadaOn">Weapon</button>
+                    <!---ALABARDA-->
+                    <div v-if="espadaPercival">
+                        <div class="table-title">
+                            <h2><i>Flamberge.</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        A prosperous kingdom devoid of war, tyranny, and betrayal - such a world does this
+                                        young man envision. His sword slickering like a flame in the wind, our hero
+                                        advances, ever closer to the world of his dreams.
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/percivalWeapon.png" alt="Weapon_percival">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 50</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">575</td>
+                                    <td class="text-left">600</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">68</td>
+                                    <td class="text-left">1920</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!---IO---->
+    <section>
+        <!--lista perosnajes-->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoIo" :class="{ IoInfo: mostrarInfoIo }">
+                <img class="imgvas" src="../assets/img/Io.png" alt="Io">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Io</h2>
+                    <q>
+                        <i>
+                            Skybound Dreamer
+                            Don't let her small size fool you. This young mage is eager to showcase her impressive talent.
+                            She vows to bring smiles to the world
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsIo">Stats</button>
+                    <ul v-if="estadisticasInfoIo">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="BastonOn">Weapon</button>
+                    <!---Baston-->
+                    <div v-if="BastonIo">
+                        <div class="table-title">
+                            <h2><i>Little Witch Scepter.</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        A little mage carried this staff as she pursued a hidden truth across the scorched
+                                        earth. So long as it was by her side, she even brought an iron colossus to its
+                                        knees, proof that she commanded magic which far outsripped her peers
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/ioWeapon.png" alt="Weapon_io">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!---YODARHA---->
+    <section>
+        <!--lista perosnajes-->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoYodarha" :class="{ YodarhaInfo: mostrarInfoYodarha }">
+                <img class="imgvas" src="../assets/img/Yodarha.png" alt="Yodarha">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Yodarha</h2>
+                    <q>
+                        <i>
+                            Illusory Fencer
+
+                            This man was once a world-renowned swordsman, but these days he spends much of his time fishing
+                            in seclusion.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsYodarha">Stats</button>
+                    <ul v-if="estadisticasInfoYodarha">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="katanaYodarha">Weapon</button>
+                    <!---Katana-->
+                    <div v-if="Katana">
+                        <div class="table-title">
+                            <h2><i>Kiku-Ichimonji</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        The codger planned to spend his final years fishing, but all he sees now are
+                                        promising youths, lost and flundering. He lays down his rod for the sword and sails
+                                        to their aid. His future may be short, but society grows when the old plant trees
+                                        under whose shade they will never sit.
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/Katana.png" alt="Weapon_io">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref,  } from 'vue';
+
+
 //statsVASE
 const estadisticasInfo = ref(false);
 const statsV = () => {
@@ -342,11 +560,85 @@ const mostrarKatalina = () => {
     mostrarInfoKatalina.value = !mostrarInfoKatalina.value;
 };
 
-//weaponVane
+//weaponKatalina
 const estoque = ref(false);
 const estoqueOn = () => {
     estoque.value = !estoque.value;
 };
+
+/////////////////////////////////////////////////////////
+
+//info Percival 
+const estadisticasInfoPercival = ref(false);
+const statsPercival = () => {
+    estadisticasInfoPercival.value = !estadisticasInfoPercival.value
+};
+const mostrarInfoPercival = ref(false);
+const mostrarPercival = () => {
+    mostrarInfoPercival.value = !mostrarInfoPercival.value;
+};
+
+//weaponPercival
+const espadaPercival = ref(false);
+const espadaOn = () => {
+    espadaPercival.value = !espadaPercival.value;
+};
+
+///////////////////////////////////////////////////
+
+//info Io
+const estadisticasInfoIo = ref(false);
+const statsIo = () => {
+    estadisticasInfoIo.value = !estadisticasInfoIo.value
+};
+const mostrarInfoIo = ref(false);
+const mostrarIo = () => {
+    mostrarInfoIo.value = !mostrarInfoIo.value;
+};
+
+//weaponIo
+const BastonIo = ref(false);
+const BastonOn = () => {
+    BastonIo.value = !BastonIo.value;
+};
+///////////////////////////////////////////////////
+
+//info Yodarha
+const estadisticasInfoYodarha = ref(false);
+const statsYodarha = () => {
+    estadisticasInfoYodarha.value = !estadisticasInfoYodarha.value
+};
+const mostrarInfoYodarha = ref(false);
+const mostrarYodarha = () => {
+    mostrarInfoYodarha.value = !mostrarInfoYodarha.value;
+};
+
+//weaponYodarha
+const Katana = ref(false);
+const katanaYodarha = () => {
+    Katana.value = !Katana.value;
+};
+
+///////////////////////////////////////////////////
+
+//info Rackam
+const estadisticasInfoRackam = ref(false);
+const statsRackam = () => {
+    estadisticasInfoRackam.value = !estadisticasInfoRackam.value
+};
+const mostrarInfoRackam = ref(false);
+const mostrarRackam = () => {
+    mostrarInfoRackam.value = !mostrarInfoRackam.value;
+};
+
+//weaponRackam
+const pistola = ref(false);
+const pistolaRackam = () => {
+    pistola.value = !pistola.value;
+};
+
+///////////////////////////////////////////////////
+
 
 
 </script>
@@ -371,6 +663,7 @@ const estoqueOn = () => {
     width: 8%;
 }
 
+
 .vaseragaB::before,
 .vaseragaB::after {
     content: "";
@@ -382,6 +675,7 @@ const estoqueOn = () => {
     opacity: 0;
     border-radius: 10px;
     transition: opacity .3s ease, background-position .3s ease;
+
 }
 
 .vaseragaB::before {
@@ -690,4 +984,338 @@ const estoqueOn = () => {
     100% {
         background-position: 0% 50%
     }
-}</style>
+}
+
+/**PERCIVAL */
+.PercivalB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.PercivalB::before,
+.PercivalB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.PercivalB::before {
+    top: 0;
+    left: 0;
+}
+
+.PercivalB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.PercivalB:hover::before,
+.PercivalB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.PercivalInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #eb7f05, #c42b08, #e4d604, #f1d3b8);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradiantePercival 17s ease infinite;
+    -moz-animation: FondoGradiantePercival 17s ease infinite;
+    -o-animation: FondoGradiantePercival 17s ease infinite;
+    animation: FondoGradiantePercival 17s ease infinite;
+}
+
+/*ANIMACIONPERCIVAL*/
+@-webkit-keyframes FondoGradiantePercival {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradiantePercival {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradiantePercival {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradiantePercival {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/**IO */
+.IoB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.IoB::before,
+.IoB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(242, 255, 0, 0.897) 0%, rgba(233, 234, 219, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.IoB::before {
+    top: 0;
+    left: 0;
+}
+
+.IoB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.IoB:hover::before,
+.IoB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.IoInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #f0d01d, #a2d7cb, #6bc9aa, #ecd5c1);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteIo 17s ease infinite;
+    -moz-animation: FondoGradianteIo 17s ease infinite;
+    -o-animation: FondoGradianteIo 17s ease infinite;
+    animation: FondoGradianteIo 17s ease infinite;
+}
+
+/*ANIMACIONIO*/
+@-webkit-keyframes FondoGradianteIo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteIo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteIo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteIo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/**YODARHA */
+.YodarhaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.YodarhaB::before,
+.YodarhaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.YodarhaB::before {
+    top: 0;
+    left: 0;
+}
+
+.YodarhaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.YodarhaB:hover::before,
+.YodarhaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.YodarhaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteYodarha 17s ease infinite;
+    -moz-animation: FondoGradianteYodarha 17s ease infinite;
+    -o-animation: FondoGradianteYodarha 17s ease infinite;
+    animation: FondoGradianteYodarha 17s ease infinite;
+}
+
+/*ANIMACIONYODARHA*/
+
+@-webkit-keyframes FondoGradianteYodarha {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteYodarha {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteYodarha {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteYodarha {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/**RACKAM */
+</style>

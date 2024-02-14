@@ -31,6 +31,9 @@
         <personajes />
       </section>
       <section>
+        <teamBuilder />
+      </section>
+      <section>
         <div>
           <!---<div>
           <input v-model="nombreBuscado" placeholder="Escribe el nombre">
@@ -110,6 +113,7 @@ import { ref } from 'vue';
 
 
 import personajes from './components/characters.vue';
+//import teamBuilder from './components/teamBuilder.vue';
 
 /*const nombreBuscado = ref('');
 const productoEncontrado = ref(null);
