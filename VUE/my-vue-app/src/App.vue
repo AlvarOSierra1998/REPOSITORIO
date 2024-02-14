@@ -35,35 +35,7 @@
       </section>
       <section>
         <div>
-          <!---<div>
-          <input v-model="nombreBuscado" placeholder="Escribe el nombre">
-          <button @click="buscarProducto">Buscar</button>
-
-          <div v-if="productoEncontrado">
-            <p>ID: {{ productoEncontrado.id }}</p>
-            <p>Nombre: {{ productoEncontrado.name }}</p>
-            <p>Precio: {{ productoEncontrado.price }}</p>
-            <p>Categoría: {{ productoEncontrado.category }}</p>
-          </div>
-          <div v-else>
-            <p>No se encontró información para el nombre proporcionado.</p>
-          </div>
-        </div>--
-          <h2>Agregar Elementos</h2>
-
-          <input type="text" v-model="nuevoElemento" @keyup.enter="agregarElemento" placeholder="Ingrese un elemento">
-
-          <div>
-            <ul>
-              <li v-for="(elemento, index) in elementos" :key="index">{{ elemento }}</li>
-
-            </ul>
-            <button @click="limpiarLista"> Team Reset </button>
-          </div>
-
-          <input type="text" v-model="nuevoEl" @keyup.enter="addItems" placeholder="Ingrese un item">-->
-
-          <!--PRUEBA>-->
+          <!--TeamBuilder>-->
           <div>
             <label for="productName">Ingrese el nombre del producto:</label>
             <input v-model="productName" id="productName" />
@@ -114,30 +86,6 @@ import { ref } from 'vue';
 
 import personajes from './components/characters.vue';
 //import teamBuilder from './components/teamBuilder.vue';
-
-/*const nombreBuscado = ref('');
-const productoEncontrado = ref(null);
-
-const buscarProducto = async () => {
-  try {
-    const response = await fetch('./personajes.json'); // Reemplaza 'URL_DE_TU_API' con la URL real de tu API.
-
-    if (response.ok) {
-      const data = await response.json();
-      productoEncontrado.value = data.productos.find(producto => producto.name === nombreBuscado.value);
-      console.log('Data from API:', data);
-    } else {
-      console.error('Error al obtener datos:', response.statusText);
-    }
-    if (!response.ok) {
-      console.error('Error al obtener datos:', response.status, response.statusText);
-      const errorData = await response.text();  // Obtener el contenido del error
-      console.error('Error Data:', errorData);
-    }
-  } catch (error) {
-    console.error('Error:', error);
-  }
-};*/
 
 
 

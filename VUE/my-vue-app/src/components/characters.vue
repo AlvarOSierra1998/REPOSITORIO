@@ -2,11 +2,10 @@
 <template>
     <!--MAIN-->
     <section>
-        <h1>Characters</h1>
         <!--lista perosnajes-->
-        <!---VASERAGA-->
+        <h1>Characters</h1>
         <div>
-            <div ref="parallax" class="botones parallax">
+            <div class="botones">
                 <button @click="mostrarVaseraga" :class="{ vaseragaB: mostrarVaseraga }">
                     <h2>Vaseraga</h2>
                 </button>
@@ -507,11 +506,118 @@
             </div>
         </div>
     </section>
+
+    <!---RACKAM---->
+    <section>
+        <!--lista perosnajes-->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoRackam" :class="{ RackamInfo: mostrarInfoRackam }">
+                <img class="imgvas" src="../assets/img/Rackam.png" alt="Rackam">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Rackam</h2>
+                    <q>
+                        <i>
+                            Skyfarer
+                            A former soldier who now travels the skies as a skyfarer. He's a bit of a worrywart, but he
+                            always has his friends' backs.
+
+                            Skybound Navigator
+                            Helmsman of the airship Grandcypher, he can be as untamed as the open skies.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsRackam">Stats</button>
+                    <ul v-if="estadisticasInfoRackam">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="pistolaRackam">Weapon</button>
+                    <!---Pistola-->
+                    <div v-if="pistola">
+                        <div class="table-title">
+                            <h2><i>Flintspike</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        A skyfarer's best friend. This Flintspike has seen its share of battles, but it's
+                                        always been there for its owner. It's a symbol of the bond between
+                                        skyfarer and skyfarer.
+                                        
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!---<section>
+        <div ref="parallax" class="botones parallax"></div>
+    </section>-->
 </template>
 
 <script setup>
-import { ref,  } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
+
+
+/***  PARALLAX   */
+
+const scrollPosition = ref(0);
+const windowHeight = ref(0);
+
+const handleScroll = () => {
+    scrollPosition.value = window.scrollY;
+};
+
+onMounted(() => {
+    windowHeight.value = window.innerHeight;
+    window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
 
 //statsVASE
 const estadisticasInfo = ref(false);
@@ -640,682 +746,8 @@ const pistolaRackam = () => {
 ///////////////////////////////////////////////////
 
 
-
 </script>
 
 <style scoped>
-/*VASERAGA*/
-.weapon {
-    width: 200%;
-    margin: auto;
-    display: flex;
-    border-radius: 20%;
-}
-
-/**CTRL + K + u comentario al seleccionar, fuente: José Manuel García Muñoz* AKA lojnoe */
-.vaseragaB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-
-.vaseragaB::before,
-.vaseragaB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(128, 52, 199, 0.8) 0%, rgba(89, 202, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-
-}
-
-.vaseragaB::before {
-    top: 0;
-    left: 0;
-}
-
-.vaseragaB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.vaseragaB:hover::before,
-.vaseragaB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.vaseragaInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #362654, #e2d9f5, #42375a, #5c2b6b);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteVaseraga 17s ease infinite;
-    -moz-animation: FondoGradianteVaseraga 17s ease infinite;
-    -o-animation: FondoGradianteVaseraga 17s ease infinite;
-    animation: FondoGradianteVaseraga 17s ease infinite;
-}
-
-/*ANIMACIONVASERAGA*/
-@-webkit-keyframes FondoGradianteVaseraga {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteVaseraga {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteVaseraga {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteVaseraga {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-/*VANE**/
-.vaneB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-.vaneB::before,
-.vaneB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(240, 174, 51, 0.8) 0%, rgba(89, 202, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.vaneB::before {
-    top: 0;
-    left: 0;
-}
-
-.vaneB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.vaneB:hover::before,
-.vaneB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.VaneInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #9ac4c1, #f1e392, #ffffff, #c7520e);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteVane 17s ease infinite;
-    -moz-animation: FondoGradianteVane 17s ease infinite;
-    -o-animation: FondoGradianteVane 17s ease infinite;
-    animation: FondoGradianteVane 17s ease infinite;
-}
-
-/*ANIMACIONVANE*/
-@-webkit-keyframes FondoGradianteVane {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteVane {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteVane {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteVane {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-
-/**KATALINA */
-
-.KatalinaB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-.KatalinaB::before,
-.KatalinaB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(2, 161, 253, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.KatalinaB::before {
-    top: 0;
-    left: 0;
-}
-
-.KatalinaB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.KatalinaB:hover::before,
-.KatalinaB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.KataInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #9ac4c1, #121957, #dfdfdf, #9dcacc);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteVane 17s ease infinite;
-    -moz-animation: FondoGradianteVane 17s ease infinite;
-    -o-animation: FondoGradianteVane 17s ease infinite;
-    animation: FondoGradianteVane 17s ease infinite;
-}
-
-/*ANIMACIONKATA*/
-@-webkit-keyframes FondoGradianteKatalina {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteKatalina {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteKatalina {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteKatalina {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-/**PERCIVAL */
-.PercivalB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-.PercivalB::before,
-.PercivalB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.PercivalB::before {
-    top: 0;
-    left: 0;
-}
-
-.PercivalB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.PercivalB:hover::before,
-.PercivalB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.PercivalInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #eb7f05, #c42b08, #e4d604, #f1d3b8);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradiantePercival 17s ease infinite;
-    -moz-animation: FondoGradiantePercival 17s ease infinite;
-    -o-animation: FondoGradiantePercival 17s ease infinite;
-    animation: FondoGradiantePercival 17s ease infinite;
-}
-
-/*ANIMACIONPERCIVAL*/
-@-webkit-keyframes FondoGradiantePercival {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradiantePercival {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradiantePercival {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradiantePercival {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-/**IO */
-.IoB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-.IoB::before,
-.IoB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(242, 255, 0, 0.897) 0%, rgba(233, 234, 219, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.IoB::before {
-    top: 0;
-    left: 0;
-}
-
-.IoB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.IoB:hover::before,
-.IoB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.IoInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #f0d01d, #a2d7cb, #6bc9aa, #ecd5c1);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteIo 17s ease infinite;
-    -moz-animation: FondoGradianteIo 17s ease infinite;
-    -o-animation: FondoGradianteIo 17s ease infinite;
-    animation: FondoGradianteIo 17s ease infinite;
-}
-
-/*ANIMACIONIO*/
-@-webkit-keyframes FondoGradianteIo {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteIo {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteIo {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteIo {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-/**YODARHA */
-.YodarhaB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-}
-
-.YodarhaB::before,
-.YodarhaB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.YodarhaB::before {
-    top: 0;
-    left: 0;
-}
-
-.YodarhaB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.YodarhaB:hover::before,
-.YodarhaB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.YodarhaInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteYodarha 17s ease infinite;
-    -moz-animation: FondoGradianteYodarha 17s ease infinite;
-    -o-animation: FondoGradianteYodarha 17s ease infinite;
-    animation: FondoGradianteYodarha 17s ease infinite;
-}
-
-/*ANIMACIONYODARHA*/
-
-@-webkit-keyframes FondoGradianteYodarha {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteYodarha {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteYodarha {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteYodarha {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-/**RACKAM */
+@import './StylesComponents/characters.css';
 </style>
