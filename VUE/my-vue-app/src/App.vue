@@ -58,7 +58,7 @@
           </li>
           <ul>
             <li class="tooltip">
-              <span class="tooltiptextLinedin">Linkedin</span>
+              <span class="tooltiptextLinkedin">Linkedin</span>
               <a href="https://twitter.com/GBF_RL_EN" target="_blank" rel="noopener noreferrer">
                 <img class="linkedin"
                   src="./assets/img/linkedin.png"
@@ -141,11 +141,11 @@ import teamBuilder from './components/teamBuilder.vue';
 }
 
 /*COMPROBAR*/
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext  {
   visibility: visible;
   opacity: 1;
 }
-.tooltiptextLinedin{
+.tooltiptextLinkedin{
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -163,6 +163,11 @@ import teamBuilder from './components/teamBuilder.vue';
   opacity: 0;
   transition: opacity 0.3s;
 }
+.tooltip:hover .tooltiptextLinkedin  {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 </style>
 
