@@ -899,6 +899,8 @@
     }
 }
 
+
+
 /**SIEGFRIED */
 .SiegfriedB {
     position: relative;
@@ -1120,4 +1122,1025 @@
         background-position: 0% 50%
     }
 }
+
+/*ROSETTA*/
+.RosettaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.RosettaB::before,
+.RosettaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.RosettaB::before {
+    top: 0;
+    left: 0;
+}
+
+.RosettaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.RosettaB:hover::before,
+.RosettaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.RosettaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #db18cb, #f1e0f3, #84adc062, #da9fcb);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteRosetta 17s ease infinite;
+    -moz-animation: FondoGradianteRosetta 17s ease infinite;
+    -o-animation: FondoGradianteRosetta 17s ease infinite;
+    animation: FondoGradianteRosetta 17s ease infinite;
+}
+
+/*ANIMACIONROSETTA*/
+
+@-webkit-keyframes FondoGradianteRosetta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteRosetta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteRosetta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteRosetta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*LANCELOT*/
+
+.LancelotB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.LancelotB::before,
+.LancelotB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.LancelotB::before {
+    top: 0;
+    left: 0;
+}
+
+.LancelotB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.LancelotB:hover::before,
+.LancelotB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.LancelotInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #e2e4e6, #f1e0f3, #02ffea62, #0f2370);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteLancelot 17s ease infinite;
+    -moz-animation: FondoGradianteLancelot 17s ease infinite;
+    -o-animation: FondoGradianteLancelot 17s ease infinite;
+    animation: FondoGradianteLancelot 17s ease infinite;
+}
+
+/*ANIMACIONLANCELOT*/
+
+@-webkit-keyframes FondoGradianteLancelot {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteLancelot {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteLancelot {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteLancelot {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*Siegfried*/
+.SiegfriedB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.SiegfriedB::before,
+.SiegfriedB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.SiegfriedB::before {
+    top: 0;
+    left: 0;
+}
+
+.SiegfriedB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.SiegfriedB:hover::before,
+.SiegfriedB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.SiegfriedInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #eb6106, #3b0808, #15215862, #71a5b4);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteSiegfried 17s ease infinite;
+    -moz-animation: FondoGradianteSiegfried 17s ease infinite;
+    -o-animation: FondoGradianteSiegfried 17s ease infinite;
+    animation: FondoGradianteSiegfried 17s ease infinite;
+}
+
+/*ANIMACIONSIEGFRIED*/
+
+@-webkit-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*CHARLOTTA*/
+.CharlottaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.CharlottaB::before,
+.CharlottaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.CharlottaB::before {
+    top: 0;
+    left: 0;
+}
+
+.CharlottaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.CharlottaB:hover::before,
+.CharlottaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.CharlottaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #eba207, #cf833d, #00d9ff62, #71a5b4);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteCharlotta 17s ease infinite;
+    -moz-animation: FondoGradianteCharlotta 17s ease infinite;
+    -o-animation: FondoGradianteCharlotta 17s ease infinite;
+    animation: FondoGradianteCharlotta 17s ease infinite;
+}
+
+/*ANIMACIONCHARLOTTA*/
+
+@-webkit-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*NARMAYA*/
+
+.NarmayaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.NarmayaB::before,
+.NarmayaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.NarmayaB::before {
+    top: 0;
+    left: 0;
+}
+
+.NarmayaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.NarmayaB:hover::before,
+.NarmayaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.NarmayaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #e57eee, #a13dcf, #d08bda, #4871bd);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteNarmaya 17s ease infinite;
+    -moz-animation: FondoGradianteNarmaya 17s ease infinite;
+    -o-animation: FondoGradianteNarmaya 17s ease infinite;
+    animation: FondoGradianteNarmaya 17s ease infinite;
+}
+
+/*ANIMACIONNARMAYA*/
+
+@-webkit-keyframes FondoGradianteNarmaya {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteNarmaya {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteNarmaya {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteNarmaya {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*ZETA*/
+
+.ZetaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.ZetaB::before,
+.ZetaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.ZetaB::before {
+    top: 0;
+    left: 0;
+}
+
+.ZetaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.ZetaB:hover::before,
+.ZetaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.ZetaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteZeta 17s ease infinite;
+    -moz-animation: FondoGradianteZeta 17s ease infinite;
+    -o-animation: FondoGradianteZeta 17s ease infinite;
+    animation: FondoGradianteZeta 17s ease infinite;
+}
+
+/*ANIMACIONZETA*/
+
+@-webkit-keyframes FondoGradianteZeta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteZeta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteZeta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteZeta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*FERRY*/
+
+.FerryB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.FerryB::before,
+.FerryB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.FerryB::before {
+    top: 0;
+    left: 0;
+}
+
+.FerryB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.FerryB:hover::before,
+.FerryB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.FerryInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteFerry 17s ease infinite;
+    -moz-animation: FondoGradianteFerry 17s ease infinite;
+    -o-animation: FondoGradianteFerry 17s ease infinite;
+    animation: FondoGradianteFerry 17s ease infinite;
+}
+
+/*ANIMACIONFERRY*/
+
+@-webkit-keyframes FondoGradianteFerry {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteFerry {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteFerry {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteFerry {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*GHANDAGOZA*/
+
+.GhandagozaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.GhandagozaB::before,
+.GhandagozaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.GhandagozaB::before {
+    top: 0;
+    left: 0;
+}
+
+.GhandagozaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.GhandagozaB:hover::before,
+.GhandagozaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.GhandagozaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteGhandagoza 17s ease infinite;
+    -moz-animation: FondoGradianteGhandagoza 17s ease infinite;
+    -o-animation: FondoGradianteGhandagoza 17s ease infinite;
+    animation: FondoGradianteGhandagoza 17s ease infinite;
+}
+
+/*ANIMACIONGHANDAGOZA*/
+
+@-webkit-keyframes FondoGradianteGhandagoza {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteGhandagoza {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteGhandagoza {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteGhandagoza {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/*CAGLIOSTRO*/
+
+.CagliostroB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.CagliostroB::before,
+.CagliostroB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.CagliostroB::before {
+    top: 0;
+    left: 0;
+}
+
+.CagliostroB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.CagliostroB:hover::before,
+.CagliostroB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.CagliostroInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteCagliostro 17s ease infinite;
+    -moz-animation: FondoGradianteCagliostro 17s ease infinite;
+    -o-animation: FondoGradianteCagliostro 17s ease infinite;
+    animation: FondoGradianteCagliostro 17s ease infinite;
+}
+
+/*ANIMACIONCAGLIOSTRO*/
+
+@-webkit-keyframes FondoGradianteCagliostro {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteCagliostro {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteCagliostro {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteCagliostro {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

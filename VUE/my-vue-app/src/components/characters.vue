@@ -51,10 +51,10 @@
                 <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
                     <h2>Ferry</h2>
                 </button>
-                <button @click="mostrarGha" :class="{ GhaB: mostrarGha }">
+                <button @click="mostrarGhandagoza" :class="{ GhandagozaB: mostrarGhandagoza }">
                     <h2>Ghandagoza</h2>
                 </button>
-                <button @click="mostrarCagli" :class="{ CagliB: mostrarCagli }">
+                <button @click="mostrarCagliostro" :class="{ CagliostroB: mostrarCagliostro }">
                     <h2>Cagliostro</h2>
                 </button>
             </div>
@@ -508,7 +508,6 @@
     </section>
 
     <!---RACKAM---->
-
     <section>
         <!--lista perosnajes-->
         <div>
@@ -551,7 +550,6 @@
                                         A skyfarer's best friend. This Flintspike has seen its share of battles, but it's
                                         always been there for its owner. It's a symbol of the bond between
                                         skyfarer and skyfarer.
-
                                     </td>
                                     <td>
                                         <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
@@ -601,10 +599,8 @@
                     <h2>Eugen</h2>
                     <q>
                         <i>
-
                             Skybound Soldier
                             A veteran skyfarer whose combat prowess is rivaled only by his regret.
-
                         </i>
                     </q>
                     </p>
@@ -670,18 +666,22 @@
     <!---ROSETTA---->
     <section>
         <!--lista perosnajes-->
+
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoRosetta" :class="{ RosettaInfo: mostrarInfoRosetta }">
                 <img class="imgvas" src="../assets/img/Rosetta.png" alt="Rosetta">
+
                 <blockquote class="txtVa">
                     <p>
                     <h2>Rosetta</h2>
                     <q>
                         <i>
-                            Skybound Songstress
-                            A songstress who can hear the voices of the earth. She travels the skies in search of the
-                            source of her power.
+
+                            Skybound Watcher
+
+                            A bystander whose roots are firmly planted in both the past and present.
+
 
                         </i>
                     </q>
@@ -695,22 +695,23 @@
                     </ul>
                     <!---WEAPON-->
                     <button @click="dagaRosetta">Weapon</button>
-                    <!---Pistola-->
+                    <!---daga-->
 
 
                     <div v-if="daga">
                         <div class="table-title">
-                            <h2><i>Harmonie</i></h2>
+                            <h2><i>Egoism</i></h2>
                         </div>
                         <table class="table-fill">
                             <thead>
                                 <tr>
                                     <td class="tdinfoV">
-                                        A songstress's weapon, a gift from the earth. It's said that the earth itself
-                                        bestowed this weapon upon her, and that it's the source of her power. The songstress
-                                        travels the skies in search of the source of her power.
-
+                                        Deep within a forgotten forest, a beautiful maiden's dagger lies in wait for the
+                                        return of its wielder. Its fate was sealed when a crew of young skyfarers invited
+                                        the maiden to relive her glory days in the sky. Though a long-held secret separates
+                                        her from the crew, she's grateful to adventure once more.
                                     </td>
+                                    <!---AÑADIR FOTO-->
                                     <td>
                                         <img class="weapon" src="../assets/img/rosettaWeapon.png" alt="Weapon_Rosetta">
                                     </td>
@@ -746,17 +747,675 @@
         </div>
     </section>
 
+    <!--LANCELOT-->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoLancelot" :class="{ LancelotInfo: mostrarInfoLancelot }">
+                <img class="imgvas" src="../assets/img/lancelot.png" alt="Rosetta">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Lancelot</h2>
+                    <q>
+                        <i>
+                            Twinfang Prodigy
+                            Captain of the knightly Order of the White Dragons. Despite his youth, he is more than capable
+                            of leading the forces of an entire kingdom.
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsLancelot">Stats</button>
+                    <ul v-if="estadisticasInfoLancelot">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="espadaOnLancelot">Weapon</button>
+                    <!---daga-->
+                    <div v-if="espada">
+                        <div class="table-title">
+                            <h2><i>Altachiara</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        Twin blades forged by an aloof blacksmith who retired to the forests of Fendrache.
+                                        Spurred by the fervent wish of an aspiring young man, he spent seven days and seven
+                                        nights pounding away on the glowing metal by his furnace. One blade is imbued with
+                                        the awe of a dragon; the other, the valor of a knight.
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/lancelotWeapon.png" alt="Weapon_Lancelot">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---SIEGFRIED---->
+
+
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoSiegfried" :class="{ SiegfriedInfo: mostrarInfoSiegfried }">
+                <img class="imgvas" src="../assets/img/siegfried.png" alt="Siegfried">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Siegfried</h2>
+                    <q>
+                        <i>
+
+                            Dragonslayer
+                            Once reviled as a traitor, that didn't stop this loyal knight from heroically saving his kingdom
+                            from crisis.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsSiegfried">Stats</button>
+                    <ul v-if="estadisticasInfoSiegfried">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="espadaOnSiegfried">Weapon</button>
+                    <!---daga-->
+                    <div v-if="espadaSiegfried">
+                        <div class="table-title">
+                            <h2><i>Integrity</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        mbroiled in bitter conspiracy more times than our hero can count, he no longer finds
+                                        meaning in both honor and dishonor alike. What remains is an enduring vow of eternal
+                                        loyalty to his country and his former king. Donning his black armor, sword in hand,
+                                        he mounrs over a bygone era.
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/siegfriedWeapon.png" alt="Weapon_Siegfried">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!---Charlotta---->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoCharlotta" :class="{ CharlottaInfo: mostrarInfoCharlotta }">
+                <img class="imgvas" src="../assets/img/charlotta.png" alt="Charlotta">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Charlotta</h2>
+                    <q>
+                        <i>
+                            Tiny Justice
+
+                            The captain of an order of holy knights, all of whom have sworn a sacred pledge. Her sword, a
+                            weapon that cleaves evil in twain, is equal to her in both size and power.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsCharlotta">Stats</button>
+                    <ul v-if="estadisticasInfoCharlotta">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="espadaOnCharlotta">Weapon</button>
+                    <!---daga-->
+                    <div v-if="espadaCharlotta">
+                        <div class="table-title">
+                            <h2><i>Claiomh Solais</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        The blade of this divine saber was forged using a rare translucent crystal that
+                                        glistens with respondent shades of aquamarine. Such a sublime creation premits only
+                                        the most holy and fully realized knights to wield its power in order to assure
+                                        indomitable valor and the greatest of glory
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/charlottaWeapon.png" alt="Weapon_Charlotta">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---NARMAYA---->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoNarmaya" :class="{ NarmayaInfo: mostrarInfoNarmaya }">
+                <img class="imgvas" src="../assets/img/narmaya.png" alt="Narmaya">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Narmaya</h2>
+                    <q>
+                        <i>
+
+                            Ephemeral Blade
+
+                            Born to a clan renowned for their mastery of all forms of martial arts, this swordswoman trains
+                            every day in order to reach even greater heights.
+
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsNarmaya">Stats</button>
+                    <ul v-if="estadisticasInfoNarmaya">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="katanaOn">Weapon</button>
+                    <!---daga-->
+                    <div v-if="katanaNarmaya">
+                        <div class="table-title">
+                            <h2><i>Wicked Nighthide</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        The blade of this divine saber was forged using a rare translucent crystal that
+                                        glistens with respondent shades of aquamarine. Such a sublime creation premits only
+                                        the most holy and fully realized knights to wield its power in order to assure
+                                        indomitable valor and the greatest of glory
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/narmayaWeapon.png" alt="Weapon_Narmaya">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---ZETA-->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoZeta" :class="{ ZetaInfo: mostrarInfoZeta }">
+                <img class="imgvas" src="../assets/img/zeta.png" alt="Zeta">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Zeta</h2>
+                    <q>
+                        <i>
+
+
+
+                            Crimson Spear
+
+                            This fearless fighter belongs to the Society, an organization which hunts primal beasts. She has
+                            formed a contract with the seal weapon known as the Spear of Arvess.
+
+
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsZeta">Stats</button>
+                    <ul v-if="estadisticasInfoZeta">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="espadaOnZeta">Weapon</button>
+                    <!---daga-->
+
+
+                    <div v-if="espadaZeta">
+                        <div class="table-title">
+                            <h2><i>Spear of Arvess</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        Restricted file - code name: Arvess. A cross-tipped spear of lunar origin. This seal
+                                        weapon harnesses the power of slames. While Arvess augments its contractor's
+                                        agility, it has a tendency to over-amplify the wielder's natural arrogance. Great
+                                        care must be taken in choosing Arvess's contractor.
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/zetaWeapon.png" alt="Weapon_Zeta">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---FERRY---->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoFerry" :class="{ FerryInfo: mostrarInfoFerry }">
+                <img class="imgvas" src="../assets/img/ferry.png" alt="Ferry">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Ferry</h2>
+                    <q>
+                        <i>
+
+                            Spirit Maiden
+
+                            An Erune girl who resides on an island shrouded in mist. Having already died, she now traverses
+                            this world as a ghost.
 
 
 
 
 
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsFerry">Stats</button>
+                    <ul v-if="estadisticasInfoFerry">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="LatigoOnFerry">Weapon</button>
+                    <!---daga-->
+                    <div v-if="LatigoFerry">
+                        <div class="table-title">
+                            <h2><i>Geisterpeitsche</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        This revenant whip in hand, a young woman prays for an everlasting connection with
+                                        those she crosses paths with. It pays heed to the screams of lost souls and herds
+                                        them to a more peaceful place
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/ferryWeapon.png" alt="Weapon_Ferry">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
 
+        </div>
+    </section>
 
+    <!---GHANDAGOZA---->
 
+    <section>
+        <!--lista perosnajes-->
 
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoGhandagoza" :class="{ GhandagozaInfo: mostrarInfoGhandagoza }">
+                <img class="imgvas" src="../assets/img/ghandagoza.png" alt="Ghandagoza">
 
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Ghandagoza</h2>
+                    <q>
+                        <i>
+                            Eternal Rage Grandmaster
 
+                            Founder of the Eternal Rage style. He has accomplished many legendary feats with his furious
+                            fists.
+                            A warrior who has dedicated his life to the art of combat. He has honed his body to
+                            perfection, and his fists are as hard as iron. He has no need for weapons, for his
+                            body is his weapon.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsGhandagoza">Stats</button>
+                    <ul v-if="estadisticasInfoGhandagoza">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="weaponOnGhandagoza">Weapon</button>
+                    <!---daga-->
+                    <div v-if="weaponGhandagoza">
+                        <div class="table-title">
+                            <h2><i>Brahma Gauntlet</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        This gauntlet blossoms like a lotus flower with the collective heat of the passion
+                                        that burns within all living creatures. Its blazing petals dance through the heavens
+                                        and devour the old world to make way for the new.
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/ghandagozaWeapon.png"
+                                            alt="Weapon_Ghandagoza">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---CAGLIOSTRO---->
+
+    <section>
+        <!--lista perosnajes-->
+
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoCagliostro" :class="{ CagliostroInfo: mostrarInfoCagliostro }">
+                <img class="imgvas" src="../assets/img/cagliostro.png" alt="Cagliostro">
+
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Cagliostro</h2>
+                    <q>
+                        <i>
+                            Eternal Alchemist
+
+                            A genius alchemist who has lived for over 1000 years. She has mastered the art of
+                            transmutation, and her knowledge of the world is vast and deep.
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsCagliostro">Stats</button>
+                    <ul v-if="estadisticasInfoCagliostro">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="weaponOnCagliostro">Weapon</button>
+                    <!---daga-->
+                    <div v-if="weaponCagliostro">
+                        <div class="table-title">
+                            <h2><i>Philosopher's Stone</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        A stone that can turn base metals into gold and grant eternal life. It is said that
+                                        the Philosopher's Stone is the ultimate goal of alchemy. Cagliostro has been
+                                        searching for it for over 1000 years.
+                                    </td>
+                                    <!---AÑADIR FOTO-->
+                                    <td>
+                                        <img class="weapon" src="../assets/img/cagliostroWeapon.png"
+                                            alt="Weapon_Cagliostro">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
 
     <!---<section>
         <div ref="parallax" class="botones parallax"></div>
@@ -941,11 +1600,179 @@ const mostrarRosetta = () => {
 };
 
 //weaponROSETTA
-const daga= ref(false);
+const daga = ref(false);
 const dagaRosetta = () => {
     daga.value = !daga.value;
 };
 
+///////////////////////////////////////////////////
+
+//infoLancelot
+const estadisticasInfoLancelot = ref(false);
+const statsLancelot = () => {
+    estadisticasInfoLancelot.value = !estadisticasInfoLancelot.value
+};
+const mostrarInfoLancelot = ref(false);
+const mostrarLancelot = () => {
+    mostrarInfoLancelot.value = !mostrarInfoLancelot.value;
+};
+
+//weaponLancelot
+const espadaLancelot = ref(false);
+const espadaOnLancelot = () => {
+    espadaLancelot.value = !espadaLancelot.value;
+};
+
+///////////////////////////////////////////////////
+
+//Siegfried
+const estadisticasInfoSiegfried = ref(false);
+const statsSiegfried = () => {
+    estadisticasInfoSiegfried.value = !estadisticasInfoSiegfried.value
+};
+const mostrarInfoSiegfried = ref(false);
+const mostrarSiegfried = () => {
+    mostrarInfoSiegfried.value = !mostrarInfoSiegfried.value;
+};
+
+//weaponSiegfried
+const espadaSiegfried = ref(false);
+const espadaOnSiegfried = () => {
+    espadaSiegfried.value = !espadaSiegfried.value;
+};
+
+///////////////////////////////////////////////////
+
+//Charlotta
+const estadisticasInfoCharlotta = ref(false);
+const statsCharlotta = () => {
+    estadisticasInfoCharlotta.value = !estadisticasInfoCharlotta.value
+};
+const mostrarInfoCharlotta = ref(false);
+const mostrarCharlotta = () => {
+    mostrarInfoCharlotta.value = !mostrarInfoCharlotta.value;
+};
+
+//weaponCharlotta
+const espadaCharlotta = ref(false);
+const espadaOnCharlotta = () => {
+    espadaCharlotta.value = !espadaCharlotta.value;
+};
+
+///////////////////////////////////////////////////
+
+//NARMAYA
+
+const estadisticasInfoNarmaya = ref(false);
+const statsNarmaya = () => {
+    estadisticasInfoNarmaya.value = !estadisticasInfoNarmaya.value
+};
+const mostrarInfoNarmaya = ref(false);
+const mostrarNarmaya = () => {
+    mostrarInfoNarmaya.value = !mostrarInfoNarmaya.value;
+};
+
+//weaponNarmaya
+const katanaNarmaya = ref(false);
+const katanaOn = () => {
+    katanaNarmaya.value = !katanaNarmaya.value;
+};
+
+///////////////////////////////////////////////////
+
+//ZETA
+
+const estadisticasInfoZeta = ref(false);
+const statsZeta = () => {
+    estadisticasInfoZeta.value = !estadisticasInfoZeta.value
+};
+const mostrarInfoZeta = ref(false);
+const mostrarZeta = () => {
+    mostrarInfoZeta.value = !mostrarInfoZeta.value;
+};
+
+//weaponZeta
+const espadaZeta = ref(false);
+const espadaOnZeta = () => {
+    espadaZeta.value = !espadaZeta.value;
+};
+
+///////////////////////////////////////////////////
+
+//FERRY
+
+const estadisticasInfoFerry = ref(false);
+
+const statsFerry = () => {
+    estadisticasInfoFerry.value = !estadisticasInfoFerry.value
+};
+
+const mostrarInfoFerry = ref(false);
+
+const mostrarFerry = () => {
+    mostrarInfoFerry.value = !mostrarInfoFerry.value;
+};
+
+//weaponFerry
+
+const LatigoFerry = ref(false);
+
+const LatigoOnFerry = () => {
+    LatigoFerry.value = !LatigoFerry.value;
+};
+
+///////////////////////////////////////////////////
+
+//Ghandagoza
+
+const estadisticasInfoGhandagoza = ref(false);
+
+const statsGhandagoza = () => {
+    estadisticasInfoGhandagoza.value = !estadisticasInfoGhandagoza.value
+};
+
+const mostrarInfoGhandagoza = ref(false);
+
+const mostrarGhandagoza = () => {
+    mostrarInfoGhandagoza.value = !mostrarInfoGhandagoza.value;
+};
+
+//weaponGhandagoza
+
+const weaponGhandagoza = ref(false);
+
+const weaponOnGhandagoza = () => {
+    weaponGhandagoza.value = !weaponGhandagoza.value;
+};
+
+///////////////////////////////////////////////////
+
+//CAGLIOSTRO
+
+const estadisticasInfoCagliostro = ref(false);
+
+const statsCagliostro = () => {
+    estadisticasInfoCagliostro.value = !estadisticasInfoCagliostro.value
+};
+
+const mostrarInfoCagliostro = ref(false);
+
+const mostrarCagliostro = () => {
+    mostrarInfoCagliostro.value = !mostrarInfoCagliostro.value;
+};
+
+//weaponCagliostro
+
+const weaponCagliostro = ref(false);
+
+const weaponOnCagliostro = () => {
+    weaponCagliostro.value = !weaponCagliostro.value;
+};
+
+///////////////////////////////////////////////////
+
 </script>
 
-<style scoped>@import './StylesComponents/characters.css';</style>
+<style scoped>
+@import './StylesComponents/characters.css';
+</style>

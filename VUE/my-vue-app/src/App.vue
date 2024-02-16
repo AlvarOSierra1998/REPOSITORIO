@@ -49,13 +49,19 @@
                   <img :src="product.img" alt="Product Photo" class="product-photo" />
                 </div>
                 <p>
-                <h2>Nombre: {{ product.name }}</h2>
+                <h2>Name: {{ product.name }}</h2>
                 </p>
                 <p>
-                <h2>Precio: {{ product.price }}</h2>
+                <h2>HP(lvl60): {{ product.HP }}</h2>
                 </p>
                 <p>
-                <h2>Categoría: {{ product.category }}</h2>
+                <h2>ATK(lvl60): {{ product.ATK }} </h2>
+                </p>
+                <p>
+                <h2>Element:<img :src="product.Element" alt="void"></h2>
+                </p>
+                <p class="margin-combat" >
+                <h2>Combat Style: {{ product.combatStyle }} </h2>
                 </p>
 
                 <hr />
@@ -95,31 +101,71 @@ import personajes from './components/characters.vue';
 const products = [
   {
     "name": "Vaseraga",
-    "price": 19.99,
-    "category": "Electrónicos",
-    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png"
+    "HP": 5878,
+    "ATK": 526,
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png",
     //"img": "../src/assets/img/vaseraga.png"
+    "combatStyle": " Tank ",
   },
   {
-    "id": 2,
-    "name": "Io",
-    "price": 29.99,
-    "category": "Ropa",
-    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png"
+    "name": "Vane",
+    "HP": 6839,
+    "ATK": 526,
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "img": "https://gbf.wiki/images/thumb/7/73/Npc_zoom_3030107000_01.png/480px-Npc_zoom_3030107000_01.png",
+    "combatStyle": " Defense ",
+
 
   },
   {
-    "id": 3,
-    "name": "Producto C",
-    "price": 9.99,
-    "category": "Hogar"
+    "name": "Katalina",
+    "HP": 2368,
+    "ATK": 404,
+    "img": "https://gbf.wiki/images/thumb/9/9b/Npc_zoom_3030005000_01.png/480px-Npc_zoom_3030005000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " DPS, Support ",
   },
   {
-    "id": 4,
-    "name": "Producto D",
-    "price": 39.99,
-    "category": "Electrónicos"
-  }
+    "name": "Percival",
+    "HP": 5279,
+    "ATK": 646,
+    "img": "https://gbf.wiki/images/thumb/d/d7/Npc_zoom_3040050000_01.png/480px-Npc_zoom_3040050000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " DPS,Tank ",
+  },
+  {
+    "name": "Lancelot",
+    "HP": 5279,
+    "ATK": 6263,
+    "img": "https://gbf.wiki/images/thumb/1/14/Npc_zoom_3040023000_01.png/480px-Npc_zoom_3040023000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " DPS, Trickster ",
+  },
+  {
+    "name": "Charlotta",
+    "HP": 6696,
+    "ATK": 5417,
+    "img": "https://gbf.wiki/images/thumb/b/b6/Npc_zoom_3040010000_01.png/480px-Npc_zoom_3040010000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " DPS ",
+  },
+  {
+    "name": "Zeta",
+    "HP": 3359,
+    "ATK": 6823,
+    "img": "https://gbf.wiki/images/thumb/e/ef/Npc_zoom_3040028000_01.png/480px-Npc_zoom_3040028000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " Hybrid DPS-Defense ",
+  },
+  {
+    "name": "Io",
+    "HP": 5279,
+    "ATK": 646,
+    "img": "https://gbf.wiki/images/thumb/3/3e/Npc_zoom_3040018000_01.png/480px-Npc_zoom_3040018000_01.png",
+    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png",
+    "combatStyle": " DPS ",
+  },
 ];
 
 const productName = ref('');
@@ -179,13 +225,16 @@ const limpiarLista = () => {
 
 <!--estilos solo para funciones-->
 <style scoped >
-
-
 .product-info {
   display: inline-block;
   margin: auto;
+
 }
 
+.margin-combat{
+  display: flex;
+  flex-direction: column;
 
+}
 </style>
 
