@@ -788,3 +788,336 @@
     }
 }
 
+/**EUGEN*/
+.EugenB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.EugenB::before,
+.EugenB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.EugenB::before {
+    top: 0;
+    left: 0;
+}
+
+.EugenB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.EugenB:hover::before,
+.EugenB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.EugenInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteEugen 17s ease infinite;
+    -moz-animation: FondoGradianteEugen 17s ease infinite;
+    -o-animation: FondoGradianteEugen 17s ease infinite;
+    animation: FondoGradianteEugen 17s ease infinite;
+}
+
+/*ANIMACIONEUGEN*/
+
+@-webkit-keyframes FondoGradianteEugen {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteEugen {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteEugen {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteEugen {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/**SIEGFRIED */
+.SiegfriedB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.SiegfriedB::before,
+.SiegfriedB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.SiegfriedB::before {
+    top: 0;
+    left: 0;
+}
+
+.SiegfriedB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.SiegfriedB:hover::before,
+.SiegfriedB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.SiegfriedInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteSiegfried 17s ease infinite;
+    -moz-animation: FondoGradianteSiegfried 17s ease infinite;
+    -o-animation: FondoGradianteSiegfried 17s ease infinite;
+    animation: FondoGradianteSiegfried 17s ease infinite;
+}
+
+/*ANIMACIONSIEGFRIED*/
+
+@-webkit-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteSiegfried {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+/**CHARLOTTA */
+.CharlottaB {
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    width: 8%;
+}
+
+.CharlottaB::before,
+.CharlottaB::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-position: bottom;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .3s ease, background-position .3s ease;
+}
+
+.CharlottaB::before {
+    top: 0;
+    left: 0;
+}
+
+.CharlottaB::after {
+    bottom: 0;
+    right: 0;
+}
+
+.CharlottaB:hover::before,
+.CharlottaB:hover::after {
+    opacity: 1;
+    background-position: top;
+}
+
+.CharlottaInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
+    background-size: 800% 800%;
+
+    -webkit-animation: FondoGradianteCharlotta 17s ease infinite;
+    -moz-animation: FondoGradianteCharlotta 17s ease infinite;
+    -o-animation: FondoGradianteCharlotta 17s ease infinite;
+    animation: FondoGradianteCharlotta 17s ease infinite;
+}
+
+/*ANIMACIONCHARLOTTA*/
+
+@-webkit-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes FondoGradianteCharlotta {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+

@@ -508,6 +508,7 @@
     </section>
 
     <!---RACKAM---->
+
     <section>
         <!--lista perosnajes-->
         <div>
@@ -550,7 +551,7 @@
                                         A skyfarer's best friend. This Flintspike has seen its share of battles, but it's
                                         always been there for its owner. It's a symbol of the bond between
                                         skyfarer and skyfarer.
-                                        
+
                                     </td>
                                     <td>
                                         <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
@@ -586,6 +587,172 @@
 
         </div>
     </section>
+
+    <!---EUGEN---->
+
+    <section>
+        <!--lista perosnajes-->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoEugen" :class="{ RackamInfo: mostrarInfoEugen }">
+                <img class="imgvas" src="../assets/img/eugen.png" alt="Eugen">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Eugen</h2>
+                    <q>
+                        <i>
+
+                            Skybound Soldier
+                            A veteran skyfarer whose combat prowess is rivaled only by his regret.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsEugen">Stats</button>
+                    <ul v-if="estadisticasInfoRackam">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="pistolaEugen">Weapon</button>
+                    <!---Pistola-->
+                    <div v-if="pistola">
+                        <div class="table-title">
+                            <h2><i>Dreyse</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        The rifle of an old veteran who drowned his regret in the sea. Across the years the
+                                        weight of self-loathing wore him down, until he eventually became unable to act.
+                                        That is until a fateful encounter turned his loathing to resolve, and he took up
+                                        arms against the great evil consuming his homeland.
+
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/rackamweapon.png" alt="Weapon_Rackam">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!---ROSETTA---->
+    <section>
+        <!--lista perosnajes-->
+        <div>
+            <!---es una clase el vaseraga info-->
+            <div v-if="mostrarInfoRosetta" :class="{ RosettaInfo: mostrarInfoRosetta }">
+                <img class="imgvas" src="../assets/img/Rosetta.png" alt="Rosetta">
+                <blockquote class="txtVa">
+                    <p>
+                    <h2>Rosetta</h2>
+                    <q>
+                        <i>
+                            Skybound Songstress
+                            A songstress who can hear the voices of the earth. She travels the skies in search of the
+                            source of her power.
+
+                        </i>
+                    </q>
+                    </p>
+                    <!---Stats--->
+                    <button @click="statsRosetta">Stats</button>
+                    <ul v-if="estadisticasInfoRosetta">
+                        <li>a</li>
+                        <li>a</li>
+                        <li>a</li>
+                    </ul>
+                    <!---WEAPON-->
+                    <button @click="dagaRosetta">Weapon</button>
+                    <!---Pistola-->
+
+
+                    <div v-if="daga">
+                        <div class="table-title">
+                            <h2><i>Harmonie</i></h2>
+                        </div>
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <td class="tdinfoV">
+                                        A songstress's weapon, a gift from the earth. It's said that the earth itself
+                                        bestowed this weapon upon her, and that it's the source of her power. The songstress
+                                        travels the skies in search of the source of her power.
+
+                                    </td>
+                                    <td>
+                                        <img class="weapon" src="../assets/img/rosettaWeapon.png" alt="Weapon_Rosetta">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Stats</th>
+                                    <th class="text-left">Level 1</th>
+                                    <th class="text-left">Level 100</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">HP</td>
+                                    <td class="text-left">23</td>
+                                    <td class="text-left">100</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">ATK</td>
+                                    <td class="text-left">9</td>
+                                    <td class="text-left">1000</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">C.A<sup>x</sup></td>
+                                    <td class="text-left">??</td>
+                                    <td class="text-left">??</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -745,9 +912,40 @@ const pistolaRackam = () => {
 
 ///////////////////////////////////////////////////
 
+//infoEugen
+const estadisticasInfoEugen = ref(false);
+const statsEugen = () => {
+    estadisticasInfoEugen.value = !estadisticasInfoEugen.value
+};
+const mostrarInfoEugen = ref(false);
+const mostrarEugen = () => {
+    mostrarInfoEugen.value = !mostrarInfoEugen.value;
+};
+
+//weaponRackam
+const pistolaE = ref(false);
+const pistolaEugen = () => {
+    pistolaE.value = !pistolaE.value;
+};
+
+///////////////////////////////////////////////////
+
+//infoRosetta
+const estadisticasInfoRosetta = ref(false);
+const statsRosetta = () => {
+    estadisticasInfoRosetta.value = !estadisticasInfoRosetta.value
+};
+const mostrarInfoRosetta = ref(false);
+const mostrarRosetta = () => {
+    mostrarInfoRosetta.value = !mostrarInfoRosetta.value;
+};
+
+//weaponROSETTA
+const daga= ref(false);
+const dagaRosetta = () => {
+    daga.value = !daga.value;
+};
 
 </script>
 
-<style scoped>
-@import './StylesComponents/characters.css';
-</style>
+<style scoped>@import './StylesComponents/characters.css';</style>
