@@ -6,6 +6,7 @@ body {
   font-optical-sizing: auto;
   font-weight:lighter;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 /*nav{
