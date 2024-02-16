@@ -28,213 +28,23 @@
 
       <!--MAIN-->
       <section>
-        <personajes />
+        <characters />
       </section>
+
       <section>
         <teamBuilder />
       </section>
-      <section>
-        <div>
-          <!--TeamBuilder>-->
-          <div>
-            <label for="productName">Ingrese el nombre del producto:</label>
-            <input v-model="productName" id="productName" />
-
-            <button @click="searchProduct">Buscar Producto</button>
-
-            <div v-if="foundProducts.length > 0">
-              <h3>Productos Encontrados:</h3>
-              <div v-for="(product, index) in foundProducts" :key="index" class="product-info">
-                <div v-if="product.img">
-                  <img :src="product.img" alt="Product Photo" class="product-photo" />
-                </div>
-                <p>
-                <h2>Name: {{ product.name }}</h2>
-                </p>
-                <p>
-                <h2>HP(lvl60): {{ product.HP }}</h2>
-                </p>
-                <p>
-                <h2>ATK(lvl60): {{ product.ATK }} </h2>
-                </p>
-                <p>
-                <h2>Element:<img :src="product.Element" alt="void"></h2>
-                </p>
-                <p class="margin-combat" >
-                <h2>Combat Style: {{ product.combatStyle }} </h2>
-                </p>
-
-                <hr />
-              </div>
-              <button @click="Eliminar(index)">Delete</button>
-              <button @click="clearResults">Limpiar Resultados</button>
-            </div>
-            <div v-else>
-              <p>No se encontró ningún producto con ese nombre.</p>
-            </div>
-          </div>
-
-
-        </div>
-
-
-      </section>
     </main>
   </body>
-</template>
-
-
-
-
-<script setup>
-import { ref } from 'vue';
-
-
-import personajes from './components/characters.vue';
-//import teamBuilder from './components/teamBuilder.vue';
-
-
-
-
-//PRUEBA
-
-const products = [
-  {
-    "name": "Vaseraga",
-    "HP": 5878,
-    "ATK": 526,
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "img": "https://gbf.wiki/images/thumb/b/b1/Npc_zoom_3040029000_01.png/480px-Npc_zoom_3040029000_01.png",
-    //"img": "../src/assets/img/vaseraga.png"
-    "combatStyle": " Tank ",
-  },
-  {
-    "name": "Vane",
-    "HP": 6839,
-    "ATK": 526,
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "img": "https://gbf.wiki/images/thumb/7/73/Npc_zoom_3030107000_01.png/480px-Npc_zoom_3030107000_01.png",
-    "combatStyle": " Defense ",
-
-
-  },
-  {
-    "name": "Katalina",
-    "HP": 2368,
-    "ATK": 404,
-    "img": "https://gbf.wiki/images/thumb/9/9b/Npc_zoom_3030005000_01.png/480px-Npc_zoom_3030005000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " DPS, Support ",
-  },
-  {
-    "name": "Percival",
-    "HP": 5279,
-    "ATK": 646,
-    "img": "https://gbf.wiki/images/thumb/d/d7/Npc_zoom_3040050000_01.png/480px-Npc_zoom_3040050000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " DPS,Tank ",
-  },
-  {
-    "name": "Lancelot",
-    "HP": 5279,
-    "ATK": 6263,
-    "img": "https://gbf.wiki/images/thumb/1/14/Npc_zoom_3040023000_01.png/480px-Npc_zoom_3040023000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " DPS, Trickster ",
-  },
-  {
-    "name": "Charlotta",
-    "HP": 6696,
-    "ATK": 5417,
-    "img": "https://gbf.wiki/images/thumb/b/b6/Npc_zoom_3040010000_01.png/480px-Npc_zoom_3040010000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " DPS ",
-  },
-  {
-    "name": "Zeta",
-    "HP": 3359,
-    "ATK": 6823,
-    "img": "https://gbf.wiki/images/thumb/e/ef/Npc_zoom_3040028000_01.png/480px-Npc_zoom_3040028000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " Hybrid DPS-Defense ",
-  },
-  {
-    "name": "Io",
-    "HP": 5279,
-    "ATK": 646,
-    "img": "https://gbf.wiki/images/thumb/3/3e/Npc_zoom_3040018000_01.png/480px-Npc_zoom_3040018000_01.png",
-    "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png",
-    "combatStyle": " DPS ",
-  },
-];
-
-const productName = ref('');
-const foundProducts = ref([]);
-
-
-const searchProduct = () => {
-  const product = products.find(p => p.name.toLowerCase() === productName.value.toLowerCase());
-  if (product) {
-    foundProducts.value = [...foundProducts.value, product];
-
-  }
-};
-const clearResults = () => {
-  foundProducts.value = [];
-};
-const Eliminar = (index) => {
-  foundProducts.value.splice(index, 1);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//ELEMENTOS
-/*
-const nuevoElemento = ref('');
-const elementos = ref([]);
-
-const agregarElemento = () => {
-  if (nuevoElemento.value.trim() !== '') {
-    elementos.value.push(nuevoElemento.value);
-    nuevoElemento.value = ''; // Limpiar el input después de agregar
-  }
-};
-
-
-const limpiarLista = () => {
-  elementos.value = []
-}*/
-
-</script>
-
-
-
-
-<!--estilos solo para funciones-->
+  </template>
+      
+      <script setup>
+        import characters from './components/characters.vue';
+        import teamBuilder from './components/teamBuilder.vue';
+      </script>
+      
 <style scoped >
-.product-info {
-  display: inline-block;
-  margin: auto;
-
-}
-
-.margin-combat{
-  display: flex;
-  flex-direction: column;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
+
 

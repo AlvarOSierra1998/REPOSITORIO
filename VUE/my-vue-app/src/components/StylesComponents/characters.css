@@ -21,6 +21,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 
@@ -52,6 +56,7 @@
 .vaseragaB:hover::after {
     opacity: 1;
     background-position: top;
+    
 }
 
 .vaseragaInfo {
@@ -133,6 +138,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .vaneB::before,
@@ -245,6 +254,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .KatalinaB::before,
@@ -355,6 +368,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .PercivalB::before,
@@ -465,6 +482,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .IoB::before,
@@ -575,6 +596,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .YodarhaB::before,
@@ -686,6 +711,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .RackamB::before,
@@ -797,6 +826,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .EugenB::before,
@@ -910,6 +943,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .SiegfriedB::before,
@@ -1021,6 +1058,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .CharlottaB::before,
@@ -1132,6 +1173,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .RosettaB::before,
@@ -1244,6 +1289,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .LancelotB::before,
@@ -1355,6 +1404,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .SiegfriedB::before,
@@ -1466,6 +1519,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .CharlottaB::before,
@@ -1578,6 +1635,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .NarmayaB::before,
@@ -1690,6 +1751,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .ZetaB::before,
@@ -1802,6 +1867,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .FerryB::before,
@@ -1914,6 +1983,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .GhandagozaB::before,
@@ -2026,6 +2099,10 @@
     cursor: pointer;
     transition: all .3s ease;
     width: 8%;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
 }
 
 .CagliostroB::before,
@@ -2034,7 +2111,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(247, 121, 72, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -2127,20 +2204,3 @@
         background-position: 0% 50%
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
