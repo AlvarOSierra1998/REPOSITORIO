@@ -5,7 +5,7 @@
         <!--lista perosnajes-->
         <h1>Characters</h1>
         <div>
-            <div class="botones">
+            <div id="top" class="botones sticky">
                 <a href="#vaseraga">
                     <button @click="mostrarVaseraga" :class="{ vaseragaB: mostrarVaseraga }">
                         <h2>Vaseraga</h2>
@@ -46,7 +46,7 @@
                         <h2>Eugen</h2>
                     </button>
                 </a>
-                <a href="#rosseta">
+                <a href="#rosetta">
                     <button @click="mostrarRosetta" :class="{ RosettaB: mostrarRosetta }">
                         <h2>Rosetta</h2>
                     </button>
@@ -77,7 +77,7 @@
                         <h2>Zeta</h2>
                     </button>
                 </a>
-                <a href ="#Ferry">
+                <a href ="#ferry">
                     <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
                         <h2>Ferry</h2>
                     </button>
@@ -98,9 +98,9 @@
                 <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Vaseraga</h2>
+                    <h2 id="vaseraga">Vaseraga</h2>
                     <q>
-                        <i id="vaseraga">
+                        <i >
                             This towering Draph warrior belongs to the Society, an organization which hunts primal
                             beasts. He has
                             formed a contract with the seal weapon known as Great Scythe Grynoth.
@@ -108,16 +108,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsV">Stats</button>
-                    <ul v-if="estadisticasInfo">
-                        <li>HP(lvl 100) 58978</li>
-                        <li>ATK (lvl 100): 60000 </li>
+                    <button class="button-stats" @click="statsV">Stats</button>
+                    <ul class="stats-fondo-vaseraga" v-if="estadisticasInfo">
+                        <li>HP(lvl 100): <b class="values-vaseraga">58978</b></li>
+                        <li>ATK (lvl 100): <b class="values-vaseraga"> 60000 </b> </li>
                         <li>Element <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="element void"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="weaponV">Weapon</button>
+                    <button class="button-stats" @click="weaponV">Weapon</button>
                     <!--grynoth-->
                     <div v-if="grynothOn">
                         <div class="table-title">
@@ -164,8 +164,15 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
+            
 
         </div>
     </section>
@@ -179,9 +186,9 @@
                 <img class="imgvas" src="../assets/img/Vane.png" alt="Vane">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Vane</h2>
+                    <h2 id="vane">Vane</h2>
                     <q>
-                        <i id="vane">
+                        <i >
                             Knight of Fellowship
                             A knight of valor, he pours his heart and soul into protecting his homeland, his friends,
                             and his comrades-in-arms.
@@ -244,6 +251,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -257,9 +270,9 @@
                 <img class="imgvas" src="../assets/img/Katalina.png" alt="Katalina">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>KATALINA</h2>
+                    <h2 id="katalina">KATALINA</h2>
                     <q>
-                        <i id="katalina">
+                        <i >
 
                             Skybound Protector
                             Katalina once swore an oath of knighthood to the Erste Empire, but those days are long
@@ -278,7 +291,7 @@
                     </ul>
                     <!---WEAPON-->
                     <button @click="estoqueOn">Weapon</button>
-                    <!---ALABARDA-->
+                    <!---RUKALSA-->
                     <div v-if="estoque">
                         <div class="table-title">
                             <h2><i>Rukalsa.</i></h2>
@@ -321,6 +334,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -334,9 +353,9 @@
                 <img class="imgvas" src="../assets/img/Percival.png" alt="Percival">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>PERCIVAL</h2>
+                    <h2 id="percival">PERCIVAL</h2>
                     <q>
-                        <i id="percival">
+                        <i >
                             Lord of Flames
                             Possessing the makings of a king, this young man strives to create a kingdom free of war with
                             other like-minded individuals.
@@ -397,6 +416,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -410,9 +435,9 @@
                 <img class="imgvas" src="../assets/img/Io.png" alt="Io">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Io</h2>
+                    <h2 id="io">Io</h2>
                     <q>
-                        <i id="Io">
+                        <i >
                             Skybound Dreamer
                             Don't let her small size fool you. This young mage is eager to showcase her impressive talent.
                             She vows to bring smiles to the world
@@ -472,6 +497,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -486,7 +517,7 @@
                 <img class="imgvas" src="../assets/img/Yodarha.png" alt="Yodarha">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Yodarha</h2>
+                    <h2 id="yodarha">Yodarha</h2>
                     <q>
                         <i>
                             Illusory Fencer
@@ -551,6 +582,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -565,7 +602,7 @@
                 <img class="imgvas" src="../assets/img/Rackam.png" alt="Rackam">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Rackam</h2>
+                    <h2 id="rackam">Rackam</h2>
                     <q>
                         <i>
                             Skyfarer
@@ -631,6 +668,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -647,7 +690,7 @@
                 <img class="imgvas" src="../assets/img/eugen.png" alt="Eugen">
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Eugen</h2>
+                    <h2 id="eugen">Eugen</h2>
                     <q>
                         <i>
                             Skybound Soldier
@@ -710,6 +753,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -727,7 +776,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Rosetta</h2>
+                    <h2 id="rosetta">Rosetta</h2>
                     <q>
                         <i>
 
@@ -796,6 +845,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -810,11 +865,11 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoLancelot" :class="{ LancelotInfo: mostrarInfoLancelot }">
-                <img class="imgvas" src="../assets/img/lancelot.png" alt="Rosetta">
+                <img class="imgvas" src="../assets/img/lancelot.png" alt="lancelot">
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Lancelot</h2>
+                    <h2 id="lancelot">Lancelot</h2>
                     <q>
                         <i>
                             Twinfang Prodigy
@@ -878,6 +933,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -898,7 +959,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Siegfried</h2>
+                    <h2 id="siegfried">Siegfried</h2>
                     <q>
                         <i>
 
@@ -964,6 +1025,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
         </div>
@@ -981,7 +1048,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Charlotta</h2>
+                    <h2 id="charlotta">Charlotta</h2>
                     <q>
                         <i>
                             Tiny Justice
@@ -1047,6 +1114,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -1065,7 +1138,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Narmaya</h2>
+                    <h2 id="narmaya">Narmaya</h2>
                     <q>
                         <i>
 
@@ -1079,16 +1152,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsNarmaya">Stats</button>
-                    <ul v-if="estadisticasInfoNarmaya">
-                        <li>HP(lvl 100): 55341</li>
-                        <li>ATK(lvl 100 ): 88888</li>
+                    <button class="button-stats" @click="statsNarmaya">Stats</button>
+                    <ul class="stats-fondo-Narmaya" v-if="estadisticasInfoNarmaya">
+                        <li>HP(lvl 100): <b class="values-Narmaya">55341</b></li>
+                        <li>ATK(lvl 100 ):<b class="values-Narmaya"> 88888 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="elemtn_narmaya"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="katanaOn">Weapon</button>
+                    <button class="button-weapon" @click="katanaOn">Weapon</button>
                     <!---daga-->
                     <div v-if="katanaNarmaya">
                         <div class="table-title">
@@ -1133,6 +1206,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -1151,7 +1230,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Zeta</h2>
+                    <h2 id="zeta">Zeta</h2>
                     <q>
                         <i>
 
@@ -1224,6 +1303,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -1242,7 +1327,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Ferry</h2>
+                    <h2 id="ferry">Ferry</h2>
                     <q>
                         <i>
 
@@ -1250,11 +1335,6 @@
 
                             An Erune girl who resides on an island shrouded in mist. Having already died, she now traverses
                             this world as a ghost.
-
-
-
-
-
                         </i>
                     </q>
                     </p>
@@ -1312,6 +1392,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -1330,7 +1416,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Ghandagoza</h2>
+                    <h2 id="Ghandagoza">Ghandagoza</h2>
                     <q>
                         <i>
                             Eternal Rage Grandmaster
@@ -1397,6 +1483,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
@@ -1415,7 +1507,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2>Cagliostro</h2>
+                    <h2 id= "Cagliostro">Cagliostro</h2>
                     <q>
                         <i>
                             Eternal Alchemist
@@ -1480,6 +1572,12 @@
                             </tbody>
                         </table>
                     </div>
+                    <a href = "#top">
+                        <p>
+                            <b>To the top!</b>
+                        </p>
+                    </a>
+                    <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
 
