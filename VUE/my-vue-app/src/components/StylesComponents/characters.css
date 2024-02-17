@@ -113,6 +113,129 @@
 
 /*KATALINA INNER*/
 
+.stats-fondo-katalina{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+.values-katalina{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+.values-katalina:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*PERCIVAL INNER*/
+
+.stats-fondo-percival{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-percival{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-percival:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*IO INNER*/
+
+.stats-fondo-io{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-io{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-io:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*YODARHA INNER*/
+
+.stats-fondo-yodarha{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-yodarha{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-yodarha:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+
+
+
 .button-stats:hover,
 .button-weapon:hover {
     padding: 0.9em;

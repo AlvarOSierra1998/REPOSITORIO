@@ -197,17 +197,17 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsVane">Stats</button>
-                    <ul v-if="estadisticasInfoVan">
-                        <li>HP(lvl 100 ): 76543 </li>
-                        <li>ATK(lvl 100 ): 40000</li>
+                    <button class="button-stats" @click="statsVane">Stats</button>
+                    <ul class="stats-fondo-vane" v-if="estadisticasInfoVan">
+                        <li>HP(lvl 100 ): <b class="values-vane"> 76543 </b> </li>
+                        <li>ATK(lvl 100 ): <b class="values-vane"> 40000 </b></li>
                         <li>Element
                             <img src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="element vane">
                         </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="alabardaOn">Weapon</button>
+                    <button class="button-stats" @click="alabardaOn">Weapon</button>
                     <!---ALABARDA-->
                     <div v-if="alabardaVane">
                         <div class="table-title">
@@ -281,16 +281,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsKatalina">Stats</button>
-                    <ul v-if="estadisticasInfoKatalina">
-                        <li>HP(100): 24000</li>
-                        <li>ATK(100): 40000</li>
+                    <button class="button-stats" @click="statsKatalina">Stats</button>
+                    <ul class="stats-fondo-katalina" v-if="estadisticasInfoKatalina">
+                        <li>HP(100): <b class="values-katalina"> 24000 </b></li>
+                        <li>ATK(100): <b class="values-katalina"> 40000 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
-                                alt=""> </li>
+                                alt="water-element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="estoqueOn">Weapon</button>
+                    <button class="button-stats" @click="estoqueOn">Weapon</button>
                     <!---RUKALSA-->
                     <div v-if="estoque">
                         <div class="table-title">
@@ -364,17 +364,17 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsPercival">Stats</button>
-                    <ul v-if="estadisticasInfoPercival">
-                        <li>HP(lvl 100): 30000</li>
-                        <li>ATK(lvl 100): 70000 </li>
+                    <button class="button-stats" @click="statsPercival">Stats</button>
+                    <ul class="stats-fondo-percival" v-if="estadisticasInfoPercival">
+                        <li>HP(lvl 100): <b class="values-percival"> 30000 </b></li>
+                        <li>ATK(lvl 100):  <b class="values-percival"> 70000 </b> </li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="percoval_Percival"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="espadaOn">Weapon</button>
-                    <!---ALABARDA-->
+                    <button class="button-stats" @click="espadaOn">Weapon</button>
+                    <!---Espada-->
                     <div v-if="espadaPercival">
                         <div class="table-title">
                             <h2><i>Flamberge.</i></h2>
@@ -430,7 +430,6 @@
     <section>
         <!--lista perosnajes-->
         <div>
-            <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoIo" :class="{ IoInfo: mostrarInfoIo }">
                 <img class="imgvas" src="../assets/img/Io.png" alt="Io">
                 <blockquote class="txtVa">
@@ -445,16 +444,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsIo">Stats</button>
-                    <ul v-if="estadisticasInfoIo">
-                        <li>HP(lvl 100): 20000</li>
-                        <li>ATK(lvl 100): 50000</li>
+                    <button class="button-stats" @click="statsIo">Stats</button>
+                    <ul class="stats-fondo-io" v-if="estadisticasInfoIo">
+                        <li>HP(lvl 100): <b class="values-io"> 20000 </b> </li>
+                        <li>ATK(lvl 100): <b class="values-io"> 50000 </b> </li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
-                                alt="io_element"></li>
+                                alt="light_element"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="BastonOn">Weapon</button>
+                    <button class="button-stats" @click="BastonOn">Weapon</button>
                     <!---Baston-->
                     <div v-if="BastonIo">
                         <div class="table-title">
@@ -529,16 +528,17 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsYodarha">Stats</button>
-                    <ul v-if="estadisticasInfoYodarha">
-                        <li>HP(lvl 100): 35000</li>
-                        <li>ATK(lvl 100): 80000</li>
+                    <button class="button-stats" @click="statsYodarha">Stats</button>
+                    <ul class="stats-fondo-yodarha" v-if="estadisticasInfoYodarha">
+                        <li>HP(lvl 100): <b class="values-yodarha"> 35000 </b> </li>
+                        <li>ATK(lvl 100): <b class="values-yodarha"> 80000 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/wind-element-icon-granblue-fantasy-relink-wiki-guide.png"
-                                alt=""></li>
+                                alt="wind_element">
+                        </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="katanaYodarha">Weapon</button>
+                    <button class="button-stats" @click="katanaYodarha">Weapon</button>
                     <!---Katana-->
                     <div v-if="Katana">
                         <div class="table-title">
