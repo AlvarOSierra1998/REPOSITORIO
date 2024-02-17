@@ -154,7 +154,8 @@ import teamBuilder from './components/teamBuilder.vue';
 
   position: absolute;
   z-index: 1;
-  left: 100%;
+  left: 7%;
+  padding: 1%;
   /* Position the tooltip to the right of the text */
   top: 50%;
   margin-top: -30px;

@@ -4,6 +4,7 @@
     background-position: center;
 }
 
+
 /*VASERAGA*/
 .weapon {
     width: 200%;
@@ -20,7 +21,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -137,7 +139,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -253,7 +256,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -367,7 +371,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -481,7 +486,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -595,7 +601,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -710,7 +717,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -723,7 +731,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(255, 115, 0, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -825,7 +833,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -838,7 +847,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(104, 46, 29, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -933,122 +942,6 @@
 }
 
 
-
-/**SIEGFRIED */
-.SiegfriedB {
-    position: relative;
-    background: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease;
-    width: 8%;
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: lighter;
-    font-style: normal;
-}
-
-.SiegfriedB::before,
-.SiegfriedB::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to top, rgba(0, 255, 132, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
-    background-position: bottom;
-    opacity: 0;
-    border-radius: 10px;
-    transition: opacity .3s ease, background-position .3s ease;
-}
-
-.SiegfriedB::before {
-    top: 0;
-    left: 0;
-}
-
-.SiegfriedB::after {
-    bottom: 0;
-    right: 0;
-}
-
-.SiegfriedB:hover::before,
-.SiegfriedB:hover::after {
-    opacity: 1;
-    background-position: top;
-}
-
-.SiegfriedInfo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #996a29, #a2d7cb, #c609099f, #59eda3);
-    background-size: 800% 800%;
-
-    -webkit-animation: FondoGradianteSiegfried 17s ease infinite;
-    -moz-animation: FondoGradianteSiegfried 17s ease infinite;
-    -o-animation: FondoGradianteSiegfried 17s ease infinite;
-    animation: FondoGradianteSiegfried 17s ease infinite;
-}
-
-/*ANIMACIONSIEGFRIED*/
-
-@-webkit-keyframes FondoGradianteSiegfried {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-moz-keyframes FondoGradianteSiegfried {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@-o-keyframes FondoGradianteSiegfried {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes FondoGradianteSiegfried {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
 /**CHARLOTTA */
 .CharlottaB {
     position: relative;
@@ -1057,7 +950,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1172,7 +1066,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1288,7 +1183,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1301,7 +1197,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(12, 126, 179, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -1403,7 +1299,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1518,7 +1415,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1531,7 +1429,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(255, 196, 0, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -1558,7 +1456,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(270deg, #eba207, #cf833d, #00d9ff62, #71a5b4);
+    background: linear-gradient(270deg, #ffae00, #ffd900, #00d9ff62, #71a5b4);
     background-size: 800% 800%;
 
     -webkit-animation: FondoGradianteCharlotta 17s ease infinite;
@@ -1634,7 +1532,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1647,7 +1546,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(255, 154, 247, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -1750,7 +1649,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1763,7 +1663,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(221, 121, 28, 0.623) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -1866,7 +1766,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1906,7 +1807,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background: linear-gradient(270deg, #07f0dd, #986dc0, #15c9a2, #268f8f);
     background-size: 800% 800%;
 
     -webkit-animation: FondoGradianteFerry 17s ease infinite;
@@ -1982,7 +1883,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;
@@ -1995,7 +1897,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, rgba(108, 106, 230, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
+    background-image: linear-gradient(to top, rgba(230, 49, 18, 0.8) 0%, rgba(89, 201, 216, 0) 70%);
     background-position: bottom;
     opacity: 0;
     border-radius: 10px;
@@ -2022,7 +1924,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(270deg, #f03d07, #c20505, #c9ae15, #268f8f);
+    background: linear-gradient(270deg, #f03d07, #b33838, #c93015, #fceade);
     background-size: 800% 800%;
 
     -webkit-animation: FondoGradianteGhandagoza 17s ease infinite;
@@ -2098,7 +2000,8 @@
     border: none;
     cursor: pointer;
     transition: all .3s ease;
-    width: 8%;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: lighter;

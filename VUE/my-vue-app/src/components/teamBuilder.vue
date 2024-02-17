@@ -173,7 +173,7 @@ const products = [
         "ATK": 318,
         "Element": "https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png",
         "img": "https://gbf.wiki/images/thumb/7/7e/Npc_zoom_3030010000_01.png/480px-Npc_zoom_3030010000_01.png",
-        "combatStyle": " Tank ",
+        "combatStyle": " DPS ",
     },
     {
         "name": "Siegfried",

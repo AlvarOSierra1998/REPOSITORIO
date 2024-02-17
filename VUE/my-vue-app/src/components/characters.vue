@@ -6,57 +6,93 @@
         <h1>Characters</h1>
         <div>
             <div class="botones">
-                <button @click="mostrarVaseraga" :class="{ vaseragaB: mostrarVaseraga }">
-                    <h2>Vaseraga</h2>
-                </button>
-                <button @click="mostrarVane" :class="{ vaneB: mostrarVane }">
-                    <h2>Vane</h2>
-                </button>
-                <button @click="mostrarKatalina" :class="{ KatalinaB: mostrarKatalina }">
-                    <h2>Katalina</h2>
-                </button>
-                <button @click="mostrarPercival" :class="{ PercivalB: mostrarPercival }">
-                    <h2>Percival</h2>
-                </button>
-                <button @click="mostrarIo" :class="{ IoB: mostrarIo }">
-                    <h2>Io</h2>
-                </button>
-                <button @click="mostrarYodarha" :class="{ YodarhaB: mostrarYodarha }">
-                    <h2>Yodarha</h2>
-                </button>
-                <button @click="mostrarRackam" :class="{ RackamB: mostrarRackam }">
-                    <h2>Rackam</h2>
-                </button>
-                <button @click="mostrarEugen" :class="{ EugenB: mostrarEugen }">
-                    <h2>Eugen</h2>
-                </button>
-                <button @click="mostrarRosetta" :class="{ RosettaB: mostrarRosetta }">
-                    <h2>Rosetta</h2>
-                </button>
-                <button @click="mostrarLancelot" :class="{ LancelotB: mostrarLancelot }">
-                    <h2>Lancelot</h2>
-                </button>
-                <button @click="mostrarSiegfried" :class="{ SiegfriedB: mostrarSiegfried }">
-                    <h2>Siegfried</h2>
-                </button>
-                <button @click="mostrarCharlotta" :class="{ CharlottaB: mostrarCharlotta }">
-                    <h2>Charlotta</h2>
-                </button>
-                <button @click="mostrarNarmaya" :class="{ NarmayaB: mostrarNarmaya }">
-                    <h2>Narmaya</h2>
-                </button>
-                <button @click="mostrarZeta" :class="{ ZetaB: mostrarZeta }">
-                    <h2>Zeta</h2>
-                </button>
-                <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
-                    <h2>Ferry</h2>
-                </button>
-                <button @click="mostrarGhandagoza" :class="{ GhandagozaB: mostrarGhandagoza }">
-                    <h2>Ghandagoza</h2>
-                </button>
-                <button @click="mostrarCagliostro" :class="{ CagliostroB: mostrarCagliostro }">
-                    <h2>Cagliostro</h2>
-                </button>
+                <a href="#vaseraga">
+                    <button @click="mostrarVaseraga" :class="{ vaseragaB: mostrarVaseraga }">
+                        <h2>Vaseraga</h2>
+                    </button>
+                </a>
+                <a href="#vane">
+                    <button @click="mostrarVane" :class="{ vaneB: mostrarVane }">
+                        <h2>Vane</h2>
+                    </button>
+                </a>
+                <a href="#katalina">
+                    <button @click="mostrarKatalina" :class="{ KatalinaB: mostrarKatalina }">
+                        <h2>Katalina</h2>
+                    </button>
+                </a>
+                <a href="#percival">
+                    <button @click="mostrarPercival" :class="{ PercivalB: mostrarPercival }">
+                        <h2>Percival</h2>
+                    </button>
+                </a>
+                <a href="#io">
+                    <button @click="mostrarIo" :class="{ IoB: mostrarIo }">
+                        <h2>Io</h2>
+                    </button>
+                </a>
+                <a href="#yodarha">
+                    <button @click="mostrarYodarha" :class="{ YodarhaB: mostrarYodarha }">
+                        <h2>Yodarha</h2>
+                    </button>
+                </a>
+                <a href="#rackam">
+                    <button @click="mostrarRackam" :class="{ RackamB: mostrarRackam }">
+                        <h2>Rackam</h2>
+                    </button>
+                </a>
+                <a href="#eugen">
+                    <button @click="mostrarEugen" :class="{ EugenB: mostrarEugen }">
+                        <h2>Eugen</h2>
+                    </button>
+                </a>
+                <a href="#rosseta">
+                    <button @click="mostrarRosetta" :class="{ RosettaB: mostrarRosetta }">
+                        <h2>Rosetta</h2>
+                    </button>
+                </a>
+                
+                <a href="#lancelot">
+                    <button @click="mostrarLancelot" :class="{ LancelotB: mostrarLancelot }">
+                        <h2>Lancelot</h2>
+                    </button>
+                </a>
+                <a href="#siegfried">
+                    <button @click="mostrarSiegfried" :class="{ SiegfriedB: mostrarSiegfried }">
+                        <h2>Siegfried</h2>
+                    </button>
+                </a>
+                <a href="#charlotta">
+                    <button @click="mostrarCharlotta" :class="{ CharlottaB: mostrarCharlotta }">
+                        <h2>Charlotta</h2>
+                    </button>
+                </a>
+                <a href="#narmaya">
+                    <button @click="mostrarNarmaya" :class="{ NarmayaB: mostrarNarmaya }">
+                        <h2>Narmaya</h2>
+                    </button>
+                </a>
+                <a href="#zeta">
+                    <button @click="mostrarZeta" :class="{ ZetaB: mostrarZeta }">
+                        <h2>Zeta</h2>
+                    </button>
+                </a>
+                <a href ="#Ferry">
+                    <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
+                        <h2>Ferry</h2>
+                    </button>
+                </a>
+                <a href="#Ghandagoza">
+                    <button @click="mostrarGhandagoza" :class="{ GhandagozaB: mostrarGhandagoza }">
+                        <h2>Ghandagoza</h2>
+                    </button>
+                </a>
+                <a href="#Cagliostro">
+                    <button @click="mostrarCagliostro" :class="{ CagliostroB: mostrarCagliostro }">
+                        <h2>Cagliostro</h2>
+                    </button>
+                </a>
+                
             </div>
             <div v-if="mostrarInfo" :class="{ vaseragaInfo: mostrarInfo }">
                 <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
@@ -64,7 +100,7 @@
                     <p>
                     <h2>Vaseraga</h2>
                     <q>
-                        <i>
+                        <i id="vaseraga">
                             This towering Draph warrior belongs to the Society, an organization which hunts primal
                             beasts. He has
                             formed a contract with the seal weapon known as Great Scythe Grynoth.
@@ -74,9 +110,11 @@
                     <!---Stats--->
                     <button @click="statsV">Stats</button>
                     <ul v-if="estadisticasInfo">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100) 58978</li>
+                        <li>ATK (lvl 100): 60000 </li>
+                        <li>Element <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="element void"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="weaponV">Weapon</button>
@@ -143,7 +181,7 @@
                     <p>
                     <h2>Vane</h2>
                     <q>
-                        <i>
+                        <i id="vane">
                             Knight of Fellowship
                             A knight of valor, he pours his heart and soul into protecting his homeland, his friends,
                             and his comrades-in-arms.
@@ -154,9 +192,12 @@
                     <!---Stats--->
                     <button @click="statsVane">Stats</button>
                     <ul v-if="estadisticasInfoVan">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 76543 </li>
+                        <li>ATK(lvl 100 ): 40000</li>
+                        <li>Element
+                            <img src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="element vane">
+                        </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="alabardaOn">Weapon</button>
@@ -218,7 +259,7 @@
                     <p>
                     <h2>KATALINA</h2>
                     <q>
-                        <i>
+                        <i id="katalina">
 
                             Skybound Protector
                             Katalina once swore an oath of knighthood to the Erste Empire, but those days are long
@@ -229,9 +270,11 @@
                     <!---Stats--->
                     <button @click="statsKatalina">Stats</button>
                     <ul v-if="estadisticasInfoKatalina">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(100): 24000</li>
+                        <li>ATK(100): 40000</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt=""> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="estoqueOn">Weapon</button>
@@ -293,7 +336,7 @@
                     <p>
                     <h2>PERCIVAL</h2>
                     <q>
-                        <i>
+                        <i id="percival">
                             Lord of Flames
                             Possessing the makings of a king, this young man strives to create a kingdom free of war with
                             other like-minded individuals.
@@ -304,9 +347,11 @@
                     <!---Stats--->
                     <button @click="statsPercival">Stats</button>
                     <ul v-if="estadisticasInfoPercival">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 30000</li>
+                        <li>ATK(lvl 100): 70000 </li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="percoval_Percival"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="espadaOn">Weapon</button>
@@ -367,7 +412,7 @@
                     <p>
                     <h2>Io</h2>
                     <q>
-                        <i>
+                        <i id="Io">
                             Skybound Dreamer
                             Don't let her small size fool you. This young mage is eager to showcase her impressive talent.
                             She vows to bring smiles to the world
@@ -377,9 +422,11 @@
                     <!---Stats--->
                     <button @click="statsIo">Stats</button>
                     <ul v-if="estadisticasInfoIo">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 20000</li>
+                        <li>ATK(lvl 100): 50000</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="io_element"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="BastonOn">Weapon</button>
@@ -453,9 +500,11 @@
                     <!---Stats--->
                     <button @click="statsYodarha">Stats</button>
                     <ul v-if="estadisticasInfoYodarha">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 35000</li>
+                        <li>ATK(lvl 100): 80000</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/wind-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt=""></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="katanaYodarha">Weapon</button>
@@ -532,9 +581,11 @@
                     <!---Stats--->
                     <button @click="statsRackam">Stats</button>
                     <ul v-if="estadisticasInfoRackam">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 65000</li>
+                        <li>ATK(lvl 100): 45000</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="Rackam_element"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="pistolaRackam">Weapon</button>
@@ -607,9 +658,11 @@
                     <!---Stats--->
                     <button @click="statsEugen">Stats</button>
                     <ul v-if="estadisticasInfoRackam">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 77542</li>
+                        <li>ATK (lvl 100) : 79062</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="eugen_element"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="pistolaEugen">Weapon</button>
@@ -689,9 +742,11 @@
                     <!---Stats--->
                     <button @click="statsRosetta">Stats</button>
                     <ul v-if="estadisticasInfoRosetta">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(100): 30000</li>
+                        <li>ATK( 100 ): 55555</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="element_void"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="dagaRosetta">Weapon</button>
@@ -771,14 +826,16 @@
                     <!---Stats--->
                     <button @click="statsLancelot">Stats</button>
                     <ul v-if="estadisticasInfoLancelot">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 22333</li>
+                        <li>ATK(lvl 100): 64231</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="Lancelot_element"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="espadaOnLancelot">Weapon</button>
                     <!---daga-->
-                    <div v-if="espada">
+                    <div v-if="espadaLancelot">
                         <div class="table-title">
                             <h2><i>Altachiara</i></h2>
                         </div>
@@ -855,9 +912,11 @@
                     <!---Stats--->
                     <button @click="statsSiegfried">Stats</button>
                     <ul v-if="estadisticasInfoSiegfried">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 65789</li>
+                        <li>ATK(lvl 100): 67682</li>
+                        <li>Element <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="Siegfried_element"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="espadaOnSiegfried">Weapon</button>
@@ -936,9 +995,11 @@
                     <!---Stats--->
                     <button @click="statsCharlotta">Stats</button>
                     <ul v-if="estadisticasInfoCharlotta">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 77777</li>
+                        <li>ATK(lvl 100 ): 62345</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="charlotta_element"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="espadaOnCharlotta">Weapon</button>
@@ -1020,9 +1081,11 @@
                     <!---Stats--->
                     <button @click="statsNarmaya">Stats</button>
                     <ul v-if="estadisticasInfoNarmaya">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 55341</li>
+                        <li>ATK(lvl 100 ): 88888</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="elemtn_narmaya"> </li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="katanaOn">Weapon</button>
@@ -1107,9 +1170,11 @@
                     <!---Stats--->
                     <button @click="statsZeta">Stats</button>
                     <ul v-if="estadisticasInfoZeta">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100 ): 63412</li>
+                        <li>ATK(lvl 100 ): 82819</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="Zeta_element"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="espadaOnZeta">Weapon</button>
@@ -1196,9 +1261,11 @@
                     <!---Stats--->
                     <button @click="statsFerry">Stats</button>
                     <ul v-if="estadisticasInfoFerry">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP( lvl 100 ): 54678</li>
+                        <li>ATK(lvl 100 ): 60000</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="ferry_element"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="LatigoOnFerry">Weapon</button>
@@ -1280,9 +1347,9 @@
                     <!---Stats--->
                     <button @click="statsGhandagoza">Stats</button>
                     <ul v-if="estadisticasInfoGhandagoza">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100): 80000</li>
+                        <li>ATK(lvl 100): 57893</li>
+                        <li>Element <img src="" alt="Ghandagoza_element"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="weaponOnGhandagoza">Weapon</button>
@@ -1361,9 +1428,11 @@
                     <!---Stats--->
                     <button @click="statsCagliostro">Stats</button>
                     <ul v-if="estadisticasInfoCagliostro">
-                        <li>a</li>
-                        <li>a</li>
-                        <li>a</li>
+                        <li>HP(lvl 100) : 10000</li>
+                        <li>ATK(lvl 100): 50493</li>
+                        <li>Element: <img
+                                src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
+                                alt="Cagliostro_element"></li>
                     </ul>
                     <!---WEAPON-->
                     <button @click="weaponOnCagliostro">Weapon</button>
@@ -1773,6 +1842,4 @@ const weaponOnCagliostro = () => {
 
 </script>
 
-<style scoped>
-@import './StylesComponents/characters.css';
-</style>
+<style scoped>@import './StylesComponents/characters.css';</style>
