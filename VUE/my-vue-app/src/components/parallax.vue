@@ -142,5 +142,23 @@ function handleScroll() {
     box-shadow: 2px 30px 40px #000000;
     transition: 0.5s;
 }
+@media ( max-width: 768px){
+    .parallax p  {
+        width: 100%;
+        height: 140px;
+        font-size:0.67rem;
+        
+       
+    }
+    
+}
+
+
+@media ( min-width: 768px){
+    blockquote {
+        width: 100%;
+        height: 100px;
+    }
+}
 
 </style>
