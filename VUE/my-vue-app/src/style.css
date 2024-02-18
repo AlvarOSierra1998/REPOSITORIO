@@ -7,6 +7,7 @@ body {
   font-weight:lighter;
   font-style: normal;
   overflow-x: hidden;
+  cursor: url('./assets/img/cursor.png'), auto;
 }
 
 /*nav{
@@ -28,7 +29,7 @@ body {
 }
 
 .foto>img {
-  width: 80%;
+  width: 100%;
 }
 
 .txtVa {

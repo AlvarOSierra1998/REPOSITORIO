@@ -3,7 +3,7 @@
     <main>
       <section class="gradiante">
         <div class="foto">
-          <img class="animate__animated animate__fadeIn" src="./assets/img/Gbf_relink_logo.png" alt="Imagen">
+          <img class="animate__animated animate__fadeIn" src="./assets/img/Gbf_relink_logo-HD.png" alt="Imagen">
         </div>
         <div style="overflow: hidden;">
           <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +80,7 @@
 import characters from './components/characters.vue';
 import teamBuilder from './components/teamBuilder.vue';
 import parallax from './components/parallax.vue';
+import carrousel from './components/carrousell.vue';
 
 
 </script>
