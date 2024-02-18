@@ -1,8 +1,3 @@
-.botones.parallax {
-    background-image: url('https://static.actugaming.net/media/2023/08/granblue-fantasy-relink-screenshot-22-08-202301.jpg');
-    background-size: cover;
-    background-position: center;
-}
 
 .button-stats,
 .button-weapon {
@@ -233,8 +228,315 @@
 
 }
 
+/*RACKAM INNER*/
 
+.stats-fondo-rackam{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
 
+.values-rackam{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-rackam:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*EUGEN*/
+
+.stats-fondo-eugen{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-eugen{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-eugen:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*ROSETTA INNER*/
+
+.stats-fondo-rosetta{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-rosetta{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-rosetta:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*LANCELOT INNER*/
+
+.stats-fondo-lancelot{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-lancelot{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-lancelot:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*SIEGFRIED INNER*/
+
+.stats-fondo-siegfried{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-siegfried{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-siegfried:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*CHARLOTTA INNER*/
+
+.stats-fondo-charlotta{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-charlotta{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-charlotta:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*ZETA INNER*/
+
+.stats-fondo-zeta{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-zeta{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-zeta:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*FERRY INNER*/
+
+.stats-fondo-ferry{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-ferry{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-ferry:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*GHANDAGOZA INNER*/
+
+.stats-fondo-ghandagoza{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-ghandagoza{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-ghandagoza:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
+
+/*CAGLIOSTRO INNER*/
+
+.stats-fondo-cagliostro{
+    background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.values-cagliostro{
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #f1f1f1;
+    cursor:default;
+}
+
+.values-cagliostro:hover{
+    color: #f1f1f1;
+    text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
+
+}
 
 .button-stats:hover,
 .button-weapon:hover {

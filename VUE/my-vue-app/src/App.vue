@@ -1,10 +1,4 @@
 <template>
-  <header>
-    <nav>
-
-    </nav>
-  </header>
-
   <body>
     <main>
       <section class="gradiante">
@@ -13,7 +7,7 @@
         </div>
         <div style="overflow: hidden;">
           <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"
-            style="fill: #ffffff; width: 101%; height: 132px; transform: rotate(180deg);">
+            style="fill: #ffffff; width: 101%; height: 632px; transform: rotate(180deg);">
             <path
               d="M0 0v46.29c47.79 22.2 103.59 32.17 158 28 70.36-5.37 136.33-33.31 206.8-37.5 73.84-4.36 147.54 16.88 218.2 35.26 69.27 18 138.3 24.88 209.4 13.08 36.15-6 69.85-17.84 104.45-29.34C989.49 25 1113-14.29 1200 52.47V0z"
               opacity=".25" />
@@ -27,13 +21,19 @@
       </section>
 
       <!--MAIN-->
+     
+      <section>
+        <parallax />
+      </section>
       <section>
         <characters />
       </section>
-
+    
       <section>
         <teamBuilder />
       </section>
+
+      
     </main>
     <footer>
       <p>© 2024 Granblue Fantasy Relink</p>
@@ -79,6 +79,9 @@
 <script setup>
 import characters from './components/characters.vue';
 import teamBuilder from './components/teamBuilder.vue';
+import parallax from './components/parallax.vue';
+
+
 </script>
       
 <style scoped >

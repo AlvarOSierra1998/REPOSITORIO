@@ -28,7 +28,7 @@ body {
 }
 
 .foto>img {
-  width: 50%;
+  width: 80%;
 }
 
 .txtVa {
@@ -330,7 +330,7 @@ td.text-right {
   border-image: fill 0 linear-gradient(#0003, #0000);
 }*/
 .gradiante {
-  height: 900px;
+  height: 1400px;
   background: linear-gradient(219deg, #76d6db, #ffffff, #e3e2f2);
   background-size: 600% 600%;
 

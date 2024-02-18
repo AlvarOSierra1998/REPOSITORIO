@@ -51,7 +51,7 @@
                         <h2>Rosetta</h2>
                     </button>
                 </a>
-                
+
                 <a href="#lancelot">
                     <button @click="mostrarLancelot" :class="{ LancelotB: mostrarLancelot }">
                         <h2>Lancelot</h2>
@@ -77,7 +77,7 @@
                         <h2>Zeta</h2>
                     </button>
                 </a>
-                <a href ="#ferry">
+                <a href="#ferry">
                     <button @click="mostrarFerry" :class="{ FerryB: mostrarFerry }">
                         <h2>Ferry</h2>
                     </button>
@@ -92,7 +92,7 @@
                         <h2>Cagliostro</h2>
                     </button>
                 </a>
-                
+
             </div>
             <div v-if="mostrarInfo" :class="{ vaseragaInfo: mostrarInfo }">
                 <img class="imgvas" src="../assets/img/vaseraga.png" alt="Vaseraga">
@@ -100,7 +100,7 @@
                     <p>
                     <h2 id="vaseraga">Vaseraga</h2>
                     <q>
-                        <i >
+                        <i>
                             This towering Draph warrior belongs to the Society, an organization which hunts primal
                             beasts. He has
                             formed a contract with the seal weapon known as Great Scythe Grynoth.
@@ -164,7 +164,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -172,7 +172,7 @@
                     <em><small>click up there to go to the buttons section!</small></em>
                 </blockquote>
             </div>
-            
+
 
         </div>
     </section>
@@ -188,7 +188,7 @@
                     <p>
                     <h2 id="vane">Vane</h2>
                     <q>
-                        <i >
+                        <i>
                             Knight of Fellowship
                             A knight of valor, he pours his heart and soul into protecting his homeland, his friends,
                             and his comrades-in-arms.
@@ -251,7 +251,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -272,7 +272,7 @@
                     <p>
                     <h2 id="katalina">KATALINA</h2>
                     <q>
-                        <i >
+                        <i>
 
                             Skybound Protector
                             Katalina once swore an oath of knighthood to the Erste Empire, but those days are long
@@ -334,7 +334,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -355,7 +355,7 @@
                     <p>
                     <h2 id="percival">PERCIVAL</h2>
                     <q>
-                        <i >
+                        <i>
                             Lord of Flames
                             Possessing the makings of a king, this young man strives to create a kingdom free of war with
                             other like-minded individuals.
@@ -367,7 +367,7 @@
                     <button class="button-stats" @click="statsPercival">Stats</button>
                     <ul class="stats-fondo-percival" v-if="estadisticasInfoPercival">
                         <li>HP(lvl 100): <b class="values-percival"> 30000 </b></li>
-                        <li>ATK(lvl 100):  <b class="values-percival"> 70000 </b> </li>
+                        <li>ATK(lvl 100): <b class="values-percival"> 70000 </b> </li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="percoval_Percival"></li>
@@ -416,7 +416,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -436,7 +436,7 @@
                     <p>
                     <h2 id="io">Io</h2>
                     <q>
-                        <i >
+                        <i>
                             Skybound Dreamer
                             Don't let her small size fool you. This young mage is eager to showcase her impressive talent.
                             She vows to bring smiles to the world
@@ -496,7 +496,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -582,7 +582,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -616,16 +616,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsRackam">Stats</button>
-                    <ul v-if="estadisticasInfoRackam">
-                        <li>HP(lvl 100): 65000</li>
-                        <li>ATK(lvl 100): 45000</li>
+                    <button class="button-stats" @click="statsRackam">Stats</button>
+                    <ul class="stats-fondo-rackam" v-if="estadisticasInfoRackam">
+                        <li>HP(lvl 100): <b class="values-rackam"> 65000 </b></li>
+                        <li>ATK(lvl 100): <b class="values-rackam"> 45000 </b> </li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="Rackam_element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="pistolaRackam">Weapon</button>
+                    <button class="button-stats" @click="pistolaRackam">Weapon</button>
                     <!---Pistola-->
                     <div v-if="pistola">
                         <div class="table-title">
@@ -668,7 +668,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -699,16 +699,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsEugen">Stats</button>
-                    <ul v-if="estadisticasInfoRackam">
-                        <li>HP(lvl 100 ): 77542</li>
-                        <li>ATK (lvl 100) : 79062</li>
+                    <button class="button-stats" @click="statsEugen">Stats</button>
+                    <ul class="stats-fondo-eugen" v-if="estadisticasInfoRackam">
+                        <li>HP(lvl 100 ): <b class="values-eugen">77542</b></li>
+                        <li>ATK (lvl 100) : <b class="values-eugen"> 79062 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="eugen_element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="pistolaEugen">Weapon</button>
+                    <button class="button-stats" @click="pistolaEugen">Weapon</button>
                     <!---Pistola-->
                     <div v-if="pistola">
                         <div class="table-title">
@@ -753,7 +753,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -789,16 +789,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsRosetta">Stats</button>
-                    <ul v-if="estadisticasInfoRosetta">
-                        <li>HP(100): 30000</li>
-                        <li>ATK( 100 ): 55555</li>
+                    <button class="button-stats" @click="statsRosetta">Stats</button>
+                    <ul class="stats-fondo-rosetta" v-if="estadisticasInfoRosetta">
+                        <li>HP(100): <b class="values-rosetta"> 30000 </b></li>
+                        <li>ATK( 100 ): <b class="values-rosetta"> 55555 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/dark-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="element_void"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="dagaRosetta">Weapon</button>
+                    <button class="button-stats" @click="dagaRosetta">Weapon</button>
                     <!---daga-->
 
 
@@ -845,7 +845,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -879,16 +879,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsLancelot">Stats</button>
-                    <ul v-if="estadisticasInfoLancelot">
-                        <li>HP(lvl 100 ): 22333</li>
-                        <li>ATK(lvl 100): 64231</li>
+                    <button class="button-stats" @click="statsLancelot">Stats</button>
+                    <ul class="stats-fondo-lancelot" v-if="estadisticasInfoLancelot">
+                        <li>HP(lvl 100 ): <b class="values-lancelot"> 22333 </b></li>
+                        <li>ATK(lvl 100): <b class="values-lancelot"> 64231 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/water-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="Lancelot_element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="espadaOnLancelot">Weapon</button>
+                    <button class="button-stats" @click="espadaOnLancelot">Weapon</button>
                     <!---daga-->
                     <div v-if="espadaLancelot">
                         <div class="table-title">
@@ -933,7 +933,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -971,16 +971,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsSiegfried">Stats</button>
-                    <ul v-if="estadisticasInfoSiegfried">
-                        <li>HP(lvl 100 ): 65789</li>
-                        <li>ATK(lvl 100): 67682</li>
+                    <button class="button-stats" @click="statsSiegfried">Stats</button>
+                    <ul class="stats-fondo-siegfried" v-if="estadisticasInfoSiegfried">
+                        <li>HP(lvl 100 ): <b class="values-siegfried"> 65789 </b></li>
+                        <li>ATK(lvl 100): <b class="values-siegfried"> 67682 </b></li>
                         <li>Element <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="Siegfried_element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="espadaOnSiegfried">Weapon</button>
+                    <button class="button-stats" @click="espadaOnSiegfried">Weapon</button>
                     <!---daga-->
                     <div v-if="espadaSiegfried">
                         <div class="table-title">
@@ -1025,7 +1025,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1060,16 +1060,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsCharlotta">Stats</button>
-                    <ul v-if="estadisticasInfoCharlotta">
-                        <li>HP(lvl 100 ): 77777</li>
-                        <li>ATK(lvl 100 ): 62345</li>
+                    <button class="button-stats" @click="statsCharlotta">Stats</button>
+                    <ul class="stats-fondo-charlotta" v-if="estadisticasInfoCharlotta">
+                        <li>HP(lvl 100 ): <b class="values-charlotta">77777</b></li>
+                        <li>ATK(lvl 100 ): <b class="values-charlotta"> 62345 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="charlotta_element"> </li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="espadaOnCharlotta">Weapon</button>
+                    <button class="button-stats" @click="espadaOnCharlotta">Weapon</button>
                     <!---daga-->
                     <div v-if="espadaCharlotta">
                         <div class="table-title">
@@ -1114,7 +1114,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1206,7 +1206,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1247,16 +1247,16 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsZeta">Stats</button>
-                    <ul v-if="estadisticasInfoZeta">
-                        <li>HP(lvl 100 ): 63412</li>
-                        <li>ATK(lvl 100 ): 82819</li>
+                    <button class="button-stats" @click="statsZeta">Stats</button>
+                    <ul class="stats-fondo-zeta" v-if="estadisticasInfoZeta">
+                        <li>HP(lvl 100 ): <b class="values-zeta"> 63412 </b></li>
+                        <li>ATK(lvl 100 ): <b class="values-zeta"> 82819 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="Zeta_element"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="espadaOnZeta">Weapon</button>
+                    <button class="button-stats" @click="espadaOnZeta">Weapon</button>
                     <!---daga-->
 
 
@@ -1303,7 +1303,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1339,17 +1339,17 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsFerry">Stats</button>
-                    <ul v-if="estadisticasInfoFerry">
-                        <li>HP( lvl 100 ): 54678</li>
-                        <li>ATK(lvl 100 ): 60000</li>
+                    <button class="button-stats" @click="statsFerry">Stats</button>
+                    <ul class="stats-fondo-ferry" v-if="estadisticasInfoFerry">
+                        <li>HP( lvl 100 ): <b class="values-ferry"> 54678 </b></li>
+                        <li>ATK(lvl 100 ): <b class="values-ferry"> 60000 </b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/light-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="ferry_element"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="LatigoOnFerry">Weapon</button>
-                    <!---daga-->
+                    <button class="button-stats" @click="LatigoOnFerry">Weapon</button>
+                    <!---Látigo-->
                     <div v-if="LatigoFerry">
                         <div class="table-title">
                             <h2><i>Geisterpeitsche</i></h2>
@@ -1392,7 +1392,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1431,15 +1431,15 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsGhandagoza">Stats</button>
-                    <ul v-if="estadisticasInfoGhandagoza">
-                        <li>HP(lvl 100): 80000</li>
-                        <li>ATK(lvl 100): 57893</li>
-                        <li>Element <img src="" alt="Ghandagoza_element"></li>
+                    <button class="button-stats" @click="statsGhandagoza">Stats</button>
+                    <ul class="stats-fondo-ghandagoza" v-if="estadisticasInfoGhandagoza">
+                        <li>HP(lvl 100): <b class="values-ghandagoza"> 80000</b></li>
+                        <li>ATK(lvl 100): <b class="values-ghandagoza"> 57893</b></li>
+                        <li>Element <img src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/fire-element-icon-granblue-fantasy-relink-wiki-guide.png" alt="Ghandagoza_element"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="weaponOnGhandagoza">Weapon</button>
-                    <!---daga-->
+                    <button class="button-stats" @click="weaponOnGhandagoza">Weapon</button>
+                    <!---Puños-->
                     <div v-if="weaponGhandagoza">
                         <div class="table-title">
                             <h2><i>Brahma Gauntlet</i></h2>
@@ -1483,7 +1483,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1507,7 +1507,7 @@
 
                 <blockquote class="txtVa">
                     <p>
-                    <h2 id= "Cagliostro">Cagliostro</h2>
+                    <h2 id="Cagliostro">Cagliostro</h2>
                     <q>
                         <i>
                             Eternal Alchemist
@@ -1518,17 +1518,17 @@
                     </q>
                     </p>
                     <!---Stats--->
-                    <button @click="statsCagliostro">Stats</button>
-                    <ul v-if="estadisticasInfoCagliostro">
-                        <li>HP(lvl 100) : 10000</li>
-                        <li>ATK(lvl 100): 50493</li>
+                    <button class="button-stats" @click="statsCagliostro">Stats</button>
+                    <ul class="stats-fondo-cagliostro" v-if="estadisticasInfoCagliostro">
+                        <li>HP(lvl 100) : <b class="values-cagliostro"> 10000</b></li>
+                        <li>ATK(lvl 100):<b class="values-cagliostro"> 50493</b></li>
                         <li>Element: <img
                                 src="https://granbluefantasyrelink.wiki.fextralife.com/file/Granblue-Fantasy-Relink/earth-element-icon-granblue-fantasy-relink-wiki-guide.png"
                                 alt="Cagliostro_element"></li>
                     </ul>
                     <!---WEAPON-->
-                    <button @click="weaponOnCagliostro">Weapon</button>
-                    <!---daga-->
+                    <button class="button-stats" @click="weaponOnCagliostro">Weapon</button>
+                    <!---Libro-->
                     <div v-if="weaponCagliostro">
                         <div class="table-title">
                             <h2><i>Philosopher's Stone</i></h2>
@@ -1572,7 +1572,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <a href = "#top">
+                    <a href="#top">
                         <p>
                             <b>To the top!</b>
                         </p>
@@ -1940,4 +1940,6 @@ const weaponOnCagliostro = () => {
 
 </script>
 
-<style scoped>@import './StylesComponents/characters.css';</style>
+<style scoped>
+@import './StylesComponents/characters.css';
+</style>
