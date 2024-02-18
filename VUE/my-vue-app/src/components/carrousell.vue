@@ -17,8 +17,10 @@ import { ref } from 'vue';
 
 const images = [
     new URL('../assets/img/fondo1.jpg', import.meta.url),
-    new URL('../assets/img/fondo1.jpg', import.meta.url),
-    new URL('../assets/img/fondo1.jpg', import.meta.url),
+    new URL('../assets/img/fondo2.jpg', import.meta.url),
+    new URL('../assets/img/fondo4.jpg', import.meta.url),
+    new URL('../assets/img/fondo5.jpeg', import.meta.url),
+    new URL('../assets/img/fondo6.jpeg', import.meta.url),
     // Add more image paths as needed
 ];
 
@@ -26,17 +28,18 @@ const activeIndex = ref(0);
 
 const next = () => {
     activeIndex.value = (activeIndex.value + 1) % images.length;
+
 };
 
 const prev = () => {
     activeIndex.value = (activeIndex.value - 1 + images.length) % images.length;
 };
+
+
 </script>
   
 <style scoped>
-
-
-.carousel{
+.carousel {
     display: inline-flex;
     margin: auto;
     position: relative;
@@ -46,7 +49,7 @@ const prev = () => {
 
 .photo {
     width: 100%;
-    border-radius: 10px ;
+    border-radius: 10px;
     box-shadow: 0 20px 120px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -66,6 +69,7 @@ const prev = () => {
     width: 100%;
 
 }
+
 .button-container button {
     margin: 0 10px;
     padding: 10px 20px;
@@ -76,55 +80,65 @@ const prev = () => {
     background: none;
 
 }
+
 .button-container button:hover {
     background-color: rgba(0, 0, 0, 0.507);
-    color:wheat;
+    color: wheat;
     box-shadow: 2px 30px 40px #000000;
     transition: 0.5s;
 }
 
-@media screen and ( max-width: 768px){
-    .carrousel{
-        display:none
+@media screen and (max-width: 768px) {
+    .carrousel {
+        display: none
     }
+
     .photo {
-    display:none;
-}
-.button-container button {
-    display:none;
-}
-}
-@media screen and ( max-width: 992px){
-    .carrousel{
-        display:none
+        display: none;
     }
+
+    .button-container button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carrousel {
+        display: none
+    }
+
     .photo {
-    display:none;
-}
-.button-container button {
-    display:none;
-}
+        display: none;
+    }
+
+    .button-container button {
+        display: none;
+    }
 }
 
 
-@media screen and (max-width: 1920px) and (max-height: 1080px){
-    .carousel{
+@media screen and (max-width: 1920px) and (max-height: 1080px) {
+    .carousel {
         display: inline-flex;
         margin: auto;
         position: relative;
         left: 2%;
     }
+
     .photo {
         width: 130%;
-        border-radius: 10px ;
+        border-radius: 10px;
         box-shadow: 20px 20px 30px 0 rgba(0, 0, 0, 0.5);
     }
+
     .carousel-item {
         display: none;
     }
+
     .carousel-item.active {
         display: block;
     }
+
     .button-container {
         display: flex;
         justify-content: center;
@@ -132,6 +146,7 @@ const prev = () => {
         margin: auto;
         width: 130%;
     }
+
     .button-container button {
         margin: 0 10px;
         padding: 10px 20px;
@@ -142,12 +157,11 @@ const prev = () => {
         background: none;
         font-size: 1.5rem;
     }
+
     .button-container button:hover {
         background-color: rgba(0, 0, 0, 0.507);
-        color:wheat;
+        color: wheat;
         box-shadow: 2px 30px 40px #000000;
         transition: 0.5s;
     }
-}
-
-</style>
+}</style>

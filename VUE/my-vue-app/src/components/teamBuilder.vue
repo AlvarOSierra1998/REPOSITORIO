@@ -35,8 +35,11 @@
 
                         <hr />
                     </div>
-                    <button @click="Eliminar(index)">Delete</button>
-                    <button @click="clearResults">Limpiar Resultados</button>
+                    <div class="conatiner-button-delete">
+                        <button class="button-delete" @click="Eliminar(index)">Delete</button>
+                        <button class="button-clear" @click="clearResults">Limpiar Resultados</button>
+                    </div>
+
                 </div>
 
                 <div v-if="noMore">
@@ -239,7 +242,36 @@ const searchProduct = () => {
 
 
 <!--estilos solo para funciones-->
-<style scoped>
+<style scoped >
+conatiner-button-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.button-delete,
+.button-clear {
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    width: 90%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    transition: all .3s ease;
+    background: linear-gradient(270deg, #f303df3b, #c205053d, #7896d149, #268f8f3d);
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
+    
+
+}
+
 .product-info {
     display: inline-block;
     margin: auto;
