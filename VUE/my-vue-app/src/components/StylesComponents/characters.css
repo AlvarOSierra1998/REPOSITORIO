@@ -1,4 +1,5 @@
 
+
 .button-stats,
 .button-weapon {
     padding: 1em;
@@ -15,12 +16,12 @@
     font-weight: lighter;
     font-style: normal;
     transition: all .3s ease;
-    
+
 
 }
 
 /*NARMAYA INNER*/
-.stats-fondo-Narmaya{
+.stats-fondo-Narmaya {
     background: linear-gradient(270deg, #f303df3b, #c205053d, #7896d149, #268f8f3d);
     text-align: center;
     list-style-type: none;
@@ -28,7 +29,8 @@
     padding: 1em;
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
-.values-Narmaya{
+
+.values-Narmaya {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -39,9 +41,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
-}  
-.values-Narmaya:hover{
+    cursor: default;
+}
+
+.values-Narmaya:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -49,7 +52,7 @@
 
 /*VASERAGA INNER*/
 
-.stats-fondo-vaseraga{
+.stats-fondo-vaseraga {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -57,7 +60,8 @@
     padding: 1em;
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
-.values-vaseraga{
+
+.values-vaseraga {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -68,9 +72,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
-}  
-.values-vaseraga:hover{
+    cursor: default;
+}
+
+.values-vaseraga:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -79,7 +84,7 @@
 
 /*VANE INNER*/
 
-.stats-fondo-vane{
+.stats-fondo-vane {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -87,7 +92,8 @@
     padding: 1em;
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
-.values-vane{
+
+.values-vane {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -98,9 +104,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
-.values-vane:hover{
+
+.values-vane:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -108,7 +115,7 @@
 
 /*KATALINA INNER*/
 
-.stats-fondo-katalina{
+.stats-fondo-katalina {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -116,7 +123,8 @@
     padding: 1em;
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
-.values-katalina{
+
+.values-katalina {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -127,9 +135,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
-.values-katalina:hover{
+
+.values-katalina:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -137,7 +146,7 @@
 
 /*PERCIVAL INNER*/
 
-.stats-fondo-percival{
+.stats-fondo-percival {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -146,7 +155,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-percival{
+.values-percival {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -157,10 +166,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-percival:hover{
+.values-percival:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -168,7 +177,7 @@
 
 /*IO INNER*/
 
-.stats-fondo-io{
+.stats-fondo-io {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -177,7 +186,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-io{
+.values-io {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -188,10 +197,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-io:hover{
+.values-io:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -199,7 +208,7 @@
 
 /*YODARHA INNER*/
 
-.stats-fondo-yodarha{
+.stats-fondo-yodarha {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -208,7 +217,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-yodarha{
+.values-yodarha {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -219,10 +228,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-yodarha:hover{
+.values-yodarha:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -230,7 +239,7 @@
 
 /*RACKAM INNER*/
 
-.stats-fondo-rackam{
+.stats-fondo-rackam {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -239,7 +248,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-rackam{
+.values-rackam {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -250,10 +259,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-rackam:hover{
+.values-rackam:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -261,7 +270,7 @@
 
 /*EUGEN*/
 
-.stats-fondo-eugen{
+.stats-fondo-eugen {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -270,7 +279,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-eugen{
+.values-eugen {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -281,10 +290,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-eugen:hover{
+.values-eugen:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -292,7 +301,7 @@
 
 /*ROSETTA INNER*/
 
-.stats-fondo-rosetta{
+.stats-fondo-rosetta {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -301,7 +310,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-rosetta{
+.values-rosetta {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -312,10 +321,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-rosetta:hover{
+.values-rosetta:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -323,7 +332,7 @@
 
 /*LANCELOT INNER*/
 
-.stats-fondo-lancelot{
+.stats-fondo-lancelot {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -332,7 +341,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-lancelot{
+.values-lancelot {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -343,10 +352,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-lancelot:hover{
+.values-lancelot:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -354,7 +363,7 @@
 
 /*SIEGFRIED INNER*/
 
-.stats-fondo-siegfried{
+.stats-fondo-siegfried {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -363,7 +372,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-siegfried{
+.values-siegfried {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -374,10 +383,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-siegfried:hover{
+.values-siegfried:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -385,7 +394,7 @@
 
 /*CHARLOTTA INNER*/
 
-.stats-fondo-charlotta{
+.stats-fondo-charlotta {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -394,7 +403,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-charlotta{
+.values-charlotta {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -405,10 +414,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-charlotta:hover{
+.values-charlotta:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -416,7 +425,7 @@
 
 /*ZETA INNER*/
 
-.stats-fondo-zeta{
+.stats-fondo-zeta {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -425,7 +434,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-zeta{
+.values-zeta {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -436,10 +445,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-zeta:hover{
+.values-zeta:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -447,7 +456,7 @@
 
 /*FERRY INNER*/
 
-.stats-fondo-ferry{
+.stats-fondo-ferry {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -456,7 +465,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-ferry{
+.values-ferry {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -467,10 +476,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-ferry:hover{
+.values-ferry:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -478,7 +487,7 @@
 
 /*GHANDAGOZA INNER*/
 
-.stats-fondo-ghandagoza{
+.stats-fondo-ghandagoza {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -487,7 +496,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-ghandagoza{
+.values-ghandagoza {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -498,10 +507,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-ghandagoza:hover{
+.values-ghandagoza:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
@@ -509,7 +518,7 @@
 
 /*CAGLIOSTRO INNER*/
 
-.stats-fondo-cagliostro{
+.stats-fondo-cagliostro {
     background: linear-gradient(270deg, #f303df3b, #6d13803d, #9fb4dd49, #7db4b43d);
     text-align: center;
     list-style-type: none;
@@ -518,7 +527,7 @@
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.values-cagliostro{
+.values-cagliostro {
     font-size: 1.5em;
     font-weight: bolder;
     font-style: normal;
@@ -529,10 +538,10 @@
     text-align: center;
     transition: all 0.3s ease;
     color: #f1f1f1;
-    cursor:default;
+    cursor: default;
 }
 
-.values-cagliostro:hover{
+.values-cagliostro:hover {
     color: #f1f1f1;
     text-shadow: 0 0 10px #f1f1f1, 0 0 20px #f1f1f1, 0 0 40px #f1f1f1, 0 0 80px #f1f1f1, 0 0 160px #f1f1f1;
 
