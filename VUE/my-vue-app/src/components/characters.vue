@@ -431,7 +431,7 @@
         <!--lista perosnajes-->
         <div>
             <div v-if="mostrarInfoIo" :class="{ IoInfo: mostrarInfoIo }">
-                <img class="imgvas" src="../assets/img/Io.png" alt="Io">
+                <img class="imgvas" src="https://relink.granbluefantasy.jp/assets/images/common/pc/characters/io.png?20240208083559" alt="Io">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="io">Io</h2>
