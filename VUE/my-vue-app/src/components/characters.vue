@@ -350,7 +350,7 @@
         <div>
             <!---es una clase el vaseraga info-->
             <div v-if="mostrarInfoPercival" :class="{ PercivalInfo: mostrarInfoPercival }">
-                <img class="imgvas" src="../assets/img/Percival.png" alt="Percival">
+                <img class="imgvas" src="https://relink.granbluefantasy.jp/assets/images/common/pc/characters/percival.png?20240208083559" alt="Percival">
                 <blockquote class="txtVa">
                     <p>
                     <h2 id="percival">PERCIVAL</h2>
